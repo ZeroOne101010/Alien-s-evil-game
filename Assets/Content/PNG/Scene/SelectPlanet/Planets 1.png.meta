@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 66a4dcb4fb6f66c42856f7e940fa351a
+guid: b89b8871b8130db41ab3a62c65a3464c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1282879037899113397
-    second: Sun
+      213: 733483781580332047
+    second: Planets 1_0
   - first:
-      213: -4458703823383280243
-    second: Earth
+      213: -6687850026126896634
+    second: Planets 1_1
   - first:
-      213: -4485808478648860706
-    second: Mars
+      213: -8853646601897713215
+    second: Planets 1_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,64 +107,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sun
+      name: Planets 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4109
-        height: 3622
+        x: 29
+        y: 4064
+        width: 4995
+        height: 4923
       alignment: 9
-      pivot: {x: 0.43150473, y: 0.47086084}
-      border: {x: 0, y: 0, z: 352, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 895d2991c830cfd43b738715ce6e6e8f
-      internalID: 1282879037899113397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Earth
-      rect:
-        serializedVersion: 2
-        x: 4461
-        y: 34
-        width: 3272
-        height: 3554
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.44963822, y: 0.5364987}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53c33ec5a29567d42b2cb23609626436
-      internalID: -4458703823383280243
+      spriteID: ccfb1de1115d6fe4db2d617bbc29528e
+      internalID: 733483781580332047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mars
+      name: Planets 1_1
       rect:
         serializedVersion: 2
-        x: 8577
-        y: 175
-        width: 2315
-        height: 2920
+        x: 7863
+        y: 5142
+        width: 3263
+        height: 3486
+      alignment: 9
+      pivot: {x: 0.62410295, y: 0.4811306}
+      border: {x: 0, y: 180, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c80b9fa39d5504fbd3ddabe117adc8
+      internalID: -6687850026126896634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planets 1_2
+      rect:
+        serializedVersion: 2
+        x: 5743
+        y: 0
+        width: 4025
+        height: 3719
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6159e2be47d8afe459a31998fd932ddd
-      internalID: -4485808478648860706
+      spriteID: ae88676d98447db44bedea56d83c3e77
+      internalID: -8853646601897713215
       vertices: []
       indices: 
       edges: []
