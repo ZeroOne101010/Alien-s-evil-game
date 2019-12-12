@@ -110,18 +110,18 @@ TextureImporter:
       name: Planets 1_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 4064
-        width: 4995
-        height: 4923
-      alignment: 9
-      pivot: {x: 0.44963822, y: 0.5364987}
+        x: 0
+        y: 4226
+        width: 4951
+        height: 4800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccfb1de1115d6fe4db2d617bbc29528e
+      spriteID: 0d5908b6e3ef9d246b948a85b7897f52
       internalID: 733483781580332047
       vertices: []
       indices: 
@@ -131,18 +131,18 @@ TextureImporter:
       name: Planets 1_1
       rect:
         serializedVersion: 2
-        x: 7863
-        y: 5142
-        width: 3263
-        height: 3486
-      alignment: 9
-      pivot: {x: 0.62410295, y: 0.4811306}
-      border: {x: 0, y: 180, z: 0, w: 0}
+        x: 8067
+        y: 5512
+        width: 3059
+        height: 3078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7c80b9fa39d5504fbd3ddabe117adc8
+      spriteID: 312785d4b79a26c44b9639961a8797ba
       internalID: -6687850026126896634
       vertices: []
       indices: 
@@ -152,18 +152,18 @@ TextureImporter:
       name: Planets 1_2
       rect:
         serializedVersion: 2
-        x: 5743
+        x: 5814
         y: 0
-        width: 4025
-        height: 3719
+        width: 3749
+        height: 3567
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae88676d98447db44bedea56d83c3e77
+      spriteID: 81af53924e1b3774798b4b8791b5cf01
       internalID: -8853646601897713215
       vertices: []
       indices: 
