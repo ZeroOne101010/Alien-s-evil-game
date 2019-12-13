@@ -29,7 +29,7 @@ public class AIMonsterAttack : MonoBehaviour
         {
             if (animator != null)
                 animator.SetBool(attackAnimationBool, true);
-                print(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+                //print(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
                 hitBox.SetActive(true);
         }
         else
