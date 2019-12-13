@@ -4,21 +4,25 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class SelectLevel : MonoBehaviour
 {
     public GameObject BlackoutScreen;
     public string Scene;
     private void Update()
     {
-        LoadSelectLevel();
-        Debug.Log(BlackoutScreen.GetComponent<Image>().color.a);
+        LoadLevel();
     }
-    public void LoadSelectLevel()
+    public void LoadLevel()
     {
         if (BlackoutScreen.GetComponent<Image>().color.a >= 1)
         {
-            Debug.Log("Соси писюн");
             SceneManager.LoadScene(Scene, LoadSceneMode.Single);
         }
+    }
+    public void Quit()
+    {
+        Debug.Log("QUIT!");
+        Application.Quit();
     }
 }
