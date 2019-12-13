@@ -409,6 +409,7 @@ GameObject:
   - component: {fileID: 459464171}
   - component: {fileID: 459464170}
   - component: {fileID: 459464169}
+  - component: {fileID: 459464172}
   m_Layer: 5
   m_Name: Earth
   m_TagString: Untagged
@@ -500,8 +501,8 @@ MonoBehaviour:
           m_StringArgument: CloseMenu
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadRandomLevel
+      - m_Target: {fileID: 459464172}
+        m_MethodName: Load_Random_Level
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -548,6 +549,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459464167}
   m_CullTransparentMesh: 0
+--- !u!114 &459464172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459464167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3de29cacb890a419f9534d13e56242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlackoutScreen: {fileID: 434258503}
+  scenes:
+  - Summer
+  - Winter
 --- !u!1 &678944122
 GameObject:
   m_ObjectHideFlags: 0
