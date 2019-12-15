@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 178543335}
   - component: {fileID: 178543334}
   m_Layer: 0
-  m_Name: Portal
+  m_Name: PortalTexture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1009,7 +1009,7 @@ Transform:
   m_LocalScale: {x: 0.608, y: 0.608, z: 0.608}
   m_Children: []
   m_Father: {fileID: 579176730}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &253731700
 GameObject:
@@ -2171,8 +2171,10 @@ Transform:
   m_LocalPosition: {x: 11.393051, y: -0.43247566, z: 80.91016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1811839446}
   - {fileID: 178543335}
+  - {fileID: 1811839446}
+  - {fileID: 1405409953}
+  - {fileID: 912875293}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3416,6 +3418,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &912875291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912875293}
+  - component: {fileID: 912875292}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &912875292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912875291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd3584f5bc29de4ea1d0e0fc798249d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrefabOfMonster:
+  - {fileID: 3238056971883679245, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
+  CountOfMonster: 0
+  TimeOfSpawn: 0
+--- !u!4 &912875293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912875291}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.053051, y: 1.8724757, z: -69.5918}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 579176730}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &914848085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4943,6 +4992,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1405409951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1405409953}
+  - component: {fileID: 1405409952}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1405409952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405409951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd3584f5bc29de4ea1d0e0fc798249d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrefabOfMonster:
+  - {fileID: 3238056971883679245, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
+  CountOfMonster: 3
+  TimeOfSpawn: 3
+--- !u!4 &1405409953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405409951}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.856949, y: 1.8724757, z: -69.5918}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 579176730}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1423103085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6340,9 +6436,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1811839446}
   - component: {fileID: 1811839445}
-  - component: {fileID: 1811839447}
   m_Layer: 0
-  m_Name: Portal
+  m_Name: PortalTexture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6410,23 +6505,8 @@ Transform:
   m_LocalScale: {x: 0.608, y: 0.608, z: 0.608}
   m_Children: []
   m_Father: {fileID: 579176730}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1811839447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811839444}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18dbe9d91bc91e342836a2805ba5efaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeOfEnemy:
-  - {fileID: 3238056971883679245, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
-  CountOfEnemy: 1
 --- !u!1 &1813507147
 GameObject:
   m_ObjectHideFlags: 0
