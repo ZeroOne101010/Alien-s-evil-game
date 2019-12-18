@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 454210698}
   - component: {fileID: 454210697}
   - component: {fileID: 454210696}
+  - component: {fileID: 454210699}
   m_Layer: 5
   m_Name: Mars
   m_TagString: Untagged
@@ -368,7 +369,7 @@ RectTransform:
   m_GameObject: {fileID: 454210694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35388, y: 0.35388, z: 0.36039138}
+  m_LocalScale: {x: 0.35388, y: 0.35388, z: 0.3603914}
   m_Children: []
   m_Father: {fileID: 678944126}
   m_RootOrder: 2
@@ -458,6 +459,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454210694}
   m_CullTransparentMesh: 0
+--- !u!95 &454210699
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454210694}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ba7100ead09f15419b7cc2acf0c8592, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &459464167
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +491,7 @@ GameObject:
   - component: {fileID: 459464170}
   - component: {fileID: 459464169}
   - component: {fileID: 459464172}
+  - component: {fileID: 459464173}
   m_Layer: 5
   m_Name: Earth
   m_TagString: Untagged
@@ -626,6 +647,25 @@ MonoBehaviour:
   scenes:
   - Summer
   - Winter
+--- !u!95 &459464173
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459464167}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 537b63b73924bab4b9dd019df06bd805, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &678944122
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +743,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &678944126
 RectTransform:
@@ -740,6 +780,7 @@ GameObject:
   - component: {fileID: 1325342431}
   - component: {fileID: 1325342430}
   - component: {fileID: 1325342429}
+  - component: {fileID: 1325342432}
   m_Layer: 5
   m_Name: Sun
   m_TagString: Untagged
@@ -845,6 +886,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325342427}
   m_CullTransparentMesh: 0
+--- !u!95 &1325342432
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325342427}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e36a5ec9e5ea164eb8047143f6af2d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1865683564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +1122,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 2485df8f6d449184f87e438b051baf5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
