@@ -24,7 +24,6 @@ public class LoadRandomLevel : MonoBehaviour
         if (BlackoutScreen.GetComponent<Image>().color.a >= 1)
         {
             temp = Random.Range(0, scenes.Length);
-            Debug.Log(temp);
             SceneManager.LoadScene(scenes[temp], LoadSceneMode.Single);
         }
 

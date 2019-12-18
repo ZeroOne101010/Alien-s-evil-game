@@ -2837,7 +2837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &726160443
 Transform:
   m_ObjectHideFlags: 0
@@ -7601,6 +7601,11 @@ PrefabInstance:
       propertyPath: jumpButton
       value: 
       objectReference: {fileID: 924373091}
+    - target: {fileID: 7982611416185467135, guid: 31038095cac421841bc27fb7ce916fb9,
+        type: 3}
+      propertyPath: jumpForce
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31038095cac421841bc27fb7ce916fb9, type: 3}
 --- !u!1001 &1709268460366301140
