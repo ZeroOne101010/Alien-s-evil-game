@@ -7,6 +7,8 @@ public class EnemySpawn : MonoBehaviour
     public static int CountTypesOfMonsters;
     public GameObject[] PrefabOfMonster = new GameObject[CountTypesOfMonsters];
     public int CountOfMonster;
+    public static int Count;
+    public int[] SequanceOfMonster = new int[Count];
     public int TimeOfSpawn;
 
     // Start is called before the first frame update
@@ -19,7 +21,7 @@ public class EnemySpawn : MonoBehaviour
         for(int i = 0; i < CountOfMonster; i++)
         {
             yield return new WaitForSeconds(TimeOfSpawn);
-            Instantiate(PrefabOfMonster[0], new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            Instantiate(PrefabOfMonster[SequanceOfMonster[i]], new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
             
         }
     }

@@ -6,6 +6,7 @@ public class AIMoveToObject : MonoBehaviour
 {
 
     public GameObject trackedObj;
+    public string tag;
     private float trackSpeed;
     public bool lookAtRight;
     public float offestToObj;
@@ -14,6 +15,8 @@ public class AIMoveToObject : MonoBehaviour
 
     public void Start()
     {
+        tag = "Player";
+        trackedObj = GameObject.FindWithTag(tag);
         animator = gameObject.GetComponent<Animator>();
         rigid = gameObject.GetComponent<Rigidbody2D>();
         trackSpeed = GetComponent<Entity>().speedMove;

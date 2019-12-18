@@ -7,6 +7,7 @@ public class AIMonsterAttack : MonoBehaviour
     private Animator animator;
     public GameObject obj;
     public GameObject hitBox;
+    public string tag;
     public float offestToObj;
     public float attackSpeed;
     private float timer;
@@ -15,6 +16,8 @@ public class AIMonsterAttack : MonoBehaviour
     {
         //hitBox.SetActive(false);
         animator = gameObject.GetComponent<Animator>();
+        tag = "Player";
+        obj = GameObject.FindWithTag(tag);
     }
 
     void Update()

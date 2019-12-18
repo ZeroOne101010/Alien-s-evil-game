@@ -1326,6 +1326,11 @@ PrefabInstance:
       propertyPath: trackedObj
       value: 
       objectReference: {fileID: 1511966650}
+    - target: {fileID: 4826310265347382950, guid: ebc8264d0ca838d49ba6a26928b0c079,
+        type: 3}
+      propertyPath: tag
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 788482256, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
       propertyPath: obj
       value: 
@@ -3449,8 +3454,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabOfMonster:
   - {fileID: 3238056971883679245, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
-  CountOfMonster: 0
-  TimeOfSpawn: 0
+  CountOfMonster: 3
+  SequanceOfMonster: 000000000000000000000000
+  TimeOfSpawn: 3
 --- !u!4 &912875293
 Transform:
   m_ObjectHideFlags: 0
@@ -5024,6 +5030,7 @@ MonoBehaviour:
   PrefabOfMonster:
   - {fileID: 3238056971883679245, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
   CountOfMonster: 3
+  SequanceOfMonster: 000000000000000000000000
   TimeOfSpawn: 3
 --- !u!4 &1405409953
 Transform:
@@ -7302,11 +7309,6 @@ PrefabInstance:
       propertyPath: jumpButton
       value: 
       objectReference: {fileID: 924373091}
-    - target: {fileID: 7982611416185467135, guid: 31038095cac421841bc27fb7ce916fb9,
-        type: 3}
-      propertyPath: jumpForce
-      value: 28
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31038095cac421841bc27fb7ce916fb9, type: 3}
 --- !u!1001 &1709268460366301140
@@ -7651,6 +7653,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 7818280492208290419, guid: c3d970721c03c20498524f8fdd3743e2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 220.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818280492208290419, guid: c3d970721c03c20498524f8fdd3743e2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 17655
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d970721c03c20498524f8fdd3743e2, type: 3}
 --- !u!1001 &7824517490830726866
