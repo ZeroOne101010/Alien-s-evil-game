@@ -390,7 +390,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ff53bce3f9e4e4ca595b44502d1027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackedObj: {fileID: 0}
+  trackedObj: {fileID: 3479953839799596892, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
+    type: 3}
+  tag: 
   lookAtRight: 0
   offestToObj: 1
 --- !u!114 &788482256
@@ -405,8 +407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e845f3c7478c84cb21d2d4b18360e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
+  obj: {fileID: 3479953839799596892, guid: c4a378fa9da1cd24aa3f8bf344ce3428, type: 3}
   hitBox: {fileID: 1859613622815156715}
+  tag: 
   offestToObj: 1
   attackSpeed: 1.5
 --- !u!1 &3635677702266656646

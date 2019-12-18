@@ -15,8 +15,8 @@ public class AIMoveToObject : MonoBehaviour
 
     public void Start()
     {
-        tag = "Player";
-        trackedObj = GameObject.FindWithTag(tag);
+        //tag = "Player";
+        //trackedObj = GameObject.FindWithTag(tag);
         animator = gameObject.GetComponent<Animator>();
         rigid = gameObject.GetComponent<Rigidbody2D>();
         trackSpeed = GetComponent<Entity>().speedMove;
