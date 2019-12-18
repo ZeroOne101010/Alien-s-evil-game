@@ -6,7 +6,7 @@ public class AIMoveToObject : MonoBehaviour
 {
 
     public GameObject trackedObj;
-    public string tag;
+    //public string tag;
     private float trackSpeed;
     public bool lookAtRight;
     public float offestToObj;
@@ -29,7 +29,8 @@ public class AIMoveToObject : MonoBehaviour
 
     public void Tracking(string moveAnimationBool, float offestToObj)
     {
-        float trackedObjWidth = trackedObj.GetComponent<SpriteRenderer>().bounds.max.x - trackedObj.GetComponent<SpriteRenderer>().bounds.min.x;
+        //float trackedObjWidth = trackedObj.GetComponent<SpriteRenderer>().bounds.max.x - trackedObj.GetComponent<SpriteRenderer>().bounds.min.x;
+        float trackedObjWidth = trackedObj.GetComponent<Collider2D>().bounds.max.x - trackedObj.GetComponent<Collider2D>().bounds.min.x;
 
         if (transform.position.x > trackedObj.transform.position.x - (trackedObjWidth / 2) - offestToObj & transform.position.x < trackedObj.transform.position.x + (trackedObjWidth / 2) + offestToObj)
         {
