@@ -7,7 +7,7 @@ public class ManagerOfBox : MonoBehaviour
     System.Random rnd = new System.Random();
     public int TimeOfSpawn;
     public GameObject BoxWithGun;
-    int x;
+    private int x;
     // Start is called before the first frame update
     void Start()
     {

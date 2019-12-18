@@ -6,7 +6,7 @@ public class DropFromBox : MonoBehaviour
 {
     System.Random rnd = new System.Random();
     public GameObject[] GunsInBox = new GameObject[0];
-    int RandomGun;
+    private int RandomGun;
     void Start()
     {
         
