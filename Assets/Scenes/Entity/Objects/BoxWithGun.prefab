@@ -118,10 +118,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GunsInBox:
-  - {fileID: 1687333583722813129, guid: 316d338c703094040b8cc2aa46fe3671, type: 3}
-  - {fileID: 832498747109902480, guid: 0cb3ba0bd4b43f7438c9fadc55f7fb50, type: 3}
-  - {fileID: 2457091773909761717, guid: 36100caf61aec0042badbf7ae78c1bab, type: 3}
-  - {fileID: 34930771654755211, guid: b4b0574f5245efa459f5347ec2f6ca93, type: 3}
+  - {fileID: 8624940099769048450, guid: 316d338c703094040b8cc2aa46fe3671, type: 3}
+  - {fileID: 4024379303873304990, guid: 0cb3ba0bd4b43f7438c9fadc55f7fb50, type: 3}
+  - {fileID: 2992685285301105638, guid: 36100caf61aec0042badbf7ae78c1bab, type: 3}
+  - {fileID: 5362027826887581181, guid: b4b0574f5245efa459f5347ec2f6ca93, type: 3}
 --- !u!61 &614643438
 BoxCollider2D:
   m_ObjectHideFlags: 0

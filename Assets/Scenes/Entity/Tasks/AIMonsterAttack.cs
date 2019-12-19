@@ -7,7 +7,7 @@ public class AIMonsterAttack : MonoBehaviour
     private Animator animator;
     public GameObject obj;
     public GameObject hitBox;
-    //public string tag;
+    public string tag;
     public float offestToObj;
     public float attackSpeed;
     private float timer;
@@ -16,8 +16,8 @@ public class AIMonsterAttack : MonoBehaviour
     {
         //hitBox.SetActive(false);
         animator = gameObject.GetComponent<Animator>();
-        //tag = "Player";
-        //obj = GameObject.FindWithTag(tag);
+        tag = "Player";
+        obj = GameObject.FindWithTag(tag);
     }
 
     void Update()
@@ -27,7 +27,6 @@ public class AIMonsterAttack : MonoBehaviour
     public void AttackHero(string attackAnimationBool, float offset)
     {
         animator.speed = attackSpeed;
-        //float objWidth = obj.GetComponent<SpriteRenderer>().bounds.max.x - obj.GetComponent<SpriteRenderer>().bounds.min.x;
         float objWidth = obj.GetComponent<Collider2D>().bounds.max.x - obj.GetComponent<Collider2D>().bounds.min.x;
         print(objWidth);
         if(transform.position.x > obj.transform.position.x - (objWidth / 2) - offset & transform.position.x < obj.transform.position.x + (objWidth / 2) + offset)

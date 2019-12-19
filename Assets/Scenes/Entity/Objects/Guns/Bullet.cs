@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    Rigidbody2D rigid;
-    public float speed;
-    // Start is called before the first frame update
+    public int speed;
     void Start()
     {
-        rigid = GetComponent<Rigidbody2D>();
-        rigid.AddRelativeForce(Vector2.right,ForceMode2D.Impulse);
+        // уничтожить объект по истечению указанного времени (секунд), если пуля никуда не попала
+        Destroy(gameObject, 20);
+    }
+    private void Update()
+    {
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

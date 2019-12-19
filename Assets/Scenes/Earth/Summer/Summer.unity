@@ -1262,15 +1262,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 788482256, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
-      propertyPath: obj
-      value: 
-      objectReference: {fileID: 1010689140}
     - target: {fileID: 3238056971883679245, guid: ebc8264d0ca838d49ba6a26928b0c079,
         type: 3}
       propertyPath: m_Name
       value: Bingo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 788482256, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
+      propertyPath: obj
+      value: 
+      objectReference: {fileID: 1010689140}
     - target: {fileID: 3926274125483521157, guid: ebc8264d0ca838d49ba6a26928b0c079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1331,11 +1331,6 @@ PrefabInstance:
       propertyPath: trackedObj
       value: 
       objectReference: {fileID: 1010689140}
-    - target: {fileID: 4826310265347382950, guid: ebc8264d0ca838d49ba6a26928b0c079,
-        type: 3}
-      propertyPath: tag
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
 --- !u!1 &339160522
@@ -7131,6 +7126,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5478287375322531492, guid: f02a429cb596c2142964a6c4e4339939,
+        type: 3}
+      propertyPath: m_Name
+      value: Islands_4
+      objectReference: {fileID: 0}
     - target: {fileID: 1510148891558835692, guid: f02a429cb596c2142964a6c4e4339939,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7185,11 +7185,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478287375322531492, guid: f02a429cb596c2142964a6c4e4339939,
-        type: 3}
-      propertyPath: m_Name
-      value: Islands_4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -8813694171376655381, guid: f02a429cb596c2142964a6c4e4339939, type: 3}
@@ -7271,6 +7266,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6362121156814633395, guid: 48560abc70920514892ca72579a87ef3,
+        type: 3}
+      propertyPath: m_Name
+      value: Islands_1
+      objectReference: {fileID: 0}
     - target: {fileID: 5283500765940163573, guid: 48560abc70920514892ca72579a87ef3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7326,11 +7326,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6362121156814633395, guid: 48560abc70920514892ca72579a87ef3,
-        type: 3}
-      propertyPath: m_Name
-      value: Islands_1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -9150650848636380946, guid: 48560abc70920514892ca72579a87ef3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 48560abc70920514892ca72579a87ef3, type: 3}
@@ -7344,6 +7339,11 @@ PrefabInstance:
     - target: {fileID: 3479953839799596892, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479953839799596892, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3479953839799596882, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
@@ -7401,6 +7401,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3479953839799596880, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.64
+      objectReference: {fileID: 0}
     - target: {fileID: 3479953839799596894, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
         type: 3}
       propertyPath: joystick
@@ -7420,6 +7425,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3987299590140157270, guid: e60bef9a9dfc31346bd0cdacb9da4c55,
+        type: 3}
+      propertyPath: m_Name
+      value: Island
+      objectReference: {fileID: 0}
     - target: {fileID: -3135551297922349553, guid: e60bef9a9dfc31346bd0cdacb9da4c55,
         type: 3}
       propertyPath: m_Offset.y
@@ -7484,11 +7494,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3987299590140157270, guid: e60bef9a9dfc31346bd0cdacb9da4c55,
-        type: 3}
-      propertyPath: m_Name
-      value: Island
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -6087528082827085220, guid: e60bef9a9dfc31346bd0cdacb9da4c55, type: 3}
@@ -7639,6 +7644,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5332661024172627765, guid: 36f5caea4d00ba8418ce4399cfdac6f4,
+        type: 3}
+      propertyPath: m_Name
+      value: Island
+      objectReference: {fileID: 0}
     - target: {fileID: -7185247351357913986, guid: 36f5caea4d00ba8418ce4399cfdac6f4,
         type: 3}
       propertyPath: m_Offset.y
@@ -7648,11 +7658,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 3.1747189
-      objectReference: {fileID: 0}
-    - target: {fileID: 5332661024172627765, guid: 36f5caea4d00ba8418ce4399cfdac6f4,
-        type: 3}
-      propertyPath: m_Name
-      value: Island
       objectReference: {fileID: 0}
     - target: {fileID: 8014104179766641492, guid: 36f5caea4d00ba8418ce4399cfdac6f4,
         type: 3}
@@ -7719,6 +7724,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8986513507950788612, guid: dcffbc16cfc3b0e4785aca3bfd20d9ed,
+        type: 3}
+      propertyPath: m_Name
+      value: Islands_3
+      objectReference: {fileID: 0}
     - target: {fileID: 8758182282018658663, guid: dcffbc16cfc3b0e4785aca3bfd20d9ed,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7774,11 +7784,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8986513507950788612, guid: dcffbc16cfc3b0e4785aca3bfd20d9ed,
-        type: 3}
-      propertyPath: m_Name
-      value: Islands_3
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4765474286057982955, guid: dcffbc16cfc3b0e4785aca3bfd20d9ed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dcffbc16cfc3b0e4785aca3bfd20d9ed, type: 3}
@@ -7789,6 +7794,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1508764838349043766, guid: 3f22be39f5057e844adb302b40853c30,
+        type: 3}
+      propertyPath: m_Name
+      value: Island
+      objectReference: {fileID: 0}
     - target: {fileID: -4257218082013296553, guid: 3f22be39f5057e844adb302b40853c30,
         type: 3}
       propertyPath: m_Size.y
@@ -7798,11 +7808,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.y
       value: -0.1043694
-      objectReference: {fileID: 0}
-    - target: {fileID: 1508764838349043766, guid: 3f22be39f5057e844adb302b40853c30,
-        type: 3}
-      propertyPath: m_Name
-      value: Island
       objectReference: {fileID: 0}
     - target: {fileID: 7435602943880613374, guid: 3f22be39f5057e844adb302b40853c30,
         type: 3}
