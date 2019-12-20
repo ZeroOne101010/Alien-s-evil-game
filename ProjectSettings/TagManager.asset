@@ -8,6 +8,9 @@ TagManager:
   - jumpbutton
   - hurtbox
   - hitbox
+  - Dull
+  - Pull
+  - BigDull
   layers:
   - Default
   - TransparentFX

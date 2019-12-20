@@ -18,4 +18,11 @@ public class DestroyGun : MonoBehaviour
         yield return new WaitForSeconds(TimeOfDestroy);
         Destroy(gameObject);
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

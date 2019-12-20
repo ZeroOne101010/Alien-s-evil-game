@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2187478866540874258}
   - component: {fileID: 382787003084985950}
-  - component: {fileID: 3749516450787548405}
-  - component: {fileID: -69495569642961185}
+  - component: {fileID: 4099643951288207493}
   - component: {fileID: 7215174624427983661}
   m_Layer: 0
   m_Name: Dull
-  m_TagString: Untagged
+  m_TagString: Dull
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3749516450787548405
+--- !u!114 &4099643951288207493
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,18 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeOfDestroy: 10
---- !u!114 &-69495569642961185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4024379303873304990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61cb24c3a46f60d498f81c72f15ee059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &7215174624427983661
 BoxCollider2D:
   m_ObjectHideFlags: 0

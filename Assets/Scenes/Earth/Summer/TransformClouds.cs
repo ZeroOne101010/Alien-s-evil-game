@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TakeGun : MonoBehaviour
+public class TransformClouds : MonoBehaviour
 {
+    public float speed = 3;
+    public Vector2 direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,13 +15,6 @@ public class TakeGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
+        transform.Translate(direction * speed * Time.deltaTime);
     }
 }

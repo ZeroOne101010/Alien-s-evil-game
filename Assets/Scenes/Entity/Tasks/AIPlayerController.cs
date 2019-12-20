@@ -35,28 +35,35 @@ public class AIPlayerController : MonoBehaviour
         jump(false);
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
+            
             if (rigid != null)
             {
                 rigid.velocity = new Vector2(speed, rigid.velocity.y);
+                
             }
             else
             {
                 gameObject.transform.position += new Vector3(speed, 0, 0);
+                
             }
-            gameObject.transform.localScale = new Vector3(1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
+            
             if (rigid != null)
             {
                 rigid.velocity = new Vector2(-speed, rigid.velocity.y);
+                
             }
             else
             {
+                
                 gameObject.transform.position += new Vector3(-speed, 0, 0);
             }
-            gameObject.transform.localScale = new Vector3(-1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-        }else if (joystick != null)
+            transform.rotation = new Quaternion(0, 180, 0, 0);
+        }
+        else if (joystick != null)
         {
             if(joystick.GetComponent<JoyStick>().inputVector.x != 0);
             {
@@ -127,4 +134,5 @@ public class AIPlayerController : MonoBehaviour
         }
         
     }
+    
 }

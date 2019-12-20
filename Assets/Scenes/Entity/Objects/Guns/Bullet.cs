@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         // уничтожить объект по истечению указанного времени (секунд), если пуля никуда не попала
-        Destroy(gameObject, 20);
+        Destroy(gameObject, 10);
     }
     private void Update()
     {
