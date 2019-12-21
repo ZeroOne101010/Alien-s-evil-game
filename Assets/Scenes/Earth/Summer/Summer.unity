@@ -3077,6 +3077,7 @@ GameObject:
   - component: {fileID: 745493854}
   - component: {fileID: 745493856}
   - component: {fileID: 745493855}
+  - component: {fileID: 745493857}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -3140,6 +3141,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gun:
+  - {fileID: 1314400424}
+  - {fileID: 911806748}
+  - {fileID: 325193685}
+--- !u!114 &745493857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745493853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83a34685e981d346b1475397943f5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Guns:
   - {fileID: 1314400424}
   - {fileID: 911806748}
   - {fileID: 325193685}
@@ -8121,7 +8138,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 745493857}
     - target: {fileID: 7818280491231176493, guid: c3d970721c03c20498524f8fdd3743e2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -8130,7 +8147,7 @@ PrefabInstance:
     - target: {fileID: 7818280491231176493, guid: c3d970721c03c20498524f8fdd3743e2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Shoot
+      value: Shot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d970721c03c20498524f8fdd3743e2, type: 3}
