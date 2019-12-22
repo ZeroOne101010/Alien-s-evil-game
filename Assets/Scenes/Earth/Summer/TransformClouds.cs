@@ -9,7 +9,7 @@ public class TransformClouds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 20);
+        Destroy(gameObject, 30);
     }
 
     // Update is called once per frame

@@ -396,7 +396,7 @@ MonoBehaviour:
   - {fileID: 4247655618250462908, guid: 8f6086b0ee3d7db4882d2a15b37863ec, type: 3}
   - {fileID: 8188684485815557816, guid: 6ffd3da0880faa84bbe515bd229903bf, type: 3}
   - {fileID: 9101337900935393202, guid: ab6ab7981d571f844b000762cf9f6900, type: 3}
-  TimeOfSpawn: 5
+  TimeOfSpawn: 3
 --- !u!4 &56958439
 Transform:
   m_ObjectHideFlags: 0
@@ -1312,6 +1312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 309500488}
+  - component: {fileID: 309500489}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -1333,6 +1334,20 @@ Transform:
   m_Father: {fileID: 325193687}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &309500489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309500487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b9c68c5c2c4504db817f930dcb3e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPref: {fileID: 6252644710568568825, guid: 3df1b703d3ff34341b2fe4e46b7d90af,
+    type: 3}
 --- !u!1 &325193685
 GameObject:
   m_ObjectHideFlags: 0
@@ -7082,6 +7097,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1843972718}
+  - component: {fileID: 1843972719}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -7103,6 +7119,20 @@ Transform:
   m_Father: {fileID: 1314400425}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1843972719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843972717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b9c68c5c2c4504db817f930dcb3e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPref: {fileID: 4060188406607896239, guid: 493f2bab6e51e3e48a16e3640fb85650,
+    type: 3}
 --- !u!1 &1904444082
 GameObject:
   m_ObjectHideFlags: 0
@@ -7424,6 +7454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2113364855}
+  - component: {fileID: 2113364856}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -7445,6 +7476,20 @@ Transform:
   m_Father: {fileID: 911806750}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2113364856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113364854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b9c68c5c2c4504db817f930dcb3e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPref: {fileID: 5658069527011174322, guid: f17863f706dd67c4eaaac3f2a6976b3f,
+    type: 3}
 --- !u!1 &2135935350
 GameObject:
   m_ObjectHideFlags: 0

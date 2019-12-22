@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     public GameObject[] Guns = new GameObject[3];
-    Transform FirePoint;
+    FirePoint FirePoint;
     private void Update()
     {
         
@@ -16,9 +16,8 @@ public class Shoot : MonoBehaviour
         {
             if (element.active == true)
             {
-                FirePoint = GetComponentInChildren<Transform>();
-                print(FirePoint.transform.position.x);
-                print(FirePoint.transform.position.y);
+                    FirePoint = element.GetComponentInChildren<FirePoint>();
+                    FirePoint.Shoot();
             }
         }
     }
