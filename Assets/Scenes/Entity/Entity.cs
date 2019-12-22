@@ -7,6 +7,7 @@ public class Entity : MonoBehaviour
 
     public Vector2 size;
     public float speedMove;
+    public int health;
 
     void Start()
     {
@@ -16,7 +17,14 @@ public class Entity : MonoBehaviour
 
     void Update()
     {
-
+        Death();
+    }
+    void Death()
+    {
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 

@@ -378,6 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
   speedMove: 5
+  health: 100
 --- !u!114 &4826310265347382950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,6 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 0}
   hitBox: {fileID: 1859613622815156715}
+  tag: 
   offestToObj: 1
   attackSpeed: 1.5
 --- !u!1 &3635677702266656646

@@ -11,17 +11,13 @@ public class AIPlayerController : MonoBehaviour
     private float speed;
     public float jumpForce;
     public GameObject joystick;
-    public GameObject jumpButton;
     private Rigidbody2D rigid;
     public bool boool;
 
     public void Start()
     {
         joystick = GameObject.FindGameObjectWithTag("joystick");
-        jumpButton = GameObject.FindGameObjectWithTag("jumpbutton");
         rigid = gameObject.GetComponent<Rigidbody2D>();
-        if (jumpButton != null)
-            jumpButton.GetComponent<Button>().onClick.AddListener(jumpForListener);
         speed = GetComponent<Entity>().speedMove;
     }
 

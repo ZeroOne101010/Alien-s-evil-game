@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8869220469004578529}
   - component: {fileID: -8421037796438956751}
   - component: {fileID: -248000768834884244}
+  - component: {fileID: -7832741090466230571}
   m_Layer: 0
   m_Name: BulletForPull
   m_TagString: Untagged
@@ -116,4 +117,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4421199501ad6e947a29fba3ff72ca9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
   speed: 35
+--- !u!61 &-7832741090466230571
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5658069527011174322}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.75, y: 1.7104176}
+    newSize: {x: 19.16, y: 1.7104176}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.75, y: 1.7104176}
+  m_EdgeRadius: 0
