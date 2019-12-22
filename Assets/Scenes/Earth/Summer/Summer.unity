@@ -1446,6 +1446,10 @@ PrefabInstance:
       propertyPath: obj
       value: 
       objectReference: {fileID: 1010689140}
+    - target: {fileID: 788482256, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3926274125483521157, guid: ebc8264d0ca838d49ba6a26928b0c079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1506,20 +1510,14 @@ PrefabInstance:
       propertyPath: trackedObj
       value: 
       objectReference: {fileID: 1010689140}
-    - target: {fileID: 4407901099601142929, guid: ebc8264d0ca838d49ba6a26928b0c079,
+    - target: {fileID: 1859613622815156715, guid: ebc8264d0ca838d49ba6a26928b0c079,
         type: 3}
-      propertyPath: m_LocalPosition.z
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2026165246690975746, guid: ebc8264d0ca838d49ba6a26928b0c079,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5445283515432218262, guid: ebc8264d0ca838d49ba6a26928b0c079,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 421392001, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
+      propertyPath: hittedObj
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
@@ -3870,8 +3868,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabOfMonster:
   - {fileID: 3238056971883679245, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
-  CountOfMonster: 1
-  SequanceOfMonster: 00000000
+  CountOfMonster: 0
+  SequanceOfMonster: 
   TimeOfSpawn: 7
 --- !u!4 &912875293
 Transform:
@@ -5471,8 +5469,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabOfMonster:
   - {fileID: 3238056971883679245, guid: ebc8264d0ca838d49ba6a26928b0c079, type: 3}
-  CountOfMonster: 1
-  SequanceOfMonster: 00000000
+  CountOfMonster: 0
+  SequanceOfMonster: 
   TimeOfSpawn: 7
 --- !u!4 &1405409953
 Transform:
@@ -7497,7 +7495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113364854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.798, y: 0.017, z: -0.14886096}
+  m_LocalPosition: {x: 1.149, y: 0.017, z: -0.14886096}
   m_LocalScale: {x: 0.88495576, y: 0.88495576, z: 0.88495576}
   m_Children: []
   m_Father: {fileID: 911806750}
@@ -7746,8 +7744,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1997123200434719701, guid: f02a429cb596c2142964a6c4e4339939,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -8813694171376655381, guid: f02a429cb596c2142964a6c4e4339939, type: 3}
+    - {fileID: -1997123200434719701, guid: f02a429cb596c2142964a6c4e4339939, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f02a429cb596c2142964a6c4e4339939, type: 3}
 --- !u!1001 &1709268460366301140
 PrefabInstance:
@@ -8315,6 +8319,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4206749226439692452, guid: 36f5caea4d00ba8418ce4399cfdac6f4,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 974961105026214428, guid: 36f5caea4d00ba8418ce4399cfdac6f4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 36f5caea4d00ba8418ce4399cfdac6f4, type: 3}
@@ -8464,6 +8473,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471879411082185404, guid: 3f22be39f5057e844adb302b40853c30,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f22be39f5057e844adb302b40853c30, type: 3}

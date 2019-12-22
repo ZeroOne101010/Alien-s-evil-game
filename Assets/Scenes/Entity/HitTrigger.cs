@@ -26,7 +26,7 @@ public class HitTrigger : MonoBehaviour
                 if (collision.transform.parent.GetComponent<ObjectInformation>() != null)
                     if (collision.transform.parent.GetComponent<ObjectInformation>().whoIsIt == "player")
                     {
-                        //print("hit");
+                        print("hit");
                     }
             }
         }
