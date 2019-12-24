@@ -28,7 +28,6 @@ public class AIMonsterAttack : MonoBehaviour
     {
         animator.speed = attackSpeed;
         float objWidth = obj.GetComponent<Collider2D>().bounds.max.x - obj.GetComponent<Collider2D>().bounds.min.x;
-        print(objWidth);
         if(transform.position.x > obj.transform.position.x - (objWidth / 2) - offset & transform.position.x < obj.transform.position.x + (objWidth / 2) + offset)
         {
             if (animator != null)

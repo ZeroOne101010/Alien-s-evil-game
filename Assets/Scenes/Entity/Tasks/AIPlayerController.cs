@@ -12,13 +12,16 @@ public class AIPlayerController : MonoBehaviour
     public float jumpForce;
     public GameObject joystick;
     private Rigidbody2D rigid;
-    public bool boool;
+    public bool isRun = true;
+    public Animator animator;
 
     public void Start()
     {
         joystick = GameObject.FindGameObjectWithTag("joystick");
         rigid = gameObject.GetComponent<Rigidbody2D>();
         speed = GetComponent<Entity>().speedMove;
+        if (GetComponent<Animator>() != null)
+            animator = GetComponent<Animator>();
     }
 
     public void Update()
@@ -28,6 +31,8 @@ public class AIPlayerController : MonoBehaviour
 
     public void PlayerMove()
     {
+        if (GetComponent<Animator>() != null)
+            animator.SetBool("Run", isRun);
         jump(false);
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -43,6 +48,7 @@ public class AIPlayerController : MonoBehaviour
                 
             }
             transform.rotation = new Quaternion(0, 0, 0, 0);
+            isRun = true;
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
@@ -58,6 +64,7 @@ public class AIPlayerController : MonoBehaviour
                 gameObject.transform.position += new Vector3(-speed, 0, 0);
             }
             transform.rotation = new Quaternion(0, 180, 0, 0);
+            //isRun = true;
         }
         else if (joystick != null)
         {
@@ -74,6 +81,7 @@ public class AIPlayerController : MonoBehaviour
                 else if(rigid.velocity.x < -0.1f)
                     gameObject.transform.localScale = new Vector3(-1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
             }
+            //isRun = true;
         }
         else
         {
@@ -82,9 +90,9 @@ public class AIPlayerController : MonoBehaviour
                 if (rigid.velocity.y == 0)
                     rigid.velocity = new Vector2(0, rigid.velocity.y);
             }
+            isRun = false;
+            print("k");
         }
-
-
     }
     public void jumpForListener()
     {
