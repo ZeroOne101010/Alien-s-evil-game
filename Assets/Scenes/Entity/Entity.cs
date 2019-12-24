@@ -8,11 +8,7 @@ public class Entity : MonoBehaviour
     public Vector2 size;
     public float speedMove;
     public int health;
-
-    void Start()
-    {
-
-    }
+    public int damage;
 
 
     void Update()

@@ -122,7 +122,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 555734870091046141}
-  m_Father: {fileID: 3926274125483521157}
+  m_Father: {fileID: 4061525467268355042}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1632519673090921590
@@ -203,7 +203,7 @@ Transform:
   m_LocalPosition: {x: -0.017, y: 0.3090001, z: 23.14063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3926274125483521157}
+  m_Father: {fileID: 4061525467268355042}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3481772434308916452
@@ -264,13 +264,14 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3926274125483521157}
+  - component: {fileID: 4061525467268355042}
   - component: {fileID: 1946187389}
   - component: {fileID: 2010091737}
   - component: {fileID: 2010091738}
   - component: {fileID: 4127481226733171349}
   - component: {fileID: 4826310265347382950}
   - component: {fileID: 788482256}
+  - component: {fileID: 5482844163723710509}
   m_Layer: 0
   m_Name: Bingo
   m_TagString: Untagged
@@ -278,15 +279,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3926274125483521157
-Transform:
+--- !u!224 &4061525467268355042
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3238056971883679245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.45, y: 4.867031, z: -23.140625}
+  m_LocalPosition: {x: 0, y: 0, z: -23.140625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7632776058764289094}
@@ -298,6 +299,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3.45, y: 4.867031}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1946187389
 Animator:
   serializedVersion: 3
@@ -412,6 +418,56 @@ MonoBehaviour:
   tag: 
   offestToObj: 1
   attackSpeed: 1.5
+--- !u!114 &5482844163723710509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238056971883679245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 0}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3635677702266656646
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +496,7 @@ Transform:
   m_LocalPosition: {x: 0.066, y: -0.5609999, z: 23.14063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3926274125483521157}
+  m_Father: {fileID: 4061525467268355042}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9041579768812292459
@@ -522,7 +578,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5183256847572891009}
-  m_Father: {fileID: 3926274125483521157}
+  m_Father: {fileID: 4061525467268355042}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4465463627477934229
@@ -684,7 +740,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.31682158, z: 23.14063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3926274125483521157}
+  m_Father: {fileID: 4061525467268355042}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5338439948859615199
@@ -765,7 +821,7 @@ Transform:
   m_LocalPosition: {x: -0.101, y: -0.5609999, z: 23.14063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3926274125483521157}
+  m_Father: {fileID: 4061525467268355042}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7095843121066268382
