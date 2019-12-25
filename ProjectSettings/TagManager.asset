@@ -11,6 +11,7 @@ TagManager:
   - Dull
   - Pull
   - BigDull
+  - Manager
   layers:
   - Default
   - TransparentFX

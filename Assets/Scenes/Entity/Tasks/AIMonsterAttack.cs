@@ -7,7 +7,6 @@ public class AIMonsterAttack : MonoBehaviour
     private Animator animator;
     public GameObject obj;
     public GameObject hitBox;
-    public string tag;
     public float offestToObj;
     public float attackSpeed;
     private float timer;
