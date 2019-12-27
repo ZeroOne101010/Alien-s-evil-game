@@ -12,6 +12,7 @@ TagManager:
   - Pull
   - BigDull
   - Manager
+  - WeaponRegistoryManager
   layers:
   - Default
   - TransparentFX

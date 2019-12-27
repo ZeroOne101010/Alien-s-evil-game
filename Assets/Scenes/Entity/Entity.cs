@@ -44,15 +44,6 @@ public class Entity : MonoBehaviour
 
     void Animation()
     {
-        //if (GetComponent<Rigidbody2D>() != null)
-        //    if (GetComponent<Rigidbody2D>().velocity.x == 0)
-        //    {
-        //        animator.SetBool("Stay", true);
-        //    }
-        //    else
-        //    {
-        //        animator.SetBool("Stay", false);
-        //    }
     }
 
     public void OnTriggerStay2D(Collider2D collision)
