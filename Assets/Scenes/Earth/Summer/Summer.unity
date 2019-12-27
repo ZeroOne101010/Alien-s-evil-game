@@ -8648,6 +8648,11 @@ PrefabInstance:
       propertyPath: jumpButton
       value: 
       objectReference: {fileID: 924373091}
+    - target: {fileID: 3479953839799596894, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
+        type: 3}
+      propertyPath: nameAnimRun
+      value: Run
+      objectReference: {fileID: 0}
     - target: {fileID: 3479953839799596882, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
         type: 3}
       propertyPath: m_LocalPosition.x

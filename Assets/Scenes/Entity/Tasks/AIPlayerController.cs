@@ -12,8 +12,9 @@ public class AIPlayerController : MonoBehaviour
     public float jumpForce;
     public GameObject joystick;
     private Rigidbody2D rigid;
-    public bool isRun = true;
+    public bool isRun = false;
     public Animator animator;
+    public string nameAnimRun;
 
     public void Start()
     {
@@ -32,15 +33,14 @@ public class AIPlayerController : MonoBehaviour
     public void PlayerMove()
     {
         if (GetComponent<Animator>() != null)
-            animator.SetBool("Run", isRun);
+            animator.SetBool(nameAnimRun, isRun);
         jump(false);
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             
             if (rigid != null)
             {
-                rigid.velocity = new Vector2(speed, rigid.velocity.y);
-                
+                rigid.velocity = new Vector2(speed, rigid.velocity.y);          
             }
             else
             {
@@ -64,34 +64,39 @@ public class AIPlayerController : MonoBehaviour
                 gameObject.transform.position += new Vector3(-speed, 0, 0);
             }
             transform.rotation = new Quaternion(0, 180, 0, 0);
-            //isRun = true;
+            isRun = true;
         }
-        else if (joystick != null)
+        else if (joystick != null & joystick.GetComponent<JoyStick>().inputVector.x != 0)
         {
-            if(joystick.GetComponent<JoyStick>().inputVector.x != 0);
+            if (rigid != null)
             {
-                if (rigid != null)
-                    rigid.velocity = new Vector2(joystick.GetComponent<JoyStick>().inputVector.x * speed, rigid.velocity.y);
-                else
-                    gameObject.transform.position += new Vector3(-speed, 0, 0);
-
-
-                if (rigid.velocity.x > 0.1f)
-                    gameObject.transform.localScale = new Vector3(1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-                else if(rigid.velocity.x < -0.1f)
-                    gameObject.transform.localScale = new Vector3(-1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                rigid.velocity = new Vector2(joystick.GetComponent<JoyStick>().inputVector.x * speed, rigid.velocity.y);
             }
-            //isRun = true;
+            else
+                gameObject.transform.position += new Vector3(-speed, 0, 0);
+            if (rigid.velocity.x > 0.1f)
+            {
+                gameObject.transform.localScale = new Vector3(1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                isRun = true;
+            }
+
+            else if (rigid.velocity.x < -0.1f)
+            {
+                gameObject.transform.localScale = new Vector3(-1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+               isRun = true;
+            }
         }
         else
         {
             if (rigid != null)
             {
-                if (rigid.velocity.y == 0)
+                //if (rigid.velocity.y == 0)
+                //{
                     rigid.velocity = new Vector2(0, rigid.velocity.y);
+                    print("k");
+                //}
             }
             isRun = false;
-            print("k");
         }
     }
     public void jumpForListener()
