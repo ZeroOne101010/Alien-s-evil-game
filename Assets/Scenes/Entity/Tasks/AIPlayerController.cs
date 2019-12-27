@@ -15,6 +15,8 @@ public class AIPlayerController : MonoBehaviour
     public bool isRun = false;
     public Animator animator;
     public string nameAnimRun;
+    public string nameAnimVelocity;
+    public string groundAnimValue;
 
     public void Start()
     {
@@ -93,7 +95,6 @@ public class AIPlayerController : MonoBehaviour
                 //if (rigid.velocity.y == 0)
                 //{
                     rigid.velocity = new Vector2(0, rigid.velocity.y);
-                    print("k");
                 //}
             }
             isRun = false;
@@ -141,7 +142,15 @@ public class AIPlayerController : MonoBehaviour
                 }
             }
         }
-        
+        if (animator != null & rigid != null)
+        {
+            if (rigid.velocity.y == 0)
+                animator.SetBool(groundAnimValue, true);
+            else
+                animator.SetBool(groundAnimValue, false);
+            animator.SetFloat(nameAnimVelocity, rigid.velocity.y);
+        }
+               
     }
     
 }
