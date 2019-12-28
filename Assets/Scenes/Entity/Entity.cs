@@ -10,6 +10,7 @@ public class Entity : MonoBehaviour
     public Animator animator;
     public float health;
     public float damage;
+    public string TagOfGameEntity;
 
     public int teamId = -1;
 
@@ -26,20 +27,22 @@ public class Entity : MonoBehaviour
         if (GetComponent<Animator>() != null)
             animator = GetComponent<Animator>();
         Animation();
+        Death();
     }
     void Death()
     {
-        hashEntity.removeEntity(this);
-        Destroy(gameObject);
+        if (health <= 0)
+        {
+            hashEntity.removeEntity(this);
+            Destroy(gameObject);
+        }
+        
     }
 
     public void getDamage(float damage)
     {
         health -= damage;
-        if(health <= 0)
-        {
-            Death();
-        }
+        
     }
 
     void Animation()
