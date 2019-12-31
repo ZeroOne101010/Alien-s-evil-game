@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Earth/Summer/Summer.unity
+    path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/SelectPlanet/SelectPlanet.unity
@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Earth/Winter/Winter.unity
     guid: 4180f36f31d69f644a6c763774f29378
+  - enabled: 1
+    path: Assets/Scenes/Shop/Shop.unity
+    guid: 286d98afde4fc69488da61a41f19906f
+  - enabled: 1
+    path: Assets/Scenes/Earth/Summer/Summer.unity
+    guid: b51276b94991e224890c061258e71b19
   m_configObjects: {}
