@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TransformClouds : MonoBehaviour
 {
-    public float speed = 3;
+    System.Random rnd = new System.Random();
     public Vector2 direction;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,6 @@ public class TransformClouds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(direction * rnd.Next(1,3) * Time.deltaTime);
     }
 }

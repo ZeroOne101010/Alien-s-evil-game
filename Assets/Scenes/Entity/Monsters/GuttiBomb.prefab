@@ -118,7 +118,7 @@ Animator:
   m_GameObject: {fileID: 7835200725341142147}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef9eb68e87dbe2a49b42f6e5b127ef73, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -139,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccd627b75350c2429314c012804a2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
 --- !u!114 &144829332144889161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,9 +217,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
   speedMove: 5
-  animator: {fileID: 0}
+  animator: {fileID: 1324245971}
   health: 100
   damage: 0
+  countOfCoinFromDeath: 0
+  Coin: {fileID: 0}
   TagOfGameEntity: GuttiBomb
   teamId: -1
 --- !u!114 &1324245968
@@ -427,7 +428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7835200726284896687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.087, y: -0.465, z: -11.949219}
+  m_LocalPosition: {x: 0.087, y: -0.531, z: -11.949219}
   m_LocalScale: {x: 1.523, y: 1.523, z: 1.523}
   m_Children: []
   m_Father: {fileID: 147468183502253519}

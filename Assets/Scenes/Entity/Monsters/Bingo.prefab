@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1281479774422659166
 Transform:
   m_ObjectHideFlags: 0
@@ -272,6 +272,8 @@ GameObject:
   - component: {fileID: 4826310265347382950}
   - component: {fileID: 788482256}
   - component: {fileID: 5482844163723710509}
+  - component: {fileID: 43220749}
+  - component: {fileID: 43220750}
   m_Layer: 0
   m_Name: Bingo
   m_TagString: Untagged
@@ -384,7 +386,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
   speedMove: 5
+  animator: {fileID: 0}
   health: 100
+  damage: 10
+  countOfCoinFromDeath: 1
+  Coin: {fileID: 4881978641584754479, guid: 614ee818ad0bac0429ec1e2199d82063, type: 3}
+  TagOfGameEntity: 
+  teamId: -1
 --- !u!114 &4826310265347382950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,13 +400,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3238056971883679245}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4ff53bce3f9e4e4ca595b44502d1027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trackedObj: {fileID: 0}
   tag: Player
+  nameOfAnimation: 
   lookAtRight: 0
   offestToObj: 1
 --- !u!114 &788482256
@@ -408,14 +417,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3238056971883679245}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9e845f3c7478c84cb21d2d4b18360e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 0}
   hitBox: {fileID: 1859613622815156715}
-  tag: 
   offestToObj: 1
   attackSpeed: 1.5
 --- !u!114 &5482844163723710509
@@ -468,6 +476,52 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &43220749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238056971883679245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53236c12cec20cf4580a551960ed541a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTrigger:
+  - {fileID: 1562942311}
+  - {fileID: 1436248278}
+  attaking: 0
+  idAttack: -1
+  attackAnimationName:
+  - Attack
+  - Attack1
+  attackDamage:
+  - 1
+  - 2
+  attackProbably:
+  - 0.3
+  - 0.5
+  timeAttack:
+  - 40
+  - 40
+--- !u!114 &43220750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238056971883679245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b567834463af32b4cabfbf34be3249c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolAnimName: Run
+  distanceToTakeTarget: 10
+  isAttacking: 1
+  target: {fileID: 0}
+  isRight: 0
 --- !u!1 &3635677702266656646
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5183256847572891009}
   - component: {fileID: 5103812590236939866}
+  - component: {fileID: 1562942311}
   m_Layer: 0
   m_Name: Enemy_1 (2)
   m_TagString: Untagged
@@ -712,6 +767,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1562942311
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4512156968152124040}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.46494776, y: 0.18957704}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.9504379, y: 0.09318278}
+    oldSize: {x: 1.0322131, y: 0.466}
+    newSize: {x: 1.0322131, y: 0.466}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0322131, y: 0.46599996}
+  m_EdgeRadius: 0
 --- !u!1 &7988715519200736697
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,6 +965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 555734870091046141}
   - component: {fileID: 2567892534086421935}
+  - component: {fileID: 1436248278}
   m_Layer: 0
   m_Name: Enemy_1 (3)
   m_TagString: Untagged
@@ -956,3 +1038,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1436248278
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172630790828582602}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.46494776, y: 0.18957704}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.9504379, y: 0.09318278}
+    oldSize: {x: 1.0322131, y: 0.466}
+    newSize: {x: 1.0322131, y: 0.466}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0322131, y: 0.46599996}
+  m_EdgeRadius: 0
