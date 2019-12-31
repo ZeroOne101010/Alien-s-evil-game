@@ -7,6 +7,7 @@ public class AIMoveToObject : MonoBehaviour
 
     public GameObject trackedObj;
     public string tag;
+    public string nameOfAnimation;
     private float trackSpeed;
     public bool lookAtRight;
     public float offestToObj;
@@ -15,6 +16,7 @@ public class AIMoveToObject : MonoBehaviour
 
     public void Start()
     {
+        
         tag = "Player";
         trackedObj = GameObject.FindWithTag(tag);
         animator = gameObject.GetComponent<Animator>();
@@ -24,7 +26,7 @@ public class AIMoveToObject : MonoBehaviour
 
     public void Update()
     {
-        Tracking("MoveTrackObject", offestToObj);
+        Tracking(nameOfAnimation, offestToObj);
     }
 
     public void Tracking(string moveAnimationBool, float offestToObj)
@@ -54,12 +56,12 @@ public class AIMoveToObject : MonoBehaviour
                 {
                     gameObject.transform.position += new Vector3(-trackSpeed, 0);
                 }
-                gameObject.transform.localScale = new Vector3(1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
                 if (animator != null)
                 {
                     animator.SetBool(moveAnimationBool, true);
                     animator.speed = trackSpeed / 5;
                 }
+                gameObject.transform.localScale = new Vector3(1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
                 lookAtRight = false;
             }
             else if (gameObject.transform.position.x < trackedObj.transform.position.x)
@@ -72,12 +74,12 @@ public class AIMoveToObject : MonoBehaviour
                 {
                     gameObject.transform.position += new Vector3(trackSpeed, 0);
                 }
-                gameObject.transform.localScale = new Vector3(-1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
                 if (animator != null)
                 {
                     animator.SetBool(moveAnimationBool, true);
                     animator.speed = trackSpeed / 5;
                 }
+                gameObject.transform.localScale = new Vector3(-1, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
                 lookAtRight = true;
             }
             else

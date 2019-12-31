@@ -1594,12 +1594,12 @@ PrefabInstance:
     - target: {fileID: 4061525467268355042, guid: ebc8264d0ca838d49ba6a26928b0c079,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3.44
+      value: 2.13
       objectReference: {fileID: 0}
     - target: {fileID: 4061525467268355042, guid: ebc8264d0ca838d49ba6a26928b0c079,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -11.71
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 4127481226733171349, guid: ebc8264d0ca838d49ba6a26928b0c079,
         type: 3}
@@ -1610,6 +1610,17 @@ PrefabInstance:
         type: 3}
       propertyPath: teamId
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127481226733171349, guid: ebc8264d0ca838d49ba6a26928b0c079,
+        type: 3}
+      propertyPath: Coin
+      value: 
+      objectReference: {fileID: 4881978641584754479, guid: 614ee818ad0bac0429ec1e2199d82063,
+        type: 3}
+    - target: {fileID: 4127481226733171349, guid: ebc8264d0ca838d49ba6a26928b0c079,
+        type: 3}
+      propertyPath: countOfCoinFromDeath
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7632776058764289094, guid: ebc8264d0ca838d49ba6a26928b0c079,
         type: 3}
@@ -4372,6 +4383,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94a5f1ac6b64ef4f8430e75e4648912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1010689150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010689140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbfdb3e8b813a34fa4a6ef2ca781a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CountOfGetCoins: 0
 --- !u!1 &1059663552
 GameObject:
   m_ObjectHideFlags: 0
@@ -7553,7 +7577,7 @@ PrefabInstance:
     - target: {fileID: 8241602054985525442, guid: 1beeabfbf4448e04394e6d16b1ef2f40,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9210390468718169504, guid: 1beeabfbf4448e04394e6d16b1ef2f40,
         type: 3}
@@ -8172,12 +8196,12 @@ PrefabInstance:
     - target: {fileID: 3479953839799596882, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.21
+      value: -14.47
       objectReference: {fileID: 0}
     - target: {fileID: 3479953839799596882, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.33
+      value: 3.32
       objectReference: {fileID: 0}
     - target: {fileID: 3479953839799596882, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
         type: 3}
@@ -8233,6 +8257,24 @@ PrefabInstance:
       propertyPath: slide
       value: 
       objectReference: {fileID: 541909286}
+    - target: {fileID: 1010689148, guid: c4a378fa9da1cd24aa3f8bf344ce3428, type: 3}
+      propertyPath: weaponOffset.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010689148, guid: c4a378fa9da1cd24aa3f8bf344ce3428, type: 3}
+      propertyPath: weaponOffset.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479953839251856637, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479953839234058592, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a378fa9da1cd24aa3f8bf344ce3428, type: 3}
 --- !u!1001 &6182418658029581379
@@ -8591,6 +8633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuttiBomb
       objectReference: {fileID: 0}
+    - target: {fileID: 1324245971, guid: 6809e91a4d08417438849bd1b15c949a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ef9eb68e87dbe2a49b42f6e5b127ef73, type: 2}
     - target: {fileID: 7835200727277263542, guid: 6809e91a4d08417438849bd1b15c949a,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -8679,12 +8725,12 @@ PrefabInstance:
     - target: {fileID: 147468183502253519, guid: 6809e91a4d08417438849bd1b15c949a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5.49
+      value: 18.93
       objectReference: {fileID: 0}
     - target: {fileID: 147468183502253519, guid: 6809e91a4d08417438849bd1b15c949a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.58
+      value: -6.66
       objectReference: {fileID: 0}
     - target: {fileID: 147468183502253519, guid: 6809e91a4d08417438849bd1b15c949a,
         type: 3}
@@ -8726,10 +8772,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1324245971, guid: 6809e91a4d08417438849bd1b15c949a, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ef9eb68e87dbe2a49b42f6e5b127ef73, type: 2}
     - target: {fileID: 1324245968, guid: 6809e91a4d08417438849bd1b15c949a, type: 3}
       propertyPath: trackedObj
       value: 

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-
+    System.Random rnd = new System.Random();
     public Vector2 size;
     public float speedMove;
     public Animator animator;
     public float health;
     public float damage;
+    public int countOfCoinFromDeath;
+    public GameObject Coin;
     public string TagOfGameEntity;
 
     public int teamId = -1;
@@ -34,6 +36,13 @@ public class Entity : MonoBehaviour
         if (health <= 0)
         {
             hashEntity.removeEntity(this);
+            for(int i = 0;i < countOfCoinFromDeath; i++)
+            {
+                 
+                GameObject coint;
+                coint = Instantiate(Coin, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+                coint.GetComponent<Rigidbody2D>().AddForce(new Vector2(rnd.Next(-2,1),1), ForceMode2D.Impulse);
+            }
             Destroy(gameObject);
         }
         
