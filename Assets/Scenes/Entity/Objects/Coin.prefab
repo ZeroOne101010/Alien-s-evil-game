@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4881978641584754480}
   - component: {fileID: 9162311549634241577}
   - component: {fileID: 2489609783531788946}
-  - component: {fileID: 5298543565983230679}
+  - component: {fileID: 2838424460343915384}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 150
   m_Sprite: {fileID: 6242299478524251619, guid: 4cd1750d4e7171846a6b982671dbcb32,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 22.25
---- !u!114 &5298543565983230679
+--- !u!114 &2838424460343915384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

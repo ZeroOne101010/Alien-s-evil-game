@@ -7,6 +7,7 @@ public class FirePoint : MonoBehaviour
     
     public GameObject bulletPref;
     private GameObject bullet;
+    public int CountOfShots;
     public void Shoot()
     {
         bullet = Instantiate(bulletPref, transform.position, transform.rotation);

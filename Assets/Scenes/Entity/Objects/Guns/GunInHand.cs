@@ -28,6 +28,7 @@ public class GunInHand : MonoBehaviour
                 Gun[1].SetActive(false);
                 Gun[2].SetActive(false);
                 break;
+                
             case "Pull":
                 Gun[1].SetActive(true);
                 Gun[0].SetActive(false);

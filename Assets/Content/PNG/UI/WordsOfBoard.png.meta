@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: fe74da4a057fe334d84da794ac0b14db
+guid: 49c18d102af18b44d9ad14e62fa1a6b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7201975861171614137
-    second: ColoredButtons_0
+      213: -614587889404872165
+    second: WordsOfBoard_0
   - first:
-      213: -7802623612588995839
-    second: ColoredButtons_1
+      213: -1106893928933372677
+    second: WordsOfBoard_1
   - first:
-      213: -2620447336533462281
-    second: ColoredButtons_2
+      213: 814885730793482432
+    second: WordsOfBoard_2
+  - first:
+      213: 1848097790300297717
+    second: WordsOfBoard_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -52,8 +55,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.47678986, y: 0.8408102}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -107,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ColoredButtons_0
+      name: WordsOfBoard_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2706
-        width: 3962
-        height: 1262
+        y: 874
+        width: 343
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 706e201401aef0241b2f87ffba5916dc
-      internalID: -7201975861171614137
+      spriteID: e9dec06ef75df5d42987b6e10ad56ad7
+      internalID: -614587889404872165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColoredButtons_1
+      name: WordsOfBoard_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 1353
-        width: 3962
-        height: 1264
+        y: 624
+        width: 792
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +145,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d395af3cdceb4d4fa283678d2c8444d
-      internalID: -7802623612588995839
+      spriteID: c4ffe0c80e5eed44780fc6b27cab3a5d
+      internalID: -1106893928933372677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColoredButtons_2
+      name: WordsOfBoard_2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
+        y: 357
+        width: 416
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac1163f8126a2c4b98fa81fcf73bc36
+      internalID: 814885730793482432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WordsOfBoard_3
+      rect:
+        serializedVersion: 2
+        x: 4
         y: 0
-        width: 3962
-        height: 1262
+        width: 981
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62951bc966aa0594faada085e20359a1
-      internalID: -2620447336533462281
+      spriteID: 6e572909c7286c04cb21088d80b415ed
+      internalID: 1848097790300297717
       vertices: []
       indices: 
       edges: []

@@ -391,6 +391,7 @@ MonoBehaviour:
   damage: 10
   countOfCoinFromDeath: 1
   Coin: {fileID: 4881978641584754479, guid: 614ee818ad0bac0429ec1e2199d82063, type: 3}
+  Exp: 5
   TagOfGameEntity: 
   teamId: -1
 --- !u!114 &4826310265347382950

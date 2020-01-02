@@ -12,6 +12,7 @@ public class Entity : MonoBehaviour
     public float damage;
     public int countOfCoinFromDeath;
     public GameObject Coin;
+    public int Exp;
     public string TagOfGameEntity;
 
     public int teamId = -1;
@@ -37,12 +38,13 @@ public class Entity : MonoBehaviour
         {
             hashEntity.removeEntity(this);
             for(int i = 0;i < countOfCoinFromDeath; i++)
-            {
-                 
+            {    
                 GameObject coint;
                 coint = Instantiate(Coin, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
                 coint.GetComponent<Rigidbody2D>().AddForce(new Vector2(rnd.Next(-2,1),1), ForceMode2D.Impulse);
+                PlayerPrefs.SetInt("Exp", PlayerPrefs.GetInt("Exp") + Exp);
             }
+
             Destroy(gameObject);
         }
         
@@ -51,7 +53,6 @@ public class Entity : MonoBehaviour
     public void getDamage(float damage)
     {
         health -= damage;
-        
     }
 
     void Animation()

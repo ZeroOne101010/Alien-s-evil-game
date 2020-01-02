@@ -13,12 +13,11 @@ public class Bullet : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.GetComponent<Entity>())
         {
             collision.GetComponent<Entity>().health -= damage;
-            print(collision.GetComponent<Entity>().health);
             Destroy(gameObject);
         }
     }

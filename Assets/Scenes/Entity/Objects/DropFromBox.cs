@@ -17,7 +17,7 @@ public class DropFromBox : MonoBehaviour
         if(collision.transform.name == "Island")
         {
             
-            RandomGun = rnd.Next(0, GunsInBox.Length-1);
+            RandomGun = rnd.Next(0, GunsInBox.Length);
             Instantiate(GunsInBox[RandomGun], new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
             Destroy(gameObject);
         }

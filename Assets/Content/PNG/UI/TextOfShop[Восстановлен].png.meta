@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: fe74da4a057fe334d84da794ac0b14db
+guid: 5da6be654d3fe92418a2383e17f105f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7201975861171614137
-    second: ColoredButtons_0
+      213: 4862777490095908947
+    second: "TextOfShop[\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D]_0"
   - first:
-      213: -7802623612588995839
-    second: ColoredButtons_1
+      213: -2096199474456843031
+    second: "TextOfShop[\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D]_1"
   - first:
-      213: -2620447336533462281
-    second: ColoredButtons_2
+      213: -3122990315555294475
+    second: "TextOfShop[\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D]_2"
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -52,8 +52,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.47678986, y: 0.8408102}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -107,55 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ColoredButtons_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2706
-        width: 3962
-        height: 1262
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 706e201401aef0241b2f87ffba5916dc
-      internalID: -7201975861171614137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ColoredButtons_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1353
-        width: 3962
-        height: 1264
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d395af3cdceb4d4fa283678d2c8444d
-      internalID: -7802623612588995839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ColoredButtons_2
+      name: "TextOfShop[\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D]_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3962
-        height: 1262
+        width: 2029
+        height: 1017
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +121,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62951bc966aa0594faada085e20359a1
-      internalID: -2620447336533462281
+      spriteID: 952641d87e870d840811788c6363333d
+      internalID: 4862777490095908947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "TextOfShop[\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D]_1"
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 0
+        width: 2674
+        height: 1017
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf5b71a7cbf65f4fb9a268e7a1c10c5
+      internalID: -2096199474456843031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "TextOfShop[\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D]_2"
+      rect:
+        serializedVersion: 2
+        x: 6038
+        y: 0
+        width: 2508
+        height: 1017
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed70828e8c6294c4ca03fddfe68f78d3
+      internalID: -3122990315555294475
       vertices: []
       indices: 
       edges: []

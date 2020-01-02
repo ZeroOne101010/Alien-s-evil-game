@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: fe74da4a057fe334d84da794ac0b14db
+guid: 6a829c4f3c7fa5f4c8dbb9b89b37d4ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7201975861171614137
-    second: ColoredButtons_0
+      213: -4148910779946699
+    second: ButtonOfSetting_0
   - first:
-      213: -7802623612588995839
-    second: ColoredButtons_1
+      213: -2994407718535467441
+    second: ButtonOfSetting_1
   - first:
-      213: -2620447336533462281
-    second: ColoredButtons_2
+      213: 3031157638061973962
+    second: ButtonOfSetting_2
+  - first:
+      213: -8438122842714412686
+    second: ButtonOfSetting_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -52,8 +55,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.47678986, y: 0.8408102}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -107,64 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ColoredButtons_0
+      name: ButtonOfSetting_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2706
-        width: 3962
-        height: 1262
+        y: 1053
+        width: 3376
+        height: 2267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 706e201401aef0241b2f87ffba5916dc
-      internalID: -7201975861171614137
+      spriteID: 0bf1bd0bd2b2a504ab49944cdef0d7f2
+      internalID: -4148910779946699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColoredButtons_1
+      name: ButtonOfSetting_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1353
-        width: 3962
-        height: 1264
+        x: 3545
+        y: 1650
+        width: 7584
+        height: 1384
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d395af3cdceb4d4fa283678d2c8444d
-      internalID: -7802623612588995839
+      spriteID: 025f2a2948fe83e45b412a31a6056a1c
+      internalID: -2994407718535467441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColoredButtons_2
+      name: ButtonOfSetting_2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4603
+        y: 66
+        width: 1897
+        height: 1039
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead082eeb3a32c74683d888b08c0a10c
+      internalID: 3031157638061973962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonOfSetting_3
+      rect:
+        serializedVersion: 2
+        x: 7597
         y: 0
-        width: 3962
-        height: 1262
+        width: 1650
+        height: 1111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62951bc966aa0594faada085e20359a1
-      internalID: -2620447336533462281
+      spriteID: f0f819b0d6f074f47ad388de9e93f276
+      internalID: -8438122842714412686
       vertices: []
       indices: 
       edges: []
