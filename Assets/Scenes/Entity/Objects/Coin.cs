@@ -10,9 +10,8 @@ public class Coin : MonoBehaviour
         if (collision.transform.tag == "Player")
         {
             GameObject player = collision.gameObject;
-            player.GetComponent<StatOfLevel>().cgold += 1;
             player.GetComponent<PrefStatOfHero>().CountOfGold += 1;
-            player.GetComponent<PrefStatOfHero>().Save();
+            player.GetComponent<StatOfLevel>().cgold += 1;
             Destroy(gameObject);
         }
     }

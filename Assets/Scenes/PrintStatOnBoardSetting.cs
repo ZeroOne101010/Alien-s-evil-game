@@ -14,5 +14,9 @@ public class PrintStatOnBoardSetting : MonoBehaviour
         {
             GetComponent<Text>().text = player.GetComponent<StatOfLevel>().cgold.ToString();
         }
+        if (AboutThisStat == "Exp")
+        {
+            GetComponent<Text>().text = player.GetComponent<StatOfLevel>().cexp.ToString();
+        }
     }
 }

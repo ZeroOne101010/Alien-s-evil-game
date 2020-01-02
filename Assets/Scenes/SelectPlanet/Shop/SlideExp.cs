@@ -10,12 +10,13 @@ public class SlideExp : MonoBehaviour
     void Update()
     {
         slide.value = PlayerPrefs.GetInt("Exp");
-        slide.maxValue = CountOfLevel * 100;
-        if (slide.value == slide.maxValue)
+        slide.maxValue = CountOfLevel * 50;
+        CountOfLevel = PlayerPrefs.GetInt("Level");
+        if (slide.value >= slide.maxValue)
         {
             CountOfLevel++;
             PlayerPrefs.SetInt("Level", CountOfLevel);
-            PlayerPrefs.SetInt("Experiance", 0);
+            PlayerPrefs.SetInt("Exp", 0);
             PlayerPrefs.Save();
             slide.value = 0;
         }

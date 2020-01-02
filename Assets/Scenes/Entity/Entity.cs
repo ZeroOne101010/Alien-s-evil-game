@@ -42,9 +42,8 @@ public class Entity : MonoBehaviour
                 GameObject coint;
                 coint = Instantiate(Coin, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
                 coint.GetComponent<Rigidbody2D>().AddForce(new Vector2(rnd.Next(-2,1),1), ForceMode2D.Impulse);
-                PlayerPrefs.SetInt("Exp", PlayerPrefs.GetInt("Exp") + Exp);
             }
-
+            PlayerPrefs.SetInt("Exp", PlayerPrefs.GetInt("Exp") + Exp);
             Destroy(gameObject);
         }
         
