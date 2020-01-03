@@ -41,7 +41,7 @@ public class RegistoredWeapons : MonoBehaviour
         else if (weapon.transform.rotation.y <= 0)
             dir = 1;
 
-        bulletType.transform.position += new Vector3(dir, 0, 0); // Выдвегаю его из персонажа, чтоб перс урон не получал от своих пуль
+        bulletType.transform.position += new Vector3(dir, 0.05f, 0); // Выдвигаю его из персонажа, чтоб перс урон не получал от своих пуль
         if (bulletType.GetComponent<BulletWork>() != null)
         {
             bulletType.GetComponent<BulletWork>().damage = damage;
