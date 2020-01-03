@@ -42,7 +42,7 @@ public class AITakeAWeapon : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    keepedWeapon.GetComponent<WeaponWork>().weaponImplementation(keepedWeapon.GetComponent<WeaponWork>().weaponDamage);
+                    keepedWeapon.GetComponent<WeaponWork>().weaponImplementation(keepedWeapon.GetComponent<WeaponWork>().weaponDamage, keepedWeapon.GetComponent<WeaponWork>().bulletType, keepedWeapon);
                 }
             }
 

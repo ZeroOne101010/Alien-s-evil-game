@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPref: {fileID: 4060188406607896239, guid: 493f2bab6e51e3e48a16e3640fb85650,
     type: 3}
+  CountOfShots: 0
 --- !u!1 &1792759265269914787
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,3 +143,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   implementationID: 0
   weaponDamage: 1500
+  bulletType: {fileID: 4060188406607896239, guid: 493f2bab6e51e3e48a16e3640fb85650,
+    type: 3}

@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 668195010409592002}
   - component: {fileID: -6408812147136582230}
+  - component: {fileID: 2504333590586860505}
   m_Layer: 0
   m_Name: WeaponRegistoryManager
-  m_TagString: Untagged
+  m_TagString: WeaponRegistoryManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,3 +46,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dull: {fileID: 1792759265269914787, guid: ffc44a17b99387c41ad0dc8b31d5d227, type: 3}
   pull: {fileID: 3627798043641743177, guid: f887910c39e8b004abb42d3b40016658, type: 3}
+  bigDull: {fileID: 0}
+--- !u!114 &2504333590586860505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5038942696819040627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45f11d94a2f607409b6daa473728ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DullBullet: {fileID: 0}
+  PullBullet: {fileID: 0}
+  BigDullBullet: {fileID: 0}

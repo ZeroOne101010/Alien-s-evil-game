@@ -2234,7 +2234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &529474309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6421,18 +6421,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7818280491404725042}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1803416146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803416142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a80c4d004228d0746bad1dec99f6c39f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1803416148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7011,7 +6999,7 @@ PrefabInstance:
     - target: {fileID: 8241602054985525442, guid: 1beeabfbf4448e04394e6d16b1ef2f40,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9210390468718169504, guid: 1beeabfbf4448e04394e6d16b1ef2f40,
         type: 3}
@@ -7144,24 +7132,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070036704}
   m_CullTransparentMesh: 0
---- !u!1 &2100192588 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2100192588, guid: c3d970721c03c20498524f8fdd3743e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 7818280491404725042}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2100192592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100192588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a80c4d004228d0746bad1dec99f6c39f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2101821132
 GameObject:
   m_ObjectHideFlags: 0
@@ -7324,24 +7294,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2135904958 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3479953838497545088, guid: c4a378fa9da1cd24aa3f8bf344ce3428,
-    type: 3}
-  m_PrefabInstance: {fileID: 3479953839467991848}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2135904962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135904958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d88f576b10359fb41a4c238107663c70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2135935350
 GameObject:
   m_ObjectHideFlags: 0
@@ -7844,6 +7796,10 @@ PrefabInstance:
       propertyPath: CountOfShots
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 745493853, guid: c4a378fa9da1cd24aa3f8bf344ce3428, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a378fa9da1cd24aa3f8bf344ce3428, type: 3}
 --- !u!1001 &6182418658029581379
@@ -7937,6 +7893,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 406990225, guid: c3d970721c03c20498524f8fdd3743e2, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7818280492080204569, guid: c3d970721c03c20498524f8fdd3743e2,
         type: 3}
@@ -8101,10 +8061,6 @@ PrefabInstance:
     - target: {fileID: 2144594936, guid: c3d970721c03c20498524f8fdd3743e2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -3.0000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 406990225, guid: c3d970721c03c20498524f8fdd3743e2, type: 3}
-      propertyPath: m_UpdateMode
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2102270425, guid: c3d970721c03c20498524f8fdd3743e2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -8356,6 +8312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GuttiBomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 7835200725341142147, guid: 6809e91a4d08417438849bd1b15c949a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 147468183502253519, guid: 6809e91a4d08417438849bd1b15c949a,
         type: 3}
@@ -8643,11 +8604,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WeaponRegistoryManager
       objectReference: {fileID: 0}
-    - target: {fileID: 5038942696819040627, guid: 1a8d38b0906a42147b602fa3122fe045,
-        type: 3}
-      propertyPath: m_TagString
-      value: WeaponRegistoryManager
-      objectReference: {fileID: 0}
     - target: {fileID: 668195010409592002, guid: 1a8d38b0906a42147b602fa3122fe045,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8703,6 +8659,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    - target: {fileID: 2504333590586860505, guid: 1a8d38b0906a42147b602fa3122fe045,
+        type: 3}
+      propertyPath: DullBullet
+      value: 
+      objectReference: {fileID: 4060188406607896239, guid: 493f2bab6e51e3e48a16e3640fb85650,
+        type: 3}
+    - target: {fileID: 2504333590586860505, guid: 1a8d38b0906a42147b602fa3122fe045,
+        type: 3}
+      propertyPath: PullBullet
+      value: 
+      objectReference: {fileID: 5658069527011174322, guid: f17863f706dd67c4eaaac3f2a6976b3f,
+        type: 3}
+    - target: {fileID: 2504333590586860505, guid: 1a8d38b0906a42147b602fa3122fe045,
+        type: 3}
+      propertyPath: BigDullBullet
+      value: 
+      objectReference: {fileID: 6252644710568568825, guid: 3df1b703d3ff34341b2fe4e46b7d90af,
+        type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8d38b0906a42147b602fa3122fe045, type: 3}

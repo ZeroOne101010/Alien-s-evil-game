@@ -6,8 +6,8 @@ public class PrintText : MonoBehaviour
 {
     void Update()
     {
-        print(PlayerPrefs.GetInt("Gold"));
-        print(PlayerPrefs.GetInt("Exp"));
-        print(PlayerPrefs.GetInt("Level"));
+        //print(PlayerPrefs.GetInt("Gold"));
+        //print(PlayerPrefs.GetInt("Exp"));
+        //print(PlayerPrefs.GetInt("Level"));
     }
 }
