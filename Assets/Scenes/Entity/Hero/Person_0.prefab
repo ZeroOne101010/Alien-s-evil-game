@@ -119,11 +119,7 @@ GameObject:
   - component: {fileID: 4595723444634147068}
   - component: {fileID: 1511966651}
   - component: {fileID: 5527166314942100888}
-  - component: {fileID: 2950820912978832378}
-  - component: {fileID: 7982611416185467135}
   - component: {fileID: 6602783367159612038}
-  - component: {fileID: 1511966658}
-  - component: {fileID: 1511966659}
   m_Layer: 0
   m_Name: Person_0
   m_TagString: Player
@@ -234,7 +230,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.318, y: 1.5770521}
+    oldSize: {x: 1.3213334, y: 0.6200186}
     newSize: {x: 19.77, y: 23.655783}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -243,36 +239,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.318, y: 1.5770521}
   m_EdgeRadius: 0
---- !u!114 &2950820912978832378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7777902609572635655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047d7d83feca1ec49bef1a1e4514f34f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0}
-  speedMove: 10
---- !u!114 &7982611416185467135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7777902609572635655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94a5f1ac6b64ef4f8430e75e4648912, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 20
-  joystick: {fileID: 0}
-  jumpButton: {fileID: 0}
-  boool: 0
 --- !u!61 &6602783367159612038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -290,7 +256,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.318, y: 1.5770521}
+    oldSize: {x: 1.3213334, y: 0.6200186}
     newSize: {x: 19.77, y: 23.655783}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -299,28 +265,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.318, y: 1.5770521}
   m_EdgeRadius: 0
---- !u!114 &1511966658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7777902609572635655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c2a9be23c2df8a488bbfaac717183e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  whoIsIt: player
---- !u!114 &1511966659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7777902609572635655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a55bfb2c5c7b15438e73c983f6bd5b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

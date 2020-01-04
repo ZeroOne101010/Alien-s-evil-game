@@ -33,7 +33,6 @@ public class HitTrigger : MonoBehaviour
        if(collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Entity>().health -= 10;
-            print(collision.gameObject.GetComponent<Entity>().health);
         }
     }
 }

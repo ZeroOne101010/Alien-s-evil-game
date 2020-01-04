@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.GetComponent<Entity>())

@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIAttackEnemy : MonoBehaviour
+public class AIAttackEnemy : AITask
 {
+
+    public GameObject gameObject;
 
     public string boolAnimName;
     public float distanceToTakeTarget = 10;
@@ -18,13 +20,22 @@ public class AIAttackEnemy : MonoBehaviour
     private float timer;
     private bool isMoving;
 
-    void Start()
+    public AIAttackEnemy(GameObject gameObject, bool isRight)
     {
+        this.gameObject = gameObject;
+        this.isRight = isRight;
         hashEntity = GameObject.FindGameObjectWithTag("Manager").GetComponent<ManagerForHashEntity>();
-        animator = GetComponent<Animator>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
-    void Update()
+    public AIAttackEnemy(GameObject gameObject)
+    {
+        this.gameObject = gameObject;
+        hashEntity = GameObject.FindGameObjectWithTag("Manager").GetComponent<ManagerForHashEntity>();
+        animator = gameObject.GetComponent<Animator>();
+    }
+
+    public override void updateTask()
     {
         timer--;
         if (timer < 0) timer = 0;
@@ -42,45 +53,45 @@ public class AIAttackEnemy : MonoBehaviour
 
     public void moveToTarget()
     {
-        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
+        Rigidbody2D rigid = gameObject.GetComponent<Rigidbody2D>();
         if (target != null)
         {
             if (rigid != null)
             {
                 isMoving = true;
-                float speed = GetComponent<Entity>().speedMove;
+                float speed = gameObject.GetComponent<Entity>().speedMove;
                 float offset = 0;
                 Collider2D col = target.GetComponent<Collider2D>();
                 if (col != null)
                 {
                     offset = target.GetComponent<Collider2D>().bounds.size.x;
                 }
-                if (target.transform.position.x + offset < transform.position.x)
+                if (target.transform.position.x + offset < gameObject.transform.position.x)
                 {
                     rigid.velocity = new Vector2(-speed, rigid.velocity.y);
                     if (isRight)
                     {
-                        transform.localScale = new Vector3(-Mathf.Abs(target.transform.localScale.x), target.transform.localScale.y, target.transform.localScale.z);
+                        gameObject.transform.localScale = new Vector3(-Mathf.Abs(target.transform.localScale.x), target.transform.localScale.y, target.transform.localScale.z);
                     }
                     else
                     {
-                        transform.localScale = new Vector3(Mathf.Abs(target.transform.localScale.x), target.transform.localScale.y, target.transform.localScale.z);
+                        gameObject.transform.localScale = new Vector3(Mathf.Abs(target.transform.localScale.x), target.transform.localScale.y, target.transform.localScale.z);
                     }
                     if (animator != null)
                     {
                         animator.SetBool(boolAnimName, true);
                     }
                 }
-                else if (target.transform.position.x - offset > transform.position.x)
+                else if (target.transform.position.x - offset > gameObject.transform.position.x)
                 {
                     rigid.velocity = new Vector2(speed, rigid.velocity.y);
                     if (isRight)
                     {
-                        transform.localScale = new Vector3(Mathf.Abs(target.transform.localScale.x), target.transform.localScale.y, target.transform.localScale.z);
+                        gameObject.transform.localScale = new Vector3(Mathf.Abs(target.transform.localScale.x), target.transform.localScale.y, target.transform.localScale.z);
                     }
                     else
                     {
-                        transform.localScale = new Vector3(-Mathf.Abs(target.transform.localScale.x), target.transform.localScale.y, target.transform.localScale.z);
+                        gameObject.transform.localScale = new Vector3(-Mathf.Abs(target.transform.localScale.x), target.transform.localScale.y, target.transform.localScale.z);
                     }
                     if (animator != null)
                     {
@@ -94,10 +105,23 @@ public class AIAttackEnemy : MonoBehaviour
                     {
                         animator.SetBool(boolAnimName, false);
                     }
-                    AIMelleAttak attack = GetComponent<AIMelleAttak>();
+
+                    Entity entity = gameObject.GetComponent<Entity>();
+
+                    AIMelleAttak attack = null;
+
+                    for (int x = 0; x < entity.task.Count; x++)
+                    {
+                        if (entity.task[x] is AIMelleAttak)
+                        {
+                            attack = entity.task[x] as AIMelleAttak;
+                            break;
+                        }
+                    }
+
                     if (attack != null)
                     {
-                        attack.activeRandomAttack();
+                        attack.activeAttacking();
                     }
                 }
             }
@@ -118,13 +142,13 @@ public class AIAttackEnemy : MonoBehaviour
 
     public void findTarget()
     {
-        for(int x = 0; x < hashEntity.entity.Count; x++)
+        for (int x = 0; x < hashEntity.entity.Count; x++)
         {
             Entity entity = hashEntity.entity[x];
-            if (entity.teamId != GetComponent<Entity>().teamId)
+            if (entity.teamId != gameObject.GetComponent<Entity>().teamId)
             {
                 Vector2 entityPos = new Vector2(entity.transform.position.x, entity.transform.position.y);
-                Vector2 pos = new Vector2(transform.position.x, transform.position.y);
+                Vector2 pos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
                 float distance = Vector2.Distance(entityPos, pos);
                 if (distance < distanceToTakeTarget)
                 {
@@ -139,10 +163,10 @@ public class AIAttackEnemy : MonoBehaviour
         for (int x = 0; x < hashEntity.entity.Count; x++)
         {
             Entity entity = hashEntity.entity[x];
-            if (entity.teamId != GetComponent<Entity>().teamId)
+            if (entity.teamId != gameObject.GetComponent<Entity>().teamId)
             {
                 Vector2 entityPos = new Vector2(entity.transform.position.x, entity.transform.position.y);
-                Vector2 pos = new Vector2(transform.position.x, transform.position.y);
+                Vector2 pos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
                 float distance = Vector2.Distance(entityPos, pos);
                 if (distance < distanceToTakeTarget)
                 {

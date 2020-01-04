@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AIDropObject : MonoBehaviour
+public class AIDropObject : AITask
 {
 
     public GameObject prifab;
@@ -12,6 +12,10 @@ public class AIDropObject : MonoBehaviour
     public Vector2 direction;
     public float speed;
 
+    public AIDropObject()
+    {
+
+    }
 
     public void dropObject()
     {  
@@ -23,4 +27,8 @@ public class AIDropObject : MonoBehaviour
         }
     }
 
+    public override void updateTask()
+    {
+        
+    }
 }

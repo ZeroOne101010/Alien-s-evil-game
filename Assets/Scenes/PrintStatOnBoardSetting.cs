@@ -12,11 +12,11 @@ public class PrintStatOnBoardSetting : MonoBehaviour
     {
         if(AboutThisStat == "Gold")
         {
-            GetComponent<Text>().text = player.GetComponent<StatOfLevel>().cgold.ToString();
+            //GetComponent<Text>().text = player.GetComponent<StatOfLevel>().cgold.ToString();
         }
         if (AboutThisStat == "Exp")
         {
-            GetComponent<Text>().text = player.GetComponent<StatOfLevel>().cexp.ToString();
+            //GetComponent<Text>().text = player.GetComponent<StatOfLevel>().cexp.ToString();
         }
     }
 }

@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIMonsterAttack : MonoBehaviour
+public class AIMonsterAttack : AITask
 {
+    public GameObject gameObject;
+
     private Animator animator;
     public GameObject obj;
     public GameObject hitBox;
@@ -11,23 +13,25 @@ public class AIMonsterAttack : MonoBehaviour
     public float attackSpeed;
     private float timer;
     private bool isAttack;
-    void Start()
+
+    public AIMonsterAttack(GameObject gameObject)
     {
-        //hitBox.SetActive(false);
+        this.gameObject = gameObject;
         animator = gameObject.GetComponent<Animator>();
-        tag = "Player";
-        obj = GameObject.FindWithTag(tag);
+        gameObject.tag = "Player";
+        obj = GameObject.FindWithTag(gameObject.tag);
     }
 
-    void Update()
+    public override void updateTask()
     {
         AttackHero("Attack", offestToObj);
     }
+
     public void AttackHero(string attackAnimationBool, float offset)
     {
         animator.speed = attackSpeed;
         float objWidth = obj.GetComponent<Collider2D>().bounds.max.x - obj.GetComponent<Collider2D>().bounds.min.x;
-        if(transform.position.x > obj.transform.position.x - (objWidth / 2) - offset & transform.position.x < obj.transform.position.x + (objWidth / 2) + offset)
+        if(gameObject.transform.position.x > obj.transform.position.x - (objWidth / 2) - offset & gameObject.transform.position.x < obj.transform.position.x + (objWidth / 2) + offset)
         {
             if (animator != null)
                 animator.SetBool(attackAnimationBool, true);
@@ -40,4 +44,5 @@ public class AIMonsterAttack : MonoBehaviour
                 animator.SetBool(attackAnimationBool, false);
         }
     }
+
 }

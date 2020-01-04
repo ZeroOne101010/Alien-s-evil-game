@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIAttack : MonoBehaviour
+public class AIAttack : AITask
 {
     public AIAttack()
+    {
+
+    }
+
+    public override void updateTask()
     {
 
     }

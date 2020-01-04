@@ -5,12 +5,15 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class AIPlayerController : MonoBehaviour
+public class AIPlayerController : AITask
 {
+
+    public GameObject gameObject;
 
     private float speed;
     public float jumpForce;
     public GameObject joystick;
+    public Button jumpButton;
     private Rigidbody2D rigid;
     public bool isRun = false;
     public Animator animator;
@@ -18,25 +21,43 @@ public class AIPlayerController : MonoBehaviour
     public string nameAnimVelocity;
     public string groundAnimValue;
 
-    public void Start()
+    public AIPlayerController(GameObject gameObject, GameObject joystick, Button jumpButton)
     {
-        joystick = GameObject.FindGameObjectWithTag("joystick");
+        this.gameObject = gameObject;
+
+        this.joystick = joystick;
+        this.jumpButton = jumpButton;
         rigid = gameObject.GetComponent<Rigidbody2D>();
-        speed = GetComponent<Entity>().speedMove;
-        if (GetComponent<Animator>() != null)
-            animator = GetComponent<Animator>();
+        speed = gameObject.GetComponent<Entity>().speedMove;
+        jumpForce = gameObject.GetComponent<Entity>().jumpForce;
+        if (gameObject.GetComponent<Animator>() != null) 
+            animator = gameObject.GetComponent<Animator>();
+        jumpButton.onClick.AddListener(jump);
     }
 
-    public void Update()
+    public AIPlayerController(GameObject gameObject, GameObject joystick)
+    {
+        this.gameObject = gameObject;
+
+        this.joystick = joystick;
+        rigid = gameObject.GetComponent<Rigidbody2D>();
+        speed = gameObject.GetComponent<Entity>().speedMove;
+        jumpForce = gameObject.GetComponent<Entity>().jumpForce;
+        if (gameObject.GetComponent<Animator>() != null)
+            animator = gameObject.GetComponent<Animator>();
+    }
+
+    public override void updateTask()
     {
         PlayerMove();
     }
 
     public void PlayerMove()
     {
-        if (GetComponent<Animator>() != null)
+        if (gameObject.GetComponent<Animator>() != null)
             animator.SetBool(nameAnimRun, isRun);
-        jump(false);
+        if(jumpButton != null)
+        keyJump();
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             
@@ -49,7 +70,7 @@ public class AIPlayerController : MonoBehaviour
                 gameObject.transform.position += new Vector3(speed, 0, 0);
                 
             }
-            transform.rotation = new Quaternion(0, 0, 0, 0);
+            gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
             isRun = true;
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
@@ -65,7 +86,7 @@ public class AIPlayerController : MonoBehaviour
                 
                 gameObject.transform.position += new Vector3(-speed, 0, 0);
             }
-            transform.rotation = new Quaternion(0, 180, 0, 0);
+            gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
             isRun = true;
         }
         else if (joystick != null & joystick.GetComponent<JoyStick>().inputVector.x != 0)
@@ -100,48 +121,42 @@ public class AIPlayerController : MonoBehaviour
             isRun = false;
         }
     }
-    public void jumpForListener()
+
+    public void keyJump()
     {
-        jump(true);
-    }
-    public void jump(bool listener)
-    {
-        if (listener == true)
+        if (rigid != null)
         {
-            if (rigid != null)
+            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
-                if (rigid.velocity.y == 0)
-                {
-                    rigid.velocity += new Vector2(0, jumpForce);
-                }
+                jump();
             }
+        }
+
+        if (animator != null & rigid != null)
+        {
+            if (rigid.velocity.y == 0)
+                animator.SetBool(groundAnimValue, true);
             else
+                animator.SetBool(groundAnimValue, false);
+            animator.SetFloat(nameAnimVelocity, rigid.velocity.y);
+        }
+
+    }
+
+    public void jump()
+    {
+        if (rigid != null)
+        {
+            if (rigid.velocity.y == 0)
             {
-                gameObject.transform.position += new Vector3(0, jumpForce, 0);
+                rigid.velocity += new Vector2(0, jumpForce);
             }
         }
         else
         {
-            if (rigid != null)
-            {
-                if (rigid.velocity.y == 0)
-                {
-                    if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-                        rigid.velocity += new Vector2(0, jumpForce);
-                }
-            }
-            else
-            {
-                if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-                {
-                    gameObject.transform.position += new Vector3(0, jumpForce, 0);
-                }
-                else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-                {
-                    gameObject.transform.position += new Vector3(0, -jumpForce, 0);
-                }
-            }
+            gameObject.transform.position += new Vector3(0, jumpForce, 0);
         }
+
         if (animator != null & rigid != null)
         {
             if (rigid.velocity.y == 0)
@@ -152,5 +167,4 @@ public class AIPlayerController : MonoBehaviour
         }
                
     }
-    
 }
