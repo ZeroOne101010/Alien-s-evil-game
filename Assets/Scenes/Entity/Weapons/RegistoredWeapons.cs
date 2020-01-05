@@ -25,11 +25,11 @@ public class RegistoredWeapons : MonoBehaviour
     }
     static public void pullImplementation(float damage, GameObject bulletType, GameObject weapon) // Реализация функционала оружия pull
     {
-        basicBullet(damage, bulletType, weapon);
+        print("pull" + damage);
     }
     static public void bigDullImplementation(float damage, GameObject bulletType, GameObject weapon) // Реализация функционала оружия bigDull
     {
-        basicBullet(damage, bulletType, weapon);
+        print("bigDull " + damage);
     }
     static public void basicBullet(float damage, GameObject bulletType, GameObject weapon)
     {
