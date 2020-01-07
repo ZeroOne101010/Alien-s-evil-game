@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Earth/Summer/Summer.unity
     guid: b51276b94991e224890c061258e71b19
+  - enabled: 1
+    path: Assets/Scenes/SelectPlanet/SelectPlanet.unity
+    guid: 1ec272610587ace4b8b254cf602ddc9c
   m_configObjects: {}
