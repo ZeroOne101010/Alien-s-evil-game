@@ -98,3 +98,4 @@ MonoBehaviour:
   weaponDamage: 0
   weaponAttackSpeed: 0
   weaponDescription: 
+  weaponReestrKey: Guns_4Key
