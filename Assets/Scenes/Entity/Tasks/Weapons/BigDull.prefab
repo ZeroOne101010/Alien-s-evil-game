@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3078311708291760387}
   - component: {fileID: 3078311708291760386}
   - component: {fileID: -2655458535512930382}
+  - component: {fileID: -742027350151567556}
   m_Layer: 0
   m_Name: BigDull
   m_TagString: BigDull
@@ -99,6 +100,27 @@ MonoBehaviour:
   weaponDamage: 100
   bulletType: {fileID: 6252644710568568825, guid: 3df1b703d3ff34341b2fe4e46b7d90af,
     type: 3}
+--- !u!114 &-742027350151567556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3078311708291760385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a9f3b8dd3f3634b9d87acbc10162df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: BigDull
+  weaponDamage: 10000000
+  weaponAttackSpeed: 1
+  weaponDescription: "\u041D\u043E\u0433\u0433\u0430\u0442\u043E \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E
+    \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E
+    \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E
+    \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E
+    \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E
+    \u043B\u043E\u0445!"
 --- !u!1 &3078311708309623955
 GameObject:
   m_ObjectHideFlags: 0

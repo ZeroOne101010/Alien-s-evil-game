@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3627798043641743179}
   - component: {fileID: 3627798043641743176}
   - component: {fileID: 4396028653116744553}
+  - component: {fileID: 7111905458402666152}
   m_Layer: 0
   m_Name: Pull
   m_TagString: Pull
@@ -99,6 +100,23 @@ MonoBehaviour:
   weaponDamage: 0
   bulletType: {fileID: 5658069527011174322, guid: f17863f706dd67c4eaaac3f2a6976b3f,
     type: 3}
+--- !u!114 &7111905458402666152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3627798043641743177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a9f3b8dd3f3634b9d87acbc10162df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Pull
+  weaponDamage: 1235
+  weaponAttackSpeed: 25
+  weaponDescription: "\u042D\u0442\u043E \u043E\u0440\u0443\u0436\u0438\u0435 \u0434\u043E\u043B\u0436\u043D\u043E
+    \u0441\u0441\u0430\u0430\u0430\u0430\u0430\u0430\u0442\u044C!!"
 --- !u!1 &3627798044641195299
 GameObject:
   m_ObjectHideFlags: 0

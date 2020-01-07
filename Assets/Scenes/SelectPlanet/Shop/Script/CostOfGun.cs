@@ -11,12 +11,13 @@ public class CostOfGun : MonoBehaviour
     {
         Gun = GetComponent<UpgradeGun>().TypeGun;
         Money = GetComponent<UpgradeGun>().Cost;
+        
     }
     void Update()
     {
         Gun = GetComponent<UpgradeGun>().TypeGun;
         Money = GetComponent<UpgradeGun>().Cost;
-        GetComponent<Text>().text = Money.ToString();
+        GetComponent<Text>().text = Money.ToString() + "$";
         print("Money - " + Gun + "is" + Money);
         print("Level of " + Gun + "is" + PlayerPrefs.GetInt(Gun));
     }
