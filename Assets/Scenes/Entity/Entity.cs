@@ -178,7 +178,7 @@ public abstract class Entity : MonoBehaviour
 
             if (melee != null)
             {
-                if (!melee.attacking)
+                if (melee.k2)
                 {
                     if (melee.attackId != -1)
                     {

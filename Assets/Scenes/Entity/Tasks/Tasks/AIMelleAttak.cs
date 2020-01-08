@@ -17,12 +17,13 @@ public class AIMelleAttak : AITask
     public float[] probablyAttack;
 
     public float timeBetweenAttack;
+    public float timer2;
 
     public List<Entity> alreadyAttackingEntity;
 
     private float timer;
-    private bool k;
-    private bool k2;
+    public bool k;
+    public bool k2;
     private Animator animator;
 
     public AIMelleAttak(GameObject gameObject, string[] nameAttackAnimation, float[] timeAttack, float[] attackDamage, float[] probablyAttack, float timeBetweenAttack)
@@ -40,13 +41,14 @@ public class AIMelleAttak : AITask
 
     public override void updateTask()
     {
-            updateAttack();
+        updateAttack();
     }
 
     public void activeAttacking()
     {
-        if (!k2)
+        if (!attacking)
         {
+            activeRandomAttack();
             attacking = true;
         }
     }
@@ -63,7 +65,6 @@ public class AIMelleAttak : AITask
 
     public void activeRandomAttack()
     {
-        attacking = true;
         int id = 0;
         for (int x = 0; x < probablyAttack.Length; x++)
         {
@@ -73,26 +74,31 @@ public class AIMelleAttak : AITask
             }
         }
         attack(id);
+        timer = timeAttack[attackId];
     }
 
     public void updateAttack()
     {
-        timer--;
-        if (timer < 0) timer = 0;
-        if (!k2)
+        if (attacking)
         {
             if (!k)
             {
-                activeRandomAttack();
-                timer = timeAttack[attackId];
-                k = true;
+                k2 = true;
+                timer--;
+                if (timer < 0) timer = 0;
+                if (timer == 0)
+                {
+                    timer = timeBetweenAttack;
+                    k = true;
+                }
             }
             else
             {
-                if (timer == 0)
+                k2 = false;
+                timer--;
+                if (timer < 0) timer = 0;
+                if(timer == 0)
                 {
-                    k2 = true;
-                    timer = timeBetweenAttack;
                     k = false;
                     attacking = false;
                     alreadyAttackingEntity = new List<Entity>();
@@ -101,15 +107,43 @@ public class AIMelleAttak : AITask
                         animator.SetBool(nameAttackAnimation[attackId], false);
                     }
                 }
+
             }
         }
-        else
-        {
-            if (timer == 0)
-            {
-                k2 = false;
-            }
-        }
+
+        //timer--;
+        //if (timer < 0) timer = 0;
+        //if (!k2)
+        //{
+        //    if (!k)
+        //    {
+        //        activeRandomAttack();
+        //        timer = timeAttack[attackId];
+        //        k = true;
+        //    }
+        //    else
+        //    {
+        //        if (timer == 0)
+        //        {
+        //            k2 = true;
+        //            timer = timeBetweenAttack;
+        //            k = false;
+        //            attacking = false;
+        //            alreadyAttackingEntity = new List<Entity>();
+        //            if (animator != null)
+        //            {
+        //                animator.SetBool(nameAttackAnimation[attackId], false);
+        //            }
+        //        }
+        //    }
+        //}
+        //else
+        //{
+        //    if (timer == 0)
+        //    {
+        //        k2 = false;
+        //    }
+        //}
 
 
 
