@@ -3,84 +3,136 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum ItemType
+{
+    none,
+    weapon,
+    ability
+}
 public class ItemSetting : MonoBehaviour
 {
-    public GameObject weapon;
+    public ItemType itemType;
+    [Header("Общие переменные")]
+    public GameObject item;
     public Text itemName;
+    public Text itemDescription;
+    public Text itemPriceText;
+    public Image itemImage;
+
+    [Header("Weapon")]
+    public WeaponSpecifications weaponSpecifications;
     public Text itemDamage;
     public Text itemAttackSpeed;
-    public Text itemDescription;
     public Text itemUpgradeLevelText;
-    public Image itemWeaponImage;
-    public string itemReestrKey;
+    public Text itemUpgradePriceText;
+    public GameObject UpgreadWeaponMenu;
+    [Space]
+
+    private string itemReestrKey;
     public int itemLevel;
-    public int k;
     void Start()
     {
-        AssignVariablesStart();
+        Init(itemType);
     }
 
     void Update()
     {
-        CheckReestr();
-        AssignVariables();
-    }
-    public void CheckReestr()
+        CheckReestr(itemType);
+        AssignVariables(itemType);    }
+    public void Init(ItemType itemType)
     {
-        if (weapon.GetComponent<WeaponSpecifications>() != null)
+        if(itemType == ItemType.weapon)
         {
-            itemReestrKey = weapon.GetComponent<WeaponSpecifications>().weaponReestrKey;
-            if (PlayerPrefs.GetInt(itemReestrKey) != 0)
+            weaponSpecifications = item.GetComponent<WeaponSpecifications>();
+            if (weaponSpecifications != null)
+                itemReestrKey = weaponSpecifications.weaponReestrKey;
+        }
+        if(itemType == ItemType.ability)
+        {
+
+        }
+
+    }
+    public void CheckReestr(ItemType itemType)
+    {
+        if (itemType == ItemType.weapon)
+        {
+            if (weaponSpecifications != null)
             {
-                itemLevel = PlayerPrefs.GetInt(itemReestrKey);
+                itemReestrKey = weaponSpecifications.weaponReestrKey;
+
+                if (PlayerPrefs.GetInt(itemReestrKey) != 0)
+                {
+                    itemLevel = PlayerPrefs.GetInt(itemReestrKey);
+                }
+                else
+                    PlayerPrefs.SetInt(itemReestrKey, 1);
+
+                if (PlayerPrefs.GetInt(itemReestrKey + "IsBought") == 0)
+                {
+                    UpgreadWeaponMenu.SetActive(false);
+                }
+                else if (PlayerPrefs.GetInt(itemReestrKey + "IsBought") != 0)
+                {
+                    UpgreadWeaponMenu.SetActive(true);
+                }
             }
-            else
-                PlayerPrefs.SetInt(itemReestrKey, 1);
         }
-    }
-    public void AssignVariablesStart()
-    {
-        GameObject weaponImageBG = gameObject.transform.Find("WeaponImageBG").gameObject;
-        GameObject weaponName = weaponImageBG.transform.Find("WeaponName").gameObject;
-        GameObject nameText = weaponName.transform.Find("NameText").gameObject;
-        itemName = nameText.GetComponent<Text>();
-
-        GameObject weaponImage = weaponImageBG.transform.Find("WeaponImage").gameObject;
-        itemWeaponImage = weaponImage.GetComponent<Image>();
-
-        GameObject specifications = gameObject.transform.Find("Specifications").gameObject;
-        GameObject Damage = specifications.transform.Find("Damage").gameObject;
-        GameObject DamageText = Damage.transform.Find("DamageText").gameObject;
-        itemDamage = DamageText.GetComponent<Text>();
-
-        GameObject AttackSpeed = specifications.transform.Find("AttackSpeed").gameObject;
-        GameObject SpeedText = AttackSpeed.transform.Find("SpeedText").gameObject;
-        itemAttackSpeed = SpeedText.GetComponent<Text>();
-
-        GameObject description = gameObject.transform.Find("Description").gameObject;
-        GameObject descriptionText = description.transform.Find("DescriptionText").gameObject;
-        itemDescription = descriptionText.GetComponent<Text>();
-        GameObject upgreadWeaponMenu = gameObject.transform.Find("UpgreadWeaponMenu").gameObject;
-        GameObject upgrade = upgreadWeaponMenu.transform.Find("Upgrade").gameObject;
-        GameObject upgradeLevelBG = upgrade.transform.Find("UpgradeLevelBG").gameObject;
-        GameObject upgradeLevelText = upgradeLevelBG.transform.Find("UpgradeLevelText").gameObject;
-        itemUpgradeLevelText = upgradeLevelText.GetComponent<Text>();
-    }
-    public void AssignVariables()
-    {      
-        if (weapon.GetComponent<WeaponSpecifications>() != null)
+        if (itemType == ItemType.ability)
         {
-            itemName.text = weapon.GetComponent<WeaponSpecifications>().weaponName.ToString();
-            itemDamage.text = (weapon.GetComponent<WeaponSpecifications>().weaponDamage * itemLevel + (itemLevel * 0.5)).ToString();
-            itemAttackSpeed.text = (weapon.GetComponent<WeaponSpecifications>().weaponAttackSpeed * itemLevel + (itemLevel * 0.5)).ToString();
-            itemDescription.text = weapon.GetComponent<WeaponSpecifications>().weaponDescription.ToString();
-            itemWeaponImage.sprite = weapon.GetComponent<SpriteRenderer>().sprite;
-            itemUpgradeLevelText.text = itemLevel.ToString();
+
         }
+        
+    }
+    public void AssignVariables(ItemType itemType)
+    {
+        if (itemType == ItemType.weapon)
+        {
+            if (weaponSpecifications != null)
+            {
+                itemName.text = weaponSpecifications.weaponName.ToString();
+                itemDamage.text = (weaponSpecifications.weaponDamage * itemLevel).ToString();
+                itemAttackSpeed.text = (weaponSpecifications.weaponAttackSpeed * itemLevel).ToString();
+                itemDescription.text = weaponSpecifications.weaponDescription.ToString();
+                itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
+                itemUpgradeLevelText.text = itemLevel.ToString();
+                itemPriceText.text = weaponSpecifications.weaponPrice.ToString();
+                itemUpgradePriceText.text = UpgradeLevelFunc(weaponSpecifications.weaponPrice, itemLevel).ToString();
+            }
+        }
+        if (itemType == ItemType.ability)
+        {
+
+        }
+    }
+    public void BuyItem(ItemType itemType)
+    {
+        if(itemType == ItemType.weapon)
+        {
+            if (PlayerPrefs.GetInt(GlobalScript.coinReestrKey) >= weaponSpecifications.weaponPrice)
+            {
+                PlayerPrefs.SetInt(GlobalScript.coinReestrKey, PlayerPrefs.GetInt(GlobalScript.coinReestrKey) - (int)weaponSpecifications.weaponPrice);
+                PlayerPrefs.SetInt(itemReestrKey + "IsBought", 1);
+                print("Kek");
+            }
+        }
+        if (itemType == ItemType.ability)
+        {
+
+        }
+
     }
     public void UpgradeLevel()
     {
-        itemLevel++;
-        PlayerPrefs.SetInt(itemReestrKey, itemLevel);
+        if(PlayerPrefs.GetInt(GlobalScript.coinReestrKey) >= UpgradeLevelFunc(weaponSpecifications.weaponPrice, itemLevel))
+        {
+            itemLevel++;
+            PlayerPrefs.SetInt(GlobalScript.coinReestrKey, (int)(PlayerPrefs.GetInt(GlobalScript.coinReestrKey) - UpgradeLevelFunc(weaponSpecifications.weaponPrice, itemLevel)));
+            PlayerPrefs.SetInt(itemReestrKey, itemLevel);
+        }
+    }
+    public float UpgradeLevelFunc(float weaponPrice, float itemLevel)
+    {
+        return weaponPrice + ((weaponPrice * itemLevel) / 4);
     }
 }

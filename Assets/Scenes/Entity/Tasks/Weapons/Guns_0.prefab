@@ -98,4 +98,5 @@ MonoBehaviour:
   weaponDamage: 0
   weaponAttackSpeed: 0
   weaponDescription: 
+  weaponPrice: 400
   weaponReestrKey: Guns_0Key

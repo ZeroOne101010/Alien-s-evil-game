@@ -8,6 +8,7 @@ public class WeaponSpecifications : MonoBehaviour
     public float weaponDamage;
     public float weaponAttackSpeed;
     public string weaponDescription;
+    public float weaponPrice;
     public string weaponReestrKey;
     public void Start()
     {
@@ -17,6 +18,6 @@ public class WeaponSpecifications : MonoBehaviour
             weaponAttackSpeed *= PlayerPrefs.GetInt(weaponReestrKey);
         }
         else
-            PlayerPrefs.SetInt(weaponReestrKey, 1);    
+            PlayerPrefs.SetInt(weaponReestrKey, 1);
     }
 }
