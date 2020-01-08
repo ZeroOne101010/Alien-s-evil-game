@@ -9,7 +9,7 @@ public class AITakeAWeapon : AITask
     public GameObject weaponSlot1;
     public GameObject weaponSlot2;
     public GameObject keepedWeapon;
-    public RegistoredWeapons registoredWeapons;
+   // public RegistoredWeapons registoredWeapons;
     public Vector3 weaponOffset;
 
     public AITakeAWeapon(GameObject gameObject, GameObject weaponSlot1, GameObject weaponSlot2, Vector3 weaponOffset)
@@ -18,7 +18,7 @@ public class AITakeAWeapon : AITask
         this.weaponSlot1 = weaponSlot1;
         this.weaponSlot2 = weaponSlot2;
         this.weaponOffset = weaponOffset;
-        registoredWeapons = GameObject.FindGameObjectWithTag("WeaponRegistoryManager").GetComponent<RegistoredWeapons>();
+        //registoredWeapons = GameObject.FindGameObjectWithTag("WeaponRegistoryManager").GetComponent<RegistoredWeapons>();
     }
 
     public AITakeAWeapon(GameObject gameObject, GameObject weaponSlot1, GameObject weaponSlot2)
@@ -26,7 +26,7 @@ public class AITakeAWeapon : AITask
         this.gameObject = gameObject;
         this.weaponSlot1 = weaponSlot1;
         this.weaponSlot2 = weaponSlot2;
-        registoredWeapons = GameObject.FindGameObjectWithTag("WeaponRegistoryManager").GetComponent<RegistoredWeapons>();
+        //registoredWeapons = GameObject.FindGameObjectWithTag("WeaponRegistoryManager").GetComponent<RegistoredWeapons>();
     }
 
     public override void updateTask()
@@ -59,7 +59,7 @@ public class AITakeAWeapon : AITask
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    keepedWeapon.GetComponent<WeaponWork>().weaponImplementation(keepedWeapon.GetComponent<WeaponWork>().weaponDamage, keepedWeapon.GetComponent<WeaponWork>().bulletType, keepedWeapon);
+                    //keepedWeapon.GetComponent<WeaponWork>().weaponImplementation(keepedWeapon.GetComponent<WeaponWork>().weaponDamage, keepedWeapon.GetComponent<WeaponWork>().bulletType, keepedWeapon);
                 }
             }
 

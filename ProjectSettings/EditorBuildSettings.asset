@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/SelectPlanet/SelectPlanet.unity
-    guid: 0bce6181ef2f1854c8ad4be500ec5399
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu/Menu.unity
     guid: f11de76f04910b2439ec647d8d7bd920
+  - enabled: 1
+    path: Assets/Scenes/Shop/Shop.unity
+    guid: 1b2fc70d392cd184a8479532607c6c3e
   - enabled: 1
     path: Assets/Scenes/Earth/Winter/Winter.unity
     guid: 4180f36f31d69f644a6c763774f29378
@@ -23,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Earth/Summer/Summer.unity
     guid: b51276b94991e224890c061258e71b19
+  - enabled: 1
+    path: Assets/Scenes/SelectPlanet/SelectPlanet.unity
+    guid: 1ec272610587ace4b8b254cf602ddc9c
   m_configObjects: {}

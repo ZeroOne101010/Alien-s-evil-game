@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PrintText : MonoBehaviour
 {
-    void Update()
+    public void printthetext()
     {
-        //print(PlayerPrefs.GetInt("Gold"));
-        //print(PlayerPrefs.GetInt("Exp"));
-        //print(PlayerPrefs.GetInt("Level"));
+        if (GetComponentInParent<Button>())
+        {
+            print("GG");
+        }
     }
 }

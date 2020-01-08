@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class BlackoutScreen : MonoBehaviour
+public class LockofGun : MonoBehaviour
 {
-    public GameObject blackoutscreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +14,5 @@ public class BlackoutScreen : MonoBehaviour
     void Update()
     {
         
-    }
-    void LockUp()
-    {
-        if (blackoutscreen.active == false)
-        {
-            blackoutscreen.SetActive(true);
-        }
-
     }
 }
