@@ -5,20 +5,24 @@ using UnityEngine.UI;
 
 public enum ItemType
 {
-    none,
+    other,
     weapon,
     ability
 }
 public class ItemSetting : MonoBehaviour
 {
     public ItemType itemType;
+    public bool isWeareable;
     [Header("Общие переменные")]
     public GameObject item;
     public Text itemName;
     public Text itemDescription;
     public Text itemPriceText;
     public Image itemImage;
-
+    public GameObject EquipMenu;
+    public GameObject AlertMenu;
+    [HideInInspector]
+    public Specifications specifications;
     [Header("Weapon")]
     public WeaponSpecifications weaponSpecifications;
     public Text itemDamage;
@@ -33,6 +37,8 @@ public class ItemSetting : MonoBehaviour
     void Start()
     {
         Init(itemType);
+        PlayerPrefs.SetInt(GlobalScript.coinReestrKey, 5000);
+        //PlayerPrefs.DeleteAll();
     }
 
     void Update()
@@ -41,20 +47,43 @@ public class ItemSetting : MonoBehaviour
         AssignVariables(itemType);    }
     public void Init(ItemType itemType)
     {
-        if(itemType == ItemType.weapon)
+        if (itemType == ItemType.other)
+        {
+            specifications = item.GetComponent<Specifications>();
+            itemReestrKey = specifications.reestrKey;
+        }
+
+        if (itemType == ItemType.weapon)
         {
             weaponSpecifications = item.GetComponent<WeaponSpecifications>();
             if (weaponSpecifications != null)
                 itemReestrKey = weaponSpecifications.weaponReestrKey;
         }
-        if(itemType == ItemType.ability)
-        {
 
-        }
 
     }
     public void CheckReestr(ItemType itemType)
     {
+        if (itemType == ItemType.other)
+        {
+            if (PlayerPrefs.GetInt(itemReestrKey + "IsBought") == 0)
+            {
+                EquipMenu.SetActive(false);
+                AlertMenu.SetActive(false);
+            }
+            else if (PlayerPrefs.GetInt(itemReestrKey + "IsBought") != 0)
+            {
+                if (isWeareable == true)
+                {
+                    EquipMenu.SetActive(true);
+                }
+                else
+                {
+                    AlertMenu.SetActive(true);
+                }
+            }
+        }
+
         if (itemType == ItemType.weapon)
         {
             if (weaponSpecifications != null)
@@ -86,6 +115,11 @@ public class ItemSetting : MonoBehaviour
     }
     public void AssignVariables(ItemType itemType)
     {
+        itemName.text = specifications.Name.ToString();
+        itemDescription.text = specifications.description.ToString();
+        itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
+        itemPriceText.text = specifications.price.ToString();
+
         if (itemType == ItemType.weapon)
         {
             if (weaponSpecifications != null)
@@ -105,9 +139,16 @@ public class ItemSetting : MonoBehaviour
 
         }
     }
-    public void BuyItem(ItemType itemType)
+    public void BuyItem()
     {
-        if(itemType == ItemType.weapon)
+        if (PlayerPrefs.GetInt(GlobalScript.coinReestrKey) >= specifications.price)
+        {
+            PlayerPrefs.SetInt(GlobalScript.coinReestrKey, PlayerPrefs.GetInt(GlobalScript.coinReestrKey) - (int)specifications.price);
+            PlayerPrefs.SetInt(itemReestrKey + "IsBought", 1);
+            print("Kek");
+        }
+        print("Kek");
+        if (itemType == ItemType.weapon)
         {
             if (PlayerPrefs.GetInt(GlobalScript.coinReestrKey) >= weaponSpecifications.weaponPrice)
             {
@@ -115,6 +156,7 @@ public class ItemSetting : MonoBehaviour
                 PlayerPrefs.SetInt(itemReestrKey + "IsBought", 1);
                 print("Kek");
             }
+            print("Kek");
         }
         if (itemType == ItemType.ability)
         {

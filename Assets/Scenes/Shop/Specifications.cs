@@ -5,9 +5,9 @@ using UnityEngine;
 public class Specifications : MonoBehaviour
 {
     public string Name;
-    public string Description;
-    public float Price;
-    public string ReestrKey;
+    public string description;
+    public float price;
+    public string reestrKey;
     void Start()
     {
         
