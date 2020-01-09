@@ -36,7 +36,7 @@ public class AIMoveToObject : AITask
         float trackedObjWidth = trackedObj.GetComponent<Collider2D>().bounds.max.x - trackedObj.GetComponent<Collider2D>().bounds.min.x;
         
 
-        if (gameObject.transform.position.x > trackedObj.transform.position.x - (trackedObjWidth / 2) - offestToObj & gameObject.transform.position.x < trackedObj.transform.position.x + (trackedObjWidth / 2) + offestToObj)
+        if (gameObject.transform.position.x > trackedObj.transform.position.x - (trackedObjWidth / 2) - offestToObj & gameObject.transform.position.x < trackedObj.transform.position.x + (trackedObjWidth / 2) + offestToObj)  
         {
             rigid.velocity = new Vector2(0, rigid.velocity.y);
             if (trackedObj.transform.position.x > gameObject.transform.position.x)
