@@ -1006,7 +1006,7 @@ GameObject:
   - component: {fileID: 3987515810265447851}
   - component: {fileID: 420047447}
   m_Layer: 5
-  m_Name: ScrollTestElement
+  m_Name: WeaponSectionElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1104,17 +1104,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d7eb54cc98a5249b7db6058c5f6d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 1792759265269914787, guid: ffc44a17b99387c41ad0dc8b31d5d227, type: 3}
-  weaponSpecifications: {fileID: 0}
+  itemType: 0
+  item: {fileID: 0}
   itemName: {fileID: 3987515810412248775}
+  itemDescription: {fileID: 3987515810582393715}
+  itemPriceText: {fileID: 3987515810089641623}
+  itemImage: {fileID: 3987515811366825864}
+  weaponSpecifications: {fileID: 0}
   itemDamage: {fileID: 3987515810599031978}
   itemAttackSpeed: {fileID: 3987515810121086333}
-  itemDescription: {fileID: 3987515810582393715}
   itemUpgradeLevelText: {fileID: 54114258347921435}
-  itemPriceText: {fileID: 3987515810089641623}
   itemUpgradePriceText: {fileID: 3781301902985744596}
   UpgreadWeaponMenu: {fileID: 3637100004278323461}
-  itemWeaponImage: {fileID: 3987515811366825864}
   itemLevel: 0
 --- !u!1 &3987515810368978482
 GameObject:
