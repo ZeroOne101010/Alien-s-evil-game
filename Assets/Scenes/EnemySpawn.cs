@@ -11,11 +11,11 @@ public class EnemySpawn : MonoBehaviour
     public int[] SequanceOfMonster = new int[Count];
     public int TimeOfSpawn;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Spawn());
     }
+
     IEnumerator Spawn()
     {
         for(int i = 0; i < CountOfMonster; i++)

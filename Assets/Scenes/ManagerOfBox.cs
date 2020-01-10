@@ -8,13 +8,12 @@ public class ManagerOfBox : MonoBehaviour
     public int TimeOfSpawn;
     public GameObject BoxWithGun;
     private int x;
-    // Start is called before the first frame update
+
     void Start()
     {
         StartCoroutine(Spawn());
     }
 
-    // Update is called once per frame
     IEnumerator Spawn()
     {
         while(true)

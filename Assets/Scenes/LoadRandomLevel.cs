@@ -11,9 +11,6 @@ public class LoadRandomLevel : MonoBehaviour
     public string[] scenes = new string[SizeOfArray];
     System.Random rnd = new System.Random();
 
-    void Update()
-    {
-    }
     public void Load_Random_Level()
     {
             temp = Random.Range(0, scenes.Length);
