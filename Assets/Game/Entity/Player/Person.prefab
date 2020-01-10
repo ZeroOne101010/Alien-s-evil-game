@@ -120,8 +120,9 @@ GameObject:
   - component: {fileID: 5484674412787162388}
   - component: {fileID: 7440428545164889940}
   - component: {fileID: 1357670560}
-  - component: {fileID: 1357670559}
   - component: {fileID: 8343960128121998103}
+  - component: {fileID: 6492887535381155212}
+  - component: {fileID: 1357670559}
   - component: {fileID: 1357670561}
   - component: {fileID: 1357670562}
   - component: {fileID: 3121929985991439371}
@@ -199,22 +200,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1357670559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144545790313368975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d2fa8c02bf03d24d979f5a87867e44b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameHaveWeapon: HaveWeapon
-  nameGround: Ground
-  nameSpeedRun: SpeedRun
-  nameJump: SpeedJump
 --- !u!50 &8343960128121998103
 Rigidbody2D:
   serializedVersion: 4
@@ -236,6 +221,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6492887535381155212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144545790313368975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0415b50acdb70774d90d16e525c85273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idActiveController: 0
+  entityAnimation: []
+--- !u!114 &1357670559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144545790313368975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2fa8c02bf03d24d979f5a87867e44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameHaveWeapon: HaveWeapon
+  nameGround: Ground
+  nameSpeedRun: SpeedRun
+  nameJump: SpeedJump
 --- !u!114 &1357670561
 MonoBehaviour:
   m_ObjectHideFlags: 0

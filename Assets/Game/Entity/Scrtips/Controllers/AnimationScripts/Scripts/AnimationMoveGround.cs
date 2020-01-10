@@ -11,7 +11,7 @@ public class AnimationMoveGround : EntityAnimation
 
     public override void animationStart()
     {
-
+        base.animationStart();
     }
 
 

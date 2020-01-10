@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PersonUserController : MonoBehaviour
+public class UserEntityController : MonoBehaviour
 {
-    private EntityMove personController;
+    private EntityMove entityMove;
 
     void Start()
     {
-        personController = GetComponent<EntityMove>();
+        entityMove = GetComponent<EntityMove>();
     }
 
     void Update()
@@ -21,15 +21,15 @@ public class PersonUserController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            personController.movePerson(new Vector2(1, 0));
+            entityMove.movePerson(new Vector2(1, 0));
         }
         else if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            personController.movePerson(new Vector2(-1, 0));
+            entityMove.movePerson(new Vector2(-1, 0));
         }
         else
         {
-            personController.stopMovePerson();
+            entityMove.stopMovePerson();
         }
     }
 
@@ -37,7 +37,7 @@ public class PersonUserController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
         {
-            personController.jumpPerson();
+            entityMove.jumpPerson();
         }
     }
 }

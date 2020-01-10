@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PersonAIController : MonoBehaviour
+public class AIEntityMoveController : MonoBehaviour
 {
 
     public float distanceToFindTarget;

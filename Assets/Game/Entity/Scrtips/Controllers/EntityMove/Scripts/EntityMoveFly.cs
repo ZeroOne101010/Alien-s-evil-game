@@ -23,6 +23,7 @@ public class EntityMoveFly : EntityMove
 
     public override void stopMovePerson()
     {
-        
+
     }
+
 }
