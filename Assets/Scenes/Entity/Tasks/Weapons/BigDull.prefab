@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3078311708291760386}
   - component: {fileID: -2655458535512930382}
   - component: {fileID: -742027350151567556}
+  - component: {fileID: 7465153912900941182}
   m_Layer: 0
   m_Name: BigDull
   m_TagString: BigDull
@@ -123,6 +124,27 @@ MonoBehaviour:
     \u043B\u043E\u0445!"
   weaponPrice: 100
   weaponReestrKey: BigDullKey
+--- !u!114 &7465153912900941182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3078311708291760385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c52f30a44448f48bd629f4e1408b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BigDull
+  description: "\u041D\u043E\u0433\u0433\u0430\u0442\u043E \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E
+    \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E
+    \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E
+    \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E
+    \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E \u043B\u043E\u0445!\u041D\u043E\u0433\u0433\u0430\u0442\u043E
+    \u043B\u043E\u0445!"
+  price: 100
+  reestrKey: BigDullKey
 --- !u!1 &3078311708309623955
 GameObject:
   m_ObjectHideFlags: 0

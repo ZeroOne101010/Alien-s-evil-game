@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1512438207970971782}
   - component: {fileID: 5301618652712554547}
   - component: {fileID: -1019721787332976654}
+  - component: {fileID: -4918420740582590837}
   m_Layer: 0
   m_Name: Guns2v_2
   m_TagString: Untagged
@@ -89,7 +90,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5633627158748087398}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43a9f3b8dd3f3634b9d87acbc10162df, type: 3}
   m_Name: 
@@ -100,3 +101,19 @@ MonoBehaviour:
   weaponDescription: 
   weaponPrice: 300
   weaponReestrKey: Guns2v_2Key
+--- !u!114 &-4918420740582590837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5633627158748087398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c52f30a44448f48bd629f4e1408b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  description: 
+  price: 300
+  reestrKey: Guns2v_2Key

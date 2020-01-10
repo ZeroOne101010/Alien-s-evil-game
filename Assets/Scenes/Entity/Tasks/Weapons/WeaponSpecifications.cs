@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class WeaponSpecifications : MonoBehaviour
 {
-    public string weaponName;
     public float weaponDamage;
     public float weaponAttackSpeed;
-    public string weaponDescription;
-    public float weaponPrice;
-    public string weaponReestrKey;
     public void Start()
     {
-        if (PlayerPrefs.GetInt(weaponReestrKey) != 0)
+        if (PlayerPrefs.GetInt(GetComponent<Specifications>().reestrKey) != 0)
         {
-            weaponDamage *= PlayerPrefs.GetInt(weaponReestrKey);
-            weaponAttackSpeed *= PlayerPrefs.GetInt(weaponReestrKey);
+            weaponDamage *= PlayerPrefs.GetInt(GetComponent<Specifications>().reestrKey);
+            weaponAttackSpeed *= PlayerPrefs.GetInt(GetComponent<Specifications>().reestrKey);
         }
         else
-            PlayerPrefs.SetInt(weaponReestrKey, 1);
+            PlayerPrefs.SetInt(GetComponent<Specifications>().reestrKey, 1);
     }
 }

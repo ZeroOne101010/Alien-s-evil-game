@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2803562753730050237}
   - component: {fileID: 8699882102396473418}
   - component: {fileID: -492230954505149299}
+  - component: {fileID: 8554632589132571432}
   m_Layer: 0
   m_Name: Guns_4
   m_TagString: Untagged
@@ -89,7 +90,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4212952807290267736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43a9f3b8dd3f3634b9d87acbc10162df, type: 3}
   m_Name: 
@@ -100,3 +101,19 @@ MonoBehaviour:
   weaponDescription: 
   weaponPrice: 413
   weaponReestrKey: Guns_4Key
+--- !u!114 &8554632589132571432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4212952807290267736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c52f30a44448f48bd629f4e1408b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  description: 
+  price: 413
+  reestrKey: Guns_4Key

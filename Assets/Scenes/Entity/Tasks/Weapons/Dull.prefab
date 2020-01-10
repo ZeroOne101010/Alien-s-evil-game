@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 1792759265269914785}
   - component: {fileID: -4369811097889033786}
   - component: {fileID: 6800212388115412169}
+  - component: {fileID: 3985562218600639422}
   m_Layer: 0
   m_Name: Dull
   m_TagString: Dull
@@ -153,7 +154,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792759265269914787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43a9f3b8dd3f3634b9d87acbc10162df, type: 3}
   m_Name: 
@@ -166,3 +167,21 @@ MonoBehaviour:
     \u0437\u0430\u043F\u0440\u0435\u0449\u0435\u043D\u0430 \u043F\u044B\u0442\u044C!"
   weaponPrice: 125
   weaponReestrKey: DullKye
+--- !u!114 &3985562218600639422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792759265269914787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c52f30a44448f48bd629f4e1408b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Dull
+  description: "\u0421\u043B\u044B\u0448\u044C, \u043C\u0443\u0434\u0438\u043B\u0430
+    \u043C\u044B\u0442\u044C, \u0442\u0443\u0442 \u0441\u044A\u0451\u043C\u043A\u0430
+    \u0437\u0430\u043F\u0440\u0435\u0449\u0435\u043D\u0430 \u043F\u044B\u0442\u044C!"
+  price: 125
+  reestrKey: DullKey
