@@ -7,6 +7,8 @@ public enum ItemType
 {
     other,
     weapon,
+    coldWeapon,
+    pistolWeapon,
     ability
 }
 public enum BuyLogic
@@ -111,6 +113,7 @@ public class ItemSetting : MonoBehaviour
         itemName.text = specifications.Name.ToString();
         itemDescription.text = specifications.description.ToString();
         itemImage.sprite = item.GetComponent<SpriteRenderer>().sprite;
+        itemImage.preserveAspect = true;
         itemPriceText.text = specifications.price.ToString();
         if (itemType == ItemType.weapon)
         {
