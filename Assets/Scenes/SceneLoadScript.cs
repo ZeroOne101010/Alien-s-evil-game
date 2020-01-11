@@ -19,7 +19,7 @@ public class SceneLoadScript : MonoBehaviour
         while (!operation.isDone)
         {
             float progress = operation.progress / 0.9f;
-            progressCircle.fillAmount =     progress;
+            progressCircle.fillAmount = progress;
             yield return null;
         }
     }
