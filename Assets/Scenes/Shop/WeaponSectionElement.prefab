@@ -864,14 +864,14 @@ RectTransform:
   m_GameObject: {fileID: 3987515809759064171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -0.7356779, y: 0.89172, z: 0.89172}
   m_Children: []
   m_Father: {fileID: 3987515810586368259}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59.87, y: 0}
+  m_AnchoredPosition: {x: -59.4, y: 0}
   m_SizeDelta: {x: 28.64, y: 23.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3987515809759064168
@@ -895,12 +895,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.19299299, b: 0.09718761, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1940122629950076160, guid: 4cd1750d4e7171846a6b982671dbcb32,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1310,22 +1311,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 1
-  isWeareable: 0
   buyLogic: 0
+  EquipMenu: {fileID: 4415791765517966171}
+  AlertMenu: {fileID: 2143371722182344499}
+  UpgreadWeaponMenu: {fileID: 3637100004278323461}
   item: {fileID: 0}
+  specifications: {fileID: 0}
   itemName: {fileID: 3987515810412248775}
   itemDescription: {fileID: 3987515810582393715}
   itemPriceText: {fileID: 3987515810089641623}
   itemImage: {fileID: 3987515811366825864}
-  EquipMenu: {fileID: 4415791765517966171}
-  AlertMenu: {fileID: 2143371722182344499}
-  specifications: {fileID: 0}
   weaponSpecifications: {fileID: 0}
   itemDamage: {fileID: 3987515810599031978}
   itemAttackSpeed: {fileID: 3987515810121086333}
   itemUpgradeLevelText: {fileID: 54114258347921435}
   itemUpgradePriceText: {fileID: 3781301902985744596}
-  UpgreadWeaponMenu: {fileID: 3637100004278323461}
   itemLevel: 0
 --- !u!1 &3987515810368978482
 GameObject:
@@ -2049,7 +2049,7 @@ RectTransform:
   m_GameObject: {fileID: 3987515810999084957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
   m_Children: []
   m_Father: {fileID: 3987515811282202924}
   m_RootOrder: 1
@@ -2080,12 +2080,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.09803918, g: 0.98039216, b: 0.84775513, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 5421337457469781628, guid: 096bbe7167c124144830b431ab4e5280,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

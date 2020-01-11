@@ -86,8 +86,8 @@ public class ItemSetting : MonoBehaviour
         if (itemType == ItemType.weapon)
         {
             weaponSpecifications = item.GetComponent<WeaponSpecifications>();
-            if (PlayerPrefs.GetInt(itemReestrKey) <= 0)         
-                PlayerPrefs.SetInt(itemReestrKey, 1);                  
+            if (PlayerPrefs.GetInt(itemReestrKey) <= 0)
+                PlayerPrefs.SetInt(itemReestrKey, 1);
             itemLevel = PlayerPrefs.GetInt(itemReestrKey);
         }
     }
