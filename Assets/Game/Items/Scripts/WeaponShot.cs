@@ -26,4 +26,20 @@ public abstract class WeaponShot : MonoBehaviour
 
     public abstract void shot(Vector3 offsetShot);
 
+    public int getTeamId()
+    {
+        EntityController entity = GetComponent<WeaponController>().keepedEntity.GetComponent<EntityController>();
+        return entity.teamId;
+    }
+
+    public EntityController getEntityController()
+    {
+        return GetComponent<WeaponController>().keepedEntity.GetComponent<EntityController>(); ;
+    }
+
+    public GameObject getKeepedEntity()
+    {
+        return GetComponent<WeaponController>().keepedEntity;
+    }
+
 }

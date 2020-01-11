@@ -8,14 +8,26 @@ public class BulletController : MonoBehaviour
     public float speedMove;
     public float teamId;
 
+    [HideInInspector]
+    public Vector2 direction;
+
+    private BulletScript[] bulletScript;
+
     void Start()
     {
-
+        bulletScript = GetComponents<BulletScript>();
+        for(int x = 0; x < bulletScript.Length; x++)
+        {
+            bulletScript[x].bulletStart();
+        }
     }
 
     void Update()
     {
-
+        for (int x = 0; x < bulletScript.Length; x++)
+        {
+            bulletScript[x].bulletUpdate();
+        }
     }
 
     public void initBullet(int teamId, Vector3 direction)
@@ -23,6 +35,12 @@ public class BulletController : MonoBehaviour
         Rigidbody2D rigid = GetComponent<Rigidbody2D>();
         rigid.velocity = direction * speedMove;
         this.teamId = teamId;
+        this.direction = direction;
+        bulletScript = GetComponents<BulletScript>();
+        for (int x = 0; x < bulletScript.Length; x++)
+        {
+            bulletScript[x].bulletInit();
+        }
     }
 
     public void bulletRapture(GameObject entity)

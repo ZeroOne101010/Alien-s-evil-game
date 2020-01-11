@@ -7,7 +7,7 @@ public class AnimationFly : EntityAnimation
 
     public string nameVelocityY = "VelocityY";
     public string nameVelocityX = "VelocityX";
-    public string nameStay = "Stay";
+    public string nameIdle = "Idle";
 
 
 
@@ -22,11 +22,11 @@ public class AnimationFly : EntityAnimation
         animator.SetFloat(nameVelocityX, rigid.velocity.x);
         if(rigid.velocity.x == 0 && rigid.velocity.y == 0)
         {
-            animator.SetBool(nameStay, true);
+            animator.SetBool(nameIdle, true);
         }
         else
         {
-            animator.SetBool(nameStay, false);
+            animator.SetBool(nameIdle, false);
         }
     }
 

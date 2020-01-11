@@ -46,9 +46,7 @@ public class ShotBullet : WeaponShot
                 createdBullet.transform.rotation = new Quaternion(0, -1, 0, 0);
             }
 
-            EntityController state = entity.GetComponent<EntityController>();
-
-            bulletController.initBullet(state.teamId, directionBullet);
+            bulletController.initBullet(getTeamId(), directionBullet);
 
         }
 
