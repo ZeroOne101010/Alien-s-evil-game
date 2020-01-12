@@ -5,15 +5,19 @@ using UnityEngine;
 public class EquipManager : MonoBehaviour
 {
     public GameObject[] HaveItemSections;
+    public GameObject choosedSection;
     public static int selectedSection;
+    public int selectedSectionPUBLIC;
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+        selectedSectionPUBLIC = selectedSection;
+        SectionLogic();
+        EquipSectionLogic();
     }
     public void SectionLogic()
     {
@@ -31,5 +35,15 @@ public class EquipManager : MonoBehaviour
                 HaveItemSections[i].GetComponent<EquipSectionScript>().section.SetActive(false);
             }
         }
+    }
+    public void EquipSectionLogic()
+    {
+        for(int i = 0; i < HaveItemSections.Length; i++)
+        {
+            if(HaveItemSections[i].GetComponent<EquipSectionScript>().sectionIndex == selectedSection)
+            {
+                choosedSection = HaveItemSections[i];
+            }
+        }   
     }
 }

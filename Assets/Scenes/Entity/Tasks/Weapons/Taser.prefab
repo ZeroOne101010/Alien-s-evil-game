@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4963192858276379827}
   - component: {fileID: -6005780081923823568}
   m_Layer: 0
-  m_Name: Guns2v_0
+  m_Name: Taser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,12 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a9f3b8dd3f3634b9d87acbc10162df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Guns2v_0Key
   weaponDamage: 1000
   weaponAttackSpeed: 25
-  weaponDescription: "\u041D\u0443 \u0442\u044B \u043B\u043E\u0445 \u043A\u043E\u043D\u0435\u0447\u043D\u043E!"
-  weaponPrice: 10
-  weaponReestrKey: Guns2v_0Key
 --- !u!114 &-6005780081923823568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c52f30a44448f48bd629f4e1408b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: 1
   Name: Guns2v_0Key
   description: "\u041D\u0443 \u0442\u044B \u043B\u043E\u0445 \u043A\u043E\u043D\u0435\u0447\u043D\u043E!"
   price: 10
   reestrKey: Guns2v_0Key
+  isBought: 1

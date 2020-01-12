@@ -109,7 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c52f30a44448f48bd629f4e1408b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: 1
   Name: Kakoeto imya
   description: 
   price: 413
   reestrKey: Guns_4Key
+  isBought: 1

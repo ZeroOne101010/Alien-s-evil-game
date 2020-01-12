@@ -95,12 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a9f3b8dd3f3634b9d87acbc10162df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: 
   weaponDamage: 0
   weaponAttackSpeed: 0
-  weaponDescription: 
-  weaponPrice: 123
-  weaponReestrKey: Guns_6Key
 --- !u!114 &3848774522115563468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c52f30a44448f48bd629f4e1408b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemType: 1
   Name: 
   description: 
   price: 123
   reestrKey: Guns_6Key
+  isBought: 1
