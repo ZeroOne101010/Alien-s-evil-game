@@ -23,7 +23,7 @@ public abstract class AnimationController : MonoBehaviour
 
     void Update()
     {
-        if(entityAnimation[idActiveController] != null)
+        if (entityAnimation[idActiveController] != null)
         {
             entityAnimation[idActiveController].animationUpdate();
         }

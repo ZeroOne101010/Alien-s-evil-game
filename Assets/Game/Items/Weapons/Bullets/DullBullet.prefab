@@ -148,6 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 5
   teamId: 0
+  timeLive: 300
+  direction: {x: 0, y: 0}
 --- !u!114 &8389238216775941754
 MonoBehaviour:
   m_ObjectHideFlags: 0

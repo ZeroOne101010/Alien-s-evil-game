@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5853275791834247734}
   - component: {fileID: 1561656024752669146}
   - component: {fileID: 7031242771198709194}
+  - component: {fileID: 1351954186475805423}
   m_Layer: 0
   m_Name: FlamethrowerBullet
   m_TagString: Untagged
@@ -97,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 0
   teamId: 0
+  timeLive: 300
   direction: {x: 0, y: 0}
 --- !u!114 &1561656024752669146
 MonoBehaviour:
@@ -126,6 +128,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0.8
+--- !u!114 &1351954186475805423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757807366291049284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5b0f57ca26af94bacf88ae1b1aa825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prifabParticle: {fileID: 8056667336045124589, guid: 6e7d9573270d6374da7bea05a9cca802,
+    type: 3}
+  count: 2
+  speedMove: 5
 --- !u!1 &8026356148991189443
 GameObject:
   m_ObjectHideFlags: 0

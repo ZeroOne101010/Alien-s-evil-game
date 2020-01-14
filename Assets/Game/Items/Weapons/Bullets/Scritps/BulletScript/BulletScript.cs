@@ -4,6 +4,12 @@ using UnityEngine;
 
 public abstract class BulletScript : MonoBehaviour
 {
+    [HideInInspector]
+    public GameObject weapon;
+
+    [HideInInspector]
+    public WeaponShot weaponShot;
+
     void Start()
     {
         bulletStart();
