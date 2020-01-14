@@ -95,12 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a9f3b8dd3f3634b9d87acbc10162df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: 
   weaponDamage: 0
   weaponAttackSpeed: 0
-  weaponDescription: 
-  weaponPrice: 413
-  weaponReestrKey: Guns_4Key
 --- !u!114 &8554632589132571432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c52f30a44448f48bd629f4e1408b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  itemType: 1
+  Name: Kakoeto imya
   description: 
   price: 413
   reestrKey: Guns_4Key
+  isBought: 1
