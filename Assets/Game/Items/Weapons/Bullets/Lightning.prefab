@@ -14,6 +14,10 @@ GameObject:
   - component: {fileID: 4250635959048977054}
   - component: {fileID: 80122105512928744}
   - component: {fileID: 2452264127673065208}
+  - component: {fileID: 6579970633905676069}
+  - component: {fileID: 841916709351784687}
+  - component: {fileID: 7167493349321577700}
+  - component: {fileID: 1180761193516970267}
   m_Layer: 0
   m_Name: Lightning
   m_TagString: Untagged
@@ -30,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 4250635959048977053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.8951, y: 1.7447, z: 0}
-  m_LocalScale: {x: 0.41941828, y: 0.19138539, z: 0.35045367}
+  m_LocalScale: {x: 0.382, y: 0.17817321, z: 0.382}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ea7575da8eb60774fb61a86565c5965b, type: 3}
-  m_Color: {r: 0.6273585, g: 0.767106, b: 1, a: 1}
+  m_Color: {r: 0.29803923, g: 0.35686275, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 5
   teamId: 0
-  timeLive: 40
+  timeLive: 20
   direction: {x: 0, y: 0}
   weapon: {fileID: 0}
   weaponShot: {fileID: 0}
@@ -118,13 +122,14 @@ MonoBehaviour:
   weaponShot: {fileID: 0}
   spreadGameObject:
   - {fileID: 4250635959048977053}
-  offsetSpawn: {x: 0.2, y: 0.1}
-  maxCountSpread: 5
-  ScatterSpread: 1
-  timeToSpreadLighting: 50
+  offsetSpawn: {x: 0.2, y: 0.2}
+  timeSpread: 5
+  maxCountSpread: 15
+  scatterSpreadCount: 2
+  countCreatedSpreadInOneSpread: 1
+  directionSpread: {x: 1, y: 0}
   spreadId: 0
-  directionSpread: {x: 0, y: 0}
-  isFirstLighting: 0
+  isFirstSpread: 0
 --- !u!50 &80122105512928744
 Rigidbody2D:
   serializedVersion: 4
@@ -172,3 +177,62 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6579970633905676069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250635959048977053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61dce408c311de441a69fc7d3453ea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0.5
+  T: 15
+--- !u!114 &841916709351784687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250635959048977053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9c454637dcfdd48b38e45abfc052e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color:
+  - {r: 0.2971698, g: 0.35608965, b: 1, a: 1}
+  - {r: 0.4009434, g: 0.45060608, b: 1, a: 1}
+--- !u!114 &7167493349321577700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250635959048977053}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f09852a8c91ed449bdf01f8f9b33d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite:
+  - {fileID: 8797268556598280503, guid: cc5fe7837d769fd4d9372d503e356c5b, type: 3}
+  - {fileID: -7855395427981662674, guid: cc5fe7837d769fd4d9372d503e356c5b, type: 3}
+  - {fileID: 3257028829369898203, guid: cc5fe7837d769fd4d9372d503e356c5b, type: 3}
+  - {fileID: -6414626992209940804, guid: cc5fe7837d769fd4d9372d503e356c5b, type: 3}
+--- !u!114 &1180761193516970267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4250635959048977053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a790d3e161baf04a88bc20620d3b294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 20

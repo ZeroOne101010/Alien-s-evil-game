@@ -25,19 +25,11 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         bulletScript = GetComponents<BulletScript>();
-        for(int x = 0; x < bulletScript.Length; x++)
-        {
-            bulletScript[x].bulletStart();
-        }
         timerLive = timeLive;
     }
 
     void Update()
     {
-        for (int x = 0; x < bulletScript.Length; x++)
-        {
-            bulletScript[x].bulletUpdate();
-        }
         timerLive--;
         if(timerLive < 0)
         {
