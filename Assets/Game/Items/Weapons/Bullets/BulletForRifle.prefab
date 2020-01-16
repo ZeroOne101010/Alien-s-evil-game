@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2110017547009399773
+--- !u!1 &1010196688155765518
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5691705218003341950}
-  - component: {fileID: 4182411811580384525}
-  - component: {fileID: 3786823684232324254}
-  - component: {fileID: 2348774211962822992}
-  - component: {fileID: 5292264404330330891}
-  - component: {fileID: 1104303054}
-  - component: {fileID: 9204829194296966213}
+  - component: {fileID: 7343819844990296}
+  - component: {fileID: 7209846072118843353}
+  - component: {fileID: 5553043931210285447}
+  - component: {fileID: 3266607383539438903}
+  - component: {fileID: 7122285091768186090}
+  - component: {fileID: 3793575731530016329}
   m_Layer: 0
-  m_Name: Flamethrower
-  m_TagString: Item
+  m_Name: BulletForRifle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5691705218003341950
+--- !u!4 &7343819844990296
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110017547009399773}
+  m_GameObject: {fileID: 1010196688155765518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.1159, y: 1.0162, z: 0}
-  m_LocalScale: {x: 0.0845178, y: 0.068171285, z: 0.257875}
+  m_LocalPosition: {x: -24.638, y: 1.141, z: 0}
+  m_LocalScale: {x: 0.0054382775, y: 0.0054382775, z: 0.0054382775}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4182411811580384525
+--- !u!212 &7209846072118843353
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110017547009399773}
+  m_GameObject: {fileID: 1010196688155765518}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,52 +73,52 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2384850958105000590, guid: 6b1161981e749d04c8d7c45d06a21dba,
+  m_Sprite: {fileID: -8301269835601782975, guid: f7582422cd972824491e6cb36d038a90,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 40.7312, y: 9.120001}
+  m_Size: {x: 42.02, y: 15.511674}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3786823684232324254
+--- !u!61 &5553043931210285447
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110017547009399773}
+  m_GameObject: {fileID: 1010196688155765518}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 40.7312, y: 9.120001}
-    newSize: {x: 40.7312, y: 9.120001}
+    oldSize: {x: 42.02, y: 15.511674}
+    newSize: {x: 42.02, y: 15.511674}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40.7312, y: 9.120001}
+  m_Size: {x: 42.02, y: 15.511674}
   m_EdgeRadius: 0
---- !u!50 &2348774211962822992
+--- !u!50 &3266607383539438903
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110017547009399773}
+  m_GameObject: {fileID: 1010196688155765518}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -127,57 +126,40 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5292264404330330891
+--- !u!114 &7122285091768186090
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110017547009399773}
+  m_GameObject: {fileID: 1010196688155765518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a7c6db97a121c4692fdc4a4fb0b614, type: 3}
+  m_Script: {fileID: 11500000, guid: 3155694510f40b94bbed21eabd9a079c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetShot: {x: 2, y: 0}
-  keepedEntity: {fileID: 0}
-  canTakeItem: 0
-  timeReload: 1
---- !u!114 &1104303054
+  speedMove: 20
+  teamId: 0
+  timeLive: 10
+  direction: {x: 0, y: 0}
+  weapon: {fileID: 0}
+  weaponShot: {fileID: 0}
+--- !u!114 &3793575731530016329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110017547009399773}
+  m_GameObject: {fileID: 1010196688155765518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5b0f57ca26af94bacf88ae1b1aa825, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b4ba5a7ee262b24f88d4d4e811f6e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prifabParticle: {fileID: 8056667336045124589, guid: 6e7d9573270d6374da7bea05a9cca802,
-    type: 3}
-  count: 1
-  speedMove: 5
---- !u!114 &9204829194296966213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110017547009399773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c465e9d8a090e554e82530c11debd196, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 0.5, y: 0.5}
-  sizeFieldSpawnBullets: {x: 0.5, y: 0.5}
-  bulletPrifab:
-  - {fileID: 1757807366291049284, guid: a033071e42462fe4197ef2e22a13a39f, type: 3}
+  damage: 20
