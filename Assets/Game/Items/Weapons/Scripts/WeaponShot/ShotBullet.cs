@@ -46,7 +46,7 @@ public class ShotBullet : WeaponShot
                 createdBullet.transform.rotation = new Quaternion(0, -1, 0, 0);
             }
 
-            bulletController.initBullet(getTeamId(), directionBullet);
+            bulletController.initBullet(getTeamId(), directionBullet, gameObject, this);
 
         }
 

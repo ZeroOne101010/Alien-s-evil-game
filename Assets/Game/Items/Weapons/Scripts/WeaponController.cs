@@ -52,7 +52,6 @@ public class WeaponController : MonoBehaviour
         if (timerReload == 0)
         {
             shotEffect();
-            ShotEffect[] effect = GetComponents<ShotEffect>();
             EntityMove entityMove = keepedEntity.GetComponent<EntityMove>();
             bool isRight = entityMove.isRight;
             Vector2 offset = isRight ? offsetShot : -offsetShot;

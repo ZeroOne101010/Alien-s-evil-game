@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class StreamBullets : WeaponShot
 {
-
+    public Vector2 direction;
     public Vector2 sizeFieldSpawnBullets;
     public GameObject[] bulletPrifab;
-    public Vector2 directionMove;
 
     public override void startWeaponShot()
     {
@@ -27,8 +26,8 @@ public class StreamBullets : WeaponShot
         GameObject bullet = Instantiate(bulletPrifab[id], spawnPos, Quaternion.identity);
         BulletController bulletController = bullet.GetComponent<BulletController>();
         float isRight = getKeepedEntity().GetComponent<EntityMove>().isRight ? 1 : -1;
-        Vector2 direction = new Vector2(directionMove.x * isRight, directionMove.y);
-        bulletController.initBullet(getTeamId(), direction);
+        Vector2 direction = new Vector2(this.direction.x * isRight, this.direction.y);
+        bulletController.initBullet(getTeamId(), direction, gameObject, this);
     }
 
 }

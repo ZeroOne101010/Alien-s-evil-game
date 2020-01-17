@@ -7,38 +7,49 @@ public class BulletController : MonoBehaviour
 
     public float speedMove;
     public float teamId;
+    public float timeLive;
+
+    private float timerLive;
 
     [HideInInspector]
     public Vector2 direction;
+
+    [HideInInspector]
+    public GameObject weapon;
+
+    [HideInInspector]
+    public WeaponShot weaponShot;
 
     private BulletScript[] bulletScript;
 
     void Start()
     {
         bulletScript = GetComponents<BulletScript>();
-        for(int x = 0; x < bulletScript.Length; x++)
-        {
-            bulletScript[x].bulletStart();
-        }
+        timerLive = timeLive;
     }
 
     void Update()
     {
-        for (int x = 0; x < bulletScript.Length; x++)
+        timerLive--;
+        if(timerLive < 0)
         {
-            bulletScript[x].bulletUpdate();
+            destroyBullet();
         }
     }
 
-    public void initBullet(int teamId, Vector3 direction)
+    public void initBullet(int teamId, Vector3 direction, GameObject weapon, WeaponShot weaponShot)
     {
         Rigidbody2D rigid = GetComponent<Rigidbody2D>();
         rigid.velocity = direction * speedMove;
         this.teamId = teamId;
         this.direction = direction;
+        this.weapon = weapon;
+        this.weaponShot = weaponShot;
         bulletScript = GetComponents<BulletScript>();
         for (int x = 0; x < bulletScript.Length; x++)
         {
+            bulletScript[x].weapon = weapon;
+            bulletScript[x].weaponShot = weaponShot;
             bulletScript[x].bulletInit();
         }
     }
