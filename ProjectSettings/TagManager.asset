@@ -14,6 +14,7 @@ TagManager:
   - Manager
   - WeaponRegistoryManager
   - RegisteryManager
+  - WeaponsID
   layers:
   - Default
   - TransparentFX
