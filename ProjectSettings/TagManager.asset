@@ -16,6 +16,7 @@ TagManager:
   - RegisteryManager
   - Entity
   - Item
+  - PrefabManager
   layers:
   - Default
   - TransparentFX
