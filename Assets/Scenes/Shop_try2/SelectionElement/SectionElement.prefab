@@ -65,6 +65,7 @@ GameObject:
   - component: {fileID: 7876390083957509446}
   - component: {fileID: 7876390083957509448}
   - component: {fileID: 7876390083957509449}
+  - component: {fileID: 4545254173671448741}
   - component: {fileID: 7803198339863559043}
   - component: {fileID: 2481967499315324768}
   m_Layer: 5
@@ -136,6 +137,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4545254173671448741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876390083957509447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29896854b1d6b7c438cd96ff0b5106c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 0
 --- !u!114 &7803198339863559043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +679,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766044878087135520, guid: 1548fca531e5aa047b662b24e3e85ae4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2620447336533462281, guid: fe74da4a057fe334d84da794ac0b14db,
+        type: 3}
+    - target: {fileID: 8766044878087135520, guid: 1548fca531e5aa047b662b24e3e85ae4,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766044878087135520, guid: 1548fca531e5aa047b662b24e3e85ae4,
+        type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1548fca531e5aa047b662b24e3e85ae4, type: 3}

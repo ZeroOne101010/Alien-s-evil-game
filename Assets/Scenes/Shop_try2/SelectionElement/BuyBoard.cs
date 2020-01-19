@@ -9,24 +9,36 @@ public class BuyBoard : Board
     public Text price;
     public GameObject[] initalBoards;
     public GameObject[] replacementBoards;
+    private ElementController elementController;
     public override void BoardStart()
     {
         base.BoardStart();
-        for (int i = 0; i < replacementBoards.Length; i++)
-            replacementBoards[i].SetActive(false);
-        for (int c = 0; c < initalBoards.Length; c++)
-            initalBoards[c].SetActive(true);
+        elementController = GetComponent<ElementController>();
+        CheckBoughtItem();
+        //GlobalScript.SetValutaValue(elementController.valutaType, 2500);
+        //ItemDataController.ClearAllValues();
     }
     public override void BoardUpdate()
     {
         base.BoardUpdate();
     }
+    private void CheckBoughtItem()
+    {
+        if (ItemDataController.GetItemData(GetComponent<ElementController>().itemID, ItemDataType.isBought) == true)
+        {
+            GlobalScript.SetObjectsActive(initalBoards, false);
+            GlobalScript.SetObjectsActive(replacementBoards, true);
+        }
+    }
     public void Buy()
     {
-        print("Вы приобрели ничто за " + price.text + " золотых стокоратных монет! ПОЗДРАВЛЯЮ");
-        for (int i = 0; i < replacementBoards.Length; i++)
-            replacementBoards[i].SetActive(true);
-        for (int c = 0; c < initalBoards.Length; c++)
-            initalBoards[c].SetActive(false);    
+        if (ItemDataController.GetItemData(GetComponent<ElementController>().itemID, ItemDataType.isBought) == false)
+            if (GlobalScript.GetValutaValue(elementController.valutaType) >= int.Parse(price.text))
+            {
+                GlobalScript.SetValutaValue(elementController.valutaType, GlobalScript.GetValutaValue(elementController.valutaType) - int.Parse(price.text));
+                ItemDataController.SetItemData(elementController.itemID, ItemDataType.isBought, true);
+                GlobalScript.SetObjectsActive(initalBoards, false);
+                GlobalScript.SetObjectsActive(replacementBoards, true);
+            }
     }
 }
