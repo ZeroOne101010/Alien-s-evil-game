@@ -83,11 +83,6 @@ public class BulletController : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-
-        if (collision.gameObject.tag != "Untagget")
-        {
-            Debug.Log(collision.gameObject.tag);
-        }
         if (collision.gameObject.tag == "Entity")
         {
             EntityController state = collision.gameObject.GetComponent<EntityController>();

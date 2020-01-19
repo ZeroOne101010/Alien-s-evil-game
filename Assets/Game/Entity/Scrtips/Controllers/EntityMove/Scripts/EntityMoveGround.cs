@@ -9,7 +9,7 @@ public class EntityMoveGround : EntityMove
         Rigidbody2D rigid = GetComponent<Rigidbody2D>();
         if (rigid.velocity.y == 0)
         {
-            rigid.velocity = new Vector2(rigid.velocity.x, forceJump);
+            rigid.velocity = new Vector2(rigid.velocity.x, entityMoveController.forceJump);
         }
     }
 
@@ -27,12 +27,12 @@ public class EntityMoveGround : EntityMove
         Rigidbody2D rigid = GetComponent<Rigidbody2D>();
         if (isRight)
         {
-            rigid.velocity = new Vector2(speedMove, rigid.velocity.y);
+            rigid.velocity = new Vector2(entityMoveController.speedMove, rigid.velocity.y);
             transform.rotation = new Quaternion(transform.rotation.x, 0, transform.rotation.z, transform.rotation.w);
         }
         else
         {
-            rigid.velocity = new Vector2(-speedMove, rigid.velocity.y);
+            rigid.velocity = new Vector2(-entityMoveController.speedMove, rigid.velocity.y);
             transform.rotation = new Quaternion(transform.rotation.x, 180, transform.rotation.z, transform.rotation.w);
         }
     }

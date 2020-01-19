@@ -18,6 +18,7 @@ public class AnimationFly : EntityAnimation
 
     public override void animationUpdate()
     {
+        base.animationUpdate();
         animator.SetFloat(nameVelocityY, rigid.velocity.y);
         animator.SetFloat(nameVelocityX, rigid.velocity.x);
         if(rigid.velocity.x == 0 && rigid.velocity.y == 0)

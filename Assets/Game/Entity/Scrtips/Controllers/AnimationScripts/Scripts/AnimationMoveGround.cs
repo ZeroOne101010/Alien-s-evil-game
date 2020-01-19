@@ -17,6 +17,7 @@ public class AnimationMoveGround : EntityAnimation
 
     public override void animationUpdate()
     {
+        base.animationUpdate();
         if (rigid.velocity.y == 0)
         {
             animator.SetBool(nameGround, true);

@@ -8,9 +8,11 @@ public class EntityMoveController : MonoBehaviour
     public float speedMove;
     public float forceJump;
 
+    private EntityMove[] entityMove;
+
     void Start()
     {
-        
+        entityMove = GetComponents<EntityMove>();
     }
 
     void Update()
@@ -18,31 +20,27 @@ public class EntityMoveController : MonoBehaviour
         
     }
 
-    public void movePerson(bool isRight)
+    public void movePerson(Vector2 direction)
     {
-        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
-        if (isRight)
+        for(int x = 0; x < entityMove.Length; x++)
         {
-            rigid.velocity = new Vector2(speedMove, rigid.velocity.y);
-        }
-        else
-        {
-            rigid.velocity = new Vector2(-speedMove, rigid.velocity.y);
+            entityMove[x].movePerson(direction);
         }
     }
 
     public void jumpPerson()
     {
-        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
-        if(rigid.velocity.y == 0)
+        for(int x = 0; x < entityMove.Length; x++)
         {
-            rigid.velocity = new Vector2(rigid.velocity.x, forceJump);
+            entityMove[x].jumpPerson();
         }
     }
 
     public void stopMovePerson()
     {
-        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
-        rigid.velocity = new Vector2(0, rigid.velocity.y);
+        for (int x = 0; x < entityMove.Length; x++)
+        {
+            entityMove[x].stopMovePerson();
+        }
     }
 }

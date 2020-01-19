@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ShotgunScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
-        
+        SpawnFourBullets();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    
+    void SpawnFourBullets()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            Instantiate(gameObject,transform.parent);
+        }
     }
 }

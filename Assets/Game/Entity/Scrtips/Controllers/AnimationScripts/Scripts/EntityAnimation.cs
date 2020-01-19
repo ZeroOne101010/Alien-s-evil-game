@@ -7,8 +7,10 @@ public abstract class EntityAnimation : MonoBehaviour
 
     protected Rigidbody2D rigid;
     protected Animator animator;
+    private EntityController entityController;
 
     public string nameHaveWeapon = "HaveWeapon";
+    public string nameDeath = "Death";
 
     public void activeWeapon(bool enable)
     {
@@ -19,7 +21,18 @@ public abstract class EntityAnimation : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        entityController = GetComponent<EntityController>();
     }
 
-    public abstract void animationUpdate();
+    public virtual void animationUpdate()
+    {
+        if (entityController.isDeath)
+        {
+            animator.SetBool(nameDeath, true);
+        }
+        else
+        {
+            animator.SetBool(nameDeath, false);
+        }
+    }
 }

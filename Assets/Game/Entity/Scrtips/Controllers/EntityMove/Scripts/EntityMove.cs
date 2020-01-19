@@ -4,14 +4,33 @@ using UnityEngine;
 
 public abstract class EntityMove : MonoBehaviour
 {
-    public float speedMove;
-    public float forceJump;
-
     public bool isRight;
+    protected EntityMoveController entityMoveController;
+
+    public void Start()
+    {
+        entityMoveController = GetComponent<EntityMoveController>();
+        entityMoveStart();
+    }
+
+    public void Update()
+    {
+        entityMoveUpdate();
+    }
+
+    public virtual void entityMoveStart()
+    {
+
+    }
+
+    public virtual void entityMoveUpdate()
+    {
+
+    }
 
     public abstract void movePerson(Vector2 direction);
     public abstract void jumpPerson();
     public abstract void stopMovePerson();
-
+    
 
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EntityController : MonoBehaviour
+public abstract class EntityController : MonoBehaviour
 {
     public int teamId = -1;
     public float health = 100;
@@ -10,37 +10,48 @@ public class EntityController : MonoBehaviour
     [HideInInspector]
     public bool isDeath;
 
-    private EntityDeathEffect[] effect;
+    private EntityDeathEffect[] deathEffect;
 
     void Start()
     {
-
+        entityStart();
     }
 
     void Update()
     {
+        entityUpdate();
         if (isDeath)
         {
-            for (int x = 0; x < effect.Length; x++)
+            for (int x = 0; x < deathEffect.Length; x++)
             {
-                effect[x].effectUpdate();
+                deathEffect[x].effectUpdate();
             }
         }
     }
 
+    public virtual void entityStart()
+    {
+
+    }
+
+    public virtual void entityUpdate()
+    {
+
+    }
+
     public void death()
     {
-        effect = GetComponents<EntityDeathEffect>();
-        for (int x = 0; x < effect.Length; x++)
+        deathEffect = GetComponents<EntityDeathEffect>();
+        for (int x = 0; x < deathEffect.Length; x++)
         {
-            effect[x].effectStart();
+            deathEffect[x].effectStart();
         }
         isDeath = true;
 
         MonoBehaviour[] component = GetComponents<MonoBehaviour>();
         for (int x = 0; x < component.Length; x++)
         {
-            if(!(component[x] is EntityController) && !(component[x] is EntityDeathEffect))
+            if(!(component[x] is EntityController) && !(component[x] is EntityDeathEffect) && !(component[x] is EntityAnimation) && !(component[x] is AnimationController))
             {
                 component[x].enabled = false;
             }

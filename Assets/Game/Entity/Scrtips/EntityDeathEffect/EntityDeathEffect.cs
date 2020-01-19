@@ -5,7 +5,13 @@ using UnityEngine;
 public abstract class EntityDeathEffect : MonoBehaviour
 {
 
-    public abstract void effectStart();
-    public abstract void effectUpdate();
+    public virtual void effectStart()
+    {
+
+    }
+    public virtual void effectUpdate()
+    {
+
+    }
 
 }
