@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2680584747454608420}
   - component: {fileID: 2680584747454608419}
   - component: {fileID: 2680584747454608418}
-  - component: {fileID: 2680584747454608417}
+  - component: {fileID: 1051479679}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Item
@@ -147,8 +147,8 @@ MonoBehaviour:
   offsetShot: {x: 1, y: 0}
   keepedEntity: {fileID: 0}
   canTakeItem: 0
-  timeReload: 5
---- !u!114 &2680584747454608417
+  timeReload: 60
+--- !u!114 &1051479679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +157,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2680584747454608416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04e4c95dba02a154e82b67cfcdd71c1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 96963f38e35bceb44a5b892018268757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 8877229424615160621, guid: 10b1a668362da884882336243259a6c3, type: 3}
+  BulletPrefab:
+  - {fileID: 6491278691691511616, guid: f4c2a5233b4606a45bba67b43a23090a, type: 3}
+  CountBullets: 10
+  angleShot: 0
+  AngleGap: 20
+  OffsetShot: {x: 1, y: 0}
