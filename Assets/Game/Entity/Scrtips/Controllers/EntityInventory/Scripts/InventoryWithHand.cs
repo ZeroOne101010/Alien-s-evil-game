@@ -94,13 +94,4 @@ public abstract class InventoryWithHand : InventoryController
             }
         }
     }
-
-    public void useItemInHand()
-    {
-        if(itemInHand != null)
-        {
-            WeaponController weaponController = itemInHand.GetComponent<WeaponController>();
-            weaponController.shot();
-        }
-    }
 }

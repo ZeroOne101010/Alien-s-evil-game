@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UserEntityController : MonoBehaviour
+public class UserEntityController : EntityController
 {
     private EntityMove entityMove;
+    private EntityAttackController attackController;
 
     void Start()
     {
         entityMove = GetComponent<EntityMove>();
+        attackController = GetComponent<EntityAttackController>();
     }
 
     void Update()
     {
         checkMoveUser();
         checkJumpUser();
+        attackUser();
     }
 
     public void checkMoveUser()
@@ -38,6 +41,14 @@ public class UserEntityController : MonoBehaviour
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
         {
             entityMove.jumpPerson();
+        }
+    }
+
+    public void attackUser()
+    {
+        if (Input.GetKey(KeyCode.R))
+        {
+            attackController.attack(null);
         }
     }
 }

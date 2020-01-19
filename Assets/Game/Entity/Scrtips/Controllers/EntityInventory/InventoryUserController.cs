@@ -14,7 +14,6 @@ public class InventoryUserController : InventoryWithHand
     {
         dropLastItem();
         takeItemInHand();
-        shotFromWeaponInHand();
         base.controllerUpdate();
     }
 
@@ -48,14 +47,6 @@ public class InventoryUserController : InventoryWithHand
                 ParentOutItemInHand();
                 inventory.dropLastItem();
             }
-        }
-    }
-
-    public void shotFromWeaponInHand()
-    {
-        if (Input.GetKey(KeyCode.R))
-        {
-            useItemInHand();
         }
     }
 
