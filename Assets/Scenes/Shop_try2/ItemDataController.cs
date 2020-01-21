@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -10,37 +11,33 @@ public enum ItemDataType
 }
 public class ItemDataController : MonoBehaviour
 {
+    static int itemDataValuesCount = 2;
+    static int encodingOffset = 224;
     public static void SetItemData(int itemID, ItemDataType itemDataType, bool value)
     {
         using (FileStream itemData = new FileStream(@"Reestr\itemData.txt", FileMode.OpenOrCreate))
         {
-            byte[] itemDataBin = new byte[1];
-            itemData.Seek((itemID * 2) + (long)itemDataType, SeekOrigin.Current);
-            itemData.Read(itemDataBin, 0, 1);
-            itemData.Seek(-1, SeekOrigin.Current);
-            itemData.Write(Encoding.UTF8.GetBytes(value == true ? "1" : "0"), 0, 1);
+            byte[] itemDataBin = new byte[sizeof(int)];
+            itemData.Seek((itemID * itemDataValuesCount) + (long)itemDataType, SeekOrigin.Current);
+            itemData.Write(BitConverter.GetBytes((value == true ? encodingOffset : -encodingOffset)), 0, 1);
         }
     }
     public static bool GetItemData(int itemID, ItemDataType itemDataType)
     {
         using (FileStream itemData = new FileStream(@"Reestr\itemData.txt", FileMode.OpenOrCreate))
         {
-            byte[] itemDataBin = new byte[1];
-            itemData.Seek((itemID * 2) + (long)itemDataType, SeekOrigin.Current);
+            byte[] itemDataBin = new byte[sizeof(int)];
+            itemData.Seek((itemID * itemDataValuesCount) + (long)itemDataType, SeekOrigin.Current);
             itemData.Read(itemDataBin, 0, 1);
-            return int.Parse(Encoding.UTF8.GetString(itemDataBin)) == 1 ? true : false;
+            return BitConverter.ToInt32(itemDataBin, 0) == encodingOffset ? true : false;
         }
     }
-    public static void ClearAllValues()
+    public static void SetAllValues(bool value, ItemDataType itemDataType)
     {
-        using (FileStream itemData = new FileStream(@"Reestr\itemData.txt", FileMode.OpenOrCreate))
+        print(PrefabManagerScript.itemsCount);
+        for (int c = 0; c < PrefabManagerScript.itemsCount; c++)
         {
-            for (int k = 0; k < itemData.Length; k++)
-            {
-                itemData.Seek(k * 2, SeekOrigin.Current);
-                itemData.Seek(-1, SeekOrigin.Current);
-                itemData.Write(Encoding.UTF8.GetBytes("0"), 0, 1);
-            }
+            SetItemData(c, itemDataType, value);
         }
     }
 }

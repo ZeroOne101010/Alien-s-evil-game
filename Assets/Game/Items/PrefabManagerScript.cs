@@ -5,9 +5,10 @@ using UnityEngine;
 public class PrefabManagerScript : MonoBehaviour
 {
     public GameObject[] items;
-    void Start()
+    public static int itemsCount;
+    void Awake()
     {
-        
+        itemsCount = items.Length;
     }
 
 
