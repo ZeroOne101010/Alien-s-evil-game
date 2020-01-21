@@ -6,9 +6,11 @@ public class UserEntityController : EntityController
 {
     private EntityMove entityMove;
     private EntityAttackController attackController;
+    public Joystick joystick;
 
     void Start()
     {
+
         entityMove = GetComponent<EntityMove>();
         attackController = GetComponent<EntityAttackController>();
     }
@@ -22,18 +24,27 @@ public class UserEntityController : EntityController
 
     public void checkMoveUser()
     {
-        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             entityMove.movePerson(new Vector2(1, 0));
         }
-        else if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             entityMove.movePerson(new Vector2(-1, 0));
+        }
+        else if (joystick.Horizontal > 0.01f)
+        {
+            entityMove.movePerson(new Vector2(joystick.Horizontal, 0));
+        }
+        else if (joystick.Horizontal < -0.01f)
+        {
+            entityMove.movePerson(new Vector2(joystick.Horizontal, 0));
         }
         else
         {
             entityMove.stopMovePerson();
         }
+        
     }
 
     public void checkJumpUser()
