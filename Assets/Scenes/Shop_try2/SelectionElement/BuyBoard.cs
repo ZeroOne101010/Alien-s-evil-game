@@ -15,15 +15,14 @@ public class BuyBoard : Board
         base.BoardStart();
         elementController = GetComponent<ElementController>();
         CheckBoughtItem();
-        GlobalScript.SetValutaValue(elementController.valutaType, 2500);
-        //ItemDataController.ClearAllValues();
     }
     public override void BoardUpdate()
     {
         base.BoardUpdate();
+
     }
     private void CheckBoughtItem()
-    {
+    {      
         if (ItemDataController.GetItemData(GetComponent<ElementController>().itemID, ItemDataType.isBought) == true)
         {
             GlobalScript.SetObjectsActive(initalBoards, false);
