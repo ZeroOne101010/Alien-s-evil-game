@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a7c6db97a121c4692fdc4a4fb0b614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetShot: {x: 1, y: 0}
+  offsetShot: {x: 1.5, y: 0.1}
   keepedEntity: {fileID: 0}
   canTakeItem: 0
   timeReload: 2

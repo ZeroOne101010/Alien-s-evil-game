@@ -9,12 +9,18 @@ public abstract class EntityAnimation : MonoBehaviour
     protected Animator animator;
     private EntityController entityController;
 
+    public string[] nameAnimationAttack;
     public string nameHaveWeapon = "HaveWeapon";
     public string nameDeath = "Death";
 
     public void activeWeapon(bool enable)
     {
         animator.SetBool(nameHaveWeapon, enable);
+    }
+
+    public void setAnimationAttack(bool value, int id)
+    {
+        animator.SetBool(nameAnimationAttack[id], value);
     }
 
     public virtual void animationStart()

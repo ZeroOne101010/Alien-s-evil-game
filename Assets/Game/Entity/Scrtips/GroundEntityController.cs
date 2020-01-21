@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyEntityController : ChaseEntityController
+public class GroundEntityController : ChaseEntityController
 {
 
     public override void entityStart()
@@ -16,4 +16,5 @@ public class FlyEntityController : ChaseEntityController
         moveToTarget();
     }
 
+    
 }
