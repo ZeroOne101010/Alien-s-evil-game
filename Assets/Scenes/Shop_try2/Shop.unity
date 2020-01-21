@@ -120,7 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-
 --- !u!1 &173734386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1020,7 @@ RectTransform:
   - {fileID: 1677821937}
   - {fileID: 2056839174}
   - {fileID: 2104016514}
-  - {fileID: 53019729}
+  - {fileID: 1782761919}
   - {fileID: 1637543517}
   - {fileID: 307226935}
   m_Father: {fileID: 758119409}
@@ -1927,6 +1926,7 @@ RectTransform:
   - {fileID: 990175412}
   - {fileID: 1428832845}
   - {fileID: 3587754754080732438}
+  - {fileID: 1800772903}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2718,6 +2718,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693520516}
   m_CullTransparentMesh: 0
+--- !u!224 &1782761919 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2096792251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1798226623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,9 +2842,8 @@ RectTransform:
   m_LocalScale: {x: 0.2724402, y: 0.14696053, z: 0.1519479}
   m_Children:
   - {fileID: 1409916615}
-  - {fileID: 49709808}
   m_Father: {fileID: 1090525159}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

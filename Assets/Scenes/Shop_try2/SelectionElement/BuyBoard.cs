@@ -15,7 +15,7 @@ public class BuyBoard : Board
         base.BoardStart();
         elementController = GetComponent<ElementController>();
         CheckBoughtItem();
-        //GlobalScript.SetValutaValue(elementController.valutaType, 2500);
+        GlobalScript.SetValutaValue(elementController.valutaType, 2500);
         //ItemDataController.ClearAllValues();
     }
     public override void BoardUpdate()
