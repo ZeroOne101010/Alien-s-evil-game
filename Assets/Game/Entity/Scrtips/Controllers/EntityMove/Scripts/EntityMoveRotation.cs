@@ -11,7 +11,6 @@ public class EntityMoveRotation : EntityMove
     public override void entityMoveUpdate()
     {
         base.entityMoveUpdate();
-        //rigid.rotation = rigid.rotation + 10;
     }
 
     public override void entityMoveStart()

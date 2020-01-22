@@ -142,7 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e13ec9ce4e1a534b8339711ad066770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRight: 0
 --- !u!114 &7440428545164889940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamId: 0
-  health: 100
+  health: 10000
   isDeath: 0
   joystick: {fileID: 0}
 --- !u!95 &1357670560
@@ -228,6 +227,8 @@ MonoBehaviour:
   nameAnimationAttack: []
   nameHaveWeapon: HaveWeapon
   nameDeath: Death
+  nameFloatRight: FloatRight
+  nameVelocity: Velocity
   nameGround: Ground
   nameSpeedRun: SpeedRun
   nameJump: SpeedJump
@@ -313,6 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 10
   forceJump: 8
+  isRight: 0
 --- !u!61 &107848772
 BoxCollider2D:
   m_ObjectHideFlags: 0

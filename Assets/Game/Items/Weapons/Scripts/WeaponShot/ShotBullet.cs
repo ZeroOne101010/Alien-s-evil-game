@@ -29,7 +29,7 @@ public class ShotBullet : WeaponShot
         {
             bool isRight = false;
             GameObject entity = GetComponent<WeaponController>().keepedEntity;
-            EntityMove entityMove = entity.GetComponent<EntityMove>();
+            EntityMoveController entityMove = entity.GetComponent<EntityMoveController>();
             if (entityMove != null)
             {
                 isRight = entityMove.isRight;

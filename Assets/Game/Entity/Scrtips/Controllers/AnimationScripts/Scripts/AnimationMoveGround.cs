@@ -28,6 +28,7 @@ public class AnimationMoveGround : EntityAnimation
         }
         animator.SetFloat(nameSpeedRun, Mathf.Abs(rigid.velocity.x));
         animator.SetFloat(nameJump, rigid.velocity.y);
+        animator.SetFloat(nameVelocity, rigid.velocity.x);
       
     }
 }

@@ -38,7 +38,7 @@ public class WeaponController : MonoBehaviour
     public void shotEffect()
     {
         ShotEffect[] effect = GetComponents<ShotEffect>();
-        EntityMove entityMove = keepedEntity.GetComponent<EntityMove>();
+        EntityMoveController entityMove = keepedEntity.GetComponent<EntityMoveController>();
         bool isRight = entityMove.isRight;
         Vector2 offset = isRight ? offsetShot : -offsetShot;
         for (int x = 0; x < effect.Length; x++)
@@ -52,7 +52,7 @@ public class WeaponController : MonoBehaviour
         if (timerReload == 0)
         {
             shotEffect();
-            EntityMove entityMove = keepedEntity.GetComponent<EntityMove>();
+            EntityMoveController entityMove = keepedEntity.GetComponent<EntityMoveController>();
             bool isRight = entityMove.isRight;
             Vector2 offset = isRight ? offsetShot : new Vector2(-offsetShot.x, offsetShot.y);
             for (int x = 0; x < weaponShot.Length; x++)

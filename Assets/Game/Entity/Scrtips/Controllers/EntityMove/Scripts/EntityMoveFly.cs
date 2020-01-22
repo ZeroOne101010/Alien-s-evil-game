@@ -18,6 +18,14 @@ public class EntityMoveFly : EntityMove
 
     public override void movePerson(Vector2 direction)
     {
+        if(direction.x > 0)
+        {
+            isRight = true;
+        }
+        else if(direction.x < 0)
+        {
+            isRight = false;
+        }
         transform.position += (Vector3)(direction * entityMoveController.speedMove * k);
     }
 

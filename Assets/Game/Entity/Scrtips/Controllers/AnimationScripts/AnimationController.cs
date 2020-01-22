@@ -30,6 +30,14 @@ public abstract class AnimationController : MonoBehaviour
         controllerUpdate();
     }
 
+    public void setAnimationAttack(bool value, int id)
+    {
+        for (int x = 0; x < entityAnimation.Length; x++)
+        {
+            entityAnimation[x].setAnimationAttack(value, id);
+        }
+    }
+
     public virtual void controllerStart()
     {
 

@@ -158,6 +158,7 @@ MonoBehaviour:
   isDeath: 0
   distanceToFindTarget: 10
   distanceToAttackTarget: 2
+  idAnimationAttack: 0
   target: {fileID: 0}
 --- !u!114 &7948279991872496409
 MonoBehaviour:
@@ -187,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 2
   forceJump: 5
+  isRight: 0
 --- !u!114 &2083471936605437658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd46b1a0ab8b344093bc5241a1575cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRight: 0
 --- !u!114 &1462803941291007686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,8 +226,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc648865c2fc0d44d9fa2604d8ae0326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameAnimationAttack:
+  - Attack1
   nameHaveWeapon: HaveWeapon
   nameDeath: Death
+  nameFloatRight: FloatRight
+  nameVelocity: Velocity
   nameVelocityY: VelocityY
   nameVelocityX: VelocityX
   nameIdle: Idle

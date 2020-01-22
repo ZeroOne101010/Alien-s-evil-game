@@ -9,6 +9,8 @@ public class SpikeAttack : EntityAttack
     public int countSpikes;
     public float forceShot;
 
+    public int idAnimationAttack;
+
     public float timeReload;
 
     public Vector2 offsetShot;
@@ -49,6 +51,7 @@ public class SpikeAttack : EntityAttack
 
                 BulletController bulletController = spike.GetComponent<BulletController>();
                 bulletController.initBullet(entityController.teamId, direction, null, null);
+
             }
             timerReload = timeReload;
         }

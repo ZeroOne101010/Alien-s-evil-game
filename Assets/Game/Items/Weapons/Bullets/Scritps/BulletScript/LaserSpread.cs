@@ -101,7 +101,7 @@ public class LaserSpread : BulletScript
             if (isFirstSpread)
             {
                 GameObject entity = weapon.GetComponent<WeaponController>().keepedEntity;
-                EntityMove entityMove = entity.GetComponent<EntityMove>();
+                EntityMoveController entityMove = entity.GetComponent<EntityMoveController>();
 
                 bool isRight = false;
 

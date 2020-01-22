@@ -10,6 +10,8 @@ public abstract class EntityController : MonoBehaviour
     [HideInInspector]
     public bool isDeath;
 
+    public int idAnimationAttack;
+
     private EntityDeathEffect[] deathEffect;
 
     void Start()

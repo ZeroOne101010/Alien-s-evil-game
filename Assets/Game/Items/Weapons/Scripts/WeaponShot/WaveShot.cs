@@ -15,7 +15,7 @@ public class WaveShot : WeaponShot
         for (int i = 0; i < CountBullets; i++)
         {
             int bulletPrifabId = Random.Range(0, BulletPrefab.Length);
-            float isRight = getKeepedEntity().GetComponent<EntityMove>().isRight ? 1 : -1;
+            float isRight = getKeepedEntity().GetComponent<EntityMoveController>().isRight ? 1 : -1;
             Vector2 spawnPos = (Vector2)(transform.position) + OffsetShot * isRight;
             Bullet[i] = Instantiate(BulletPrefab[bulletPrifabId], spawnPos, Quaternion.identity);
             BulletController bulletController = Bullet[i].GetComponent<BulletController>();

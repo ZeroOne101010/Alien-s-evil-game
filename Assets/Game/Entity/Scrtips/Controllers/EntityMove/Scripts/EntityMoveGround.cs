@@ -28,12 +28,10 @@ public class EntityMoveGround : EntityMove
         if (isRight)
         {
             rigid.velocity = new Vector2(entityMoveController.speedMove, rigid.velocity.y);
-            transform.rotation = new Quaternion(transform.rotation.x, 0, transform.rotation.z, transform.rotation.w);
         }
         else
         {
             rigid.velocity = new Vector2(-entityMoveController.speedMove, rigid.velocity.y);
-            transform.rotation = new Quaternion(transform.rotation.x, 180, transform.rotation.z, transform.rotation.w);
         }
     }
 

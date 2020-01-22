@@ -8,7 +8,12 @@ public class EntityMoveController : MonoBehaviour
     public float speedMove;
     public float forceJump;
 
+    public bool inverseRight;
+
     private EntityMove[] entityMove;
+
+    [HideInInspector]
+    public bool isRight;
 
     void Start()
     {

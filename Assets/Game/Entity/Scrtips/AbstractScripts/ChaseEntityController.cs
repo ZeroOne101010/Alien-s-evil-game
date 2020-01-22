@@ -12,12 +12,14 @@ public abstract class ChaseEntityController : EntityController
 
     private EntityMoveController entityMoveController;
     private EntityAttackController entityAttackController;
+    private AnimationController animationController;
 
     public override void entityStart()
     {
         base.entityStart();
         entityAttackController = GetComponent<EntityAttackController>();
         entityMoveController = GetComponent<EntityMoveController>();
+        animationController = GetComponent<AnimationController>();
     }
 
     public override void entityUpdate()

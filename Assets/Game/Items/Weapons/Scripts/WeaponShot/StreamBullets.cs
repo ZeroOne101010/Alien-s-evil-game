@@ -25,7 +25,7 @@ public class StreamBullets : WeaponShot
         int id = Random.Range(0, bulletPrifab.Length);
         GameObject bullet = Instantiate(bulletPrifab[id], spawnPos, Quaternion.identity);
         BulletController bulletController = bullet.GetComponent<BulletController>();
-        float isRight = getKeepedEntity().GetComponent<EntityMove>().isRight ? 1 : -1;
+        float isRight = getKeepedEntity().GetComponent<EntityMoveController>().isRight ? 1 : -1;
         Vector2 direction = new Vector2(this.direction.x * isRight, this.direction.y);
         bulletController.initBullet(getTeamId(), direction, gameObject, this);
     }

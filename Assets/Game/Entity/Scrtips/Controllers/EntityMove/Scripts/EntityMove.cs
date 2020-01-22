@@ -4,8 +4,21 @@ using UnityEngine;
 
 public abstract class EntityMove : MonoBehaviour
 {
-    public bool isRight;
+    [HideInInspector]
     protected EntityMoveController entityMoveController;
+
+    [HideInInspector]
+    protected bool isRight
+    {
+        get
+        {
+            return entityMoveController.isRight;
+        }
+        set
+        {
+            entityMoveController.isRight = value;
+        }
+    }
 
     public void Start()
     {
@@ -16,6 +29,29 @@ public abstract class EntityMove : MonoBehaviour
     public void Update()
     {
         entityMoveUpdate();
+        if (!entityMoveController.inverseRight)
+        {
+            if (isRight)
+            {
+                transform.rotation = new Quaternion(transform.rotation.x, 0, transform.rotation.z, transform.rotation.w);
+            }
+            else
+            {
+                transform.rotation = new Quaternion(transform.rotation.x, 180, transform.rotation.z, transform.rotation.w);
+            }
+        }
+        else
+        {
+            if (!isRight)
+            {
+                transform.rotation = new Quaternion(transform.rotation.x, 0, transform.rotation.z, transform.rotation.w);
+            }
+            else
+            {
+                transform.rotation = new Quaternion(transform.rotation.x, 180, transform.rotation.z, transform.rotation.w);
+            }
+        }
+
     }
 
     public virtual void entityMoveStart()
