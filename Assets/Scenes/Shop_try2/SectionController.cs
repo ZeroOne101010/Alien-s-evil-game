@@ -9,6 +9,10 @@ public class SectionController : MonoBehaviour
     public GameObject[] buttons;
     public void Start()
     {
+        ActivateSection(selectedSection);
+    }
+    public void Update()
+    {
     }
     public void ActivateSection(int section)
     {

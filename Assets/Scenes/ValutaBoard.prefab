@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8754855931526698921}
   - component: {fileID: 1470397210000450595}
   m_Layer: 5
-  m_Name: MoneyBoard
+  m_Name: ValutaBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ddca67eb477c9b4a9c5e152ed581c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: {fileID: 0}
+  valuta: {fileID: 1294919503454690193}
+  valutaType: 0
 --- !u!1 &7012409461678867169
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,22 +237,22 @@ PrefabInstance:
     - target: {fileID: 4755583222793978082, guid: 79d0200fa15bffe45bc4cecd5c1e0f8a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -61
+      value: -62.53
       objectReference: {fileID: 0}
     - target: {fileID: 4755583222793978082, guid: 79d0200fa15bffe45bc4cecd5c1e0f8a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.00000035763
       objectReference: {fileID: 0}
     - target: {fileID: 4755583222793978082, guid: 79d0200fa15bffe45bc4cecd5c1e0f8a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 20.59
+      value: 29.69
       objectReference: {fileID: 0}
     - target: {fileID: 4755583222793978082, guid: 79d0200fa15bffe45bc4cecd5c1e0f8a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 20.59
+      value: 29.68
       objectReference: {fileID: 0}
     - target: {fileID: 4755583222793978082, guid: 79d0200fa15bffe45bc4cecd5c1e0f8a,
         type: 3}
