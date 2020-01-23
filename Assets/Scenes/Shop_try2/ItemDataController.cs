@@ -19,17 +19,36 @@ public class ItemDataController : MonoBehaviour
         {
             byte[] itemDataBin = new byte[sizeof(int)];
             itemData.Seek((itemID * itemDataValuesCount) + (long)itemDataType, SeekOrigin.Current);
-            itemData.Write(BitConverter.GetBytes((value == true ? encodingOffset : -encodingOffset)), 0, 1);
+            itemData.Write(BitConverter.GetBytes((value == true ? 1 + encodingOffset : encodingOffset)), 0, 1);
         }
     }
-    public static bool GetItemData(int itemID, ItemDataType itemDataType)
+    public static void SetItemData(int itemID, ItemDataType itemDataType, int slot)
+    {
+        using (FileStream itemData = new FileStream(@"Reestr\itemData.txt", FileMode.OpenOrCreate))
+        {
+            byte[] itemDataBin = new byte[sizeof(int)];
+            itemData.Seek((itemID * itemDataValuesCount) + (long)itemDataType, SeekOrigin.Current);
+            itemData.Write(BitConverter.GetBytes(slot + encodingOffset), 0, 1);
+        }
+    }
+    //public static bool GetItemData(int itemID, ItemDataType itemDataType)
+    //{
+    //    using (FileStream itemData = new FileStream(@"Reestr\itemData.txt", FileMode.OpenOrCreate))
+    //    {
+    //        byte[] itemDataBin = new byte[sizeof(int)];
+    //        itemData.Seek((itemID * itemDataValuesCount) + (long)itemDataType, SeekOrigin.Current);
+    //        itemData.Read(itemDataBin, 0, 1);
+    //        return BitConverter.ToInt32(itemDataBin, 0) == encodingOffset ? true : false;
+    //    }
+    //}
+    public static int GetItemData(int itemID, ItemDataType itemDataType)
     {
         using (FileStream itemData = new FileStream(@"Reestr\itemData.txt", FileMode.OpenOrCreate))
         {
             byte[] itemDataBin = new byte[sizeof(int)];
             itemData.Seek((itemID * itemDataValuesCount) + (long)itemDataType, SeekOrigin.Current);
             itemData.Read(itemDataBin, 0, 1);
-            return BitConverter.ToInt32(itemDataBin, 0) == encodingOffset ? true : false;
+            return BitConverter.ToInt32(itemDataBin, 0) - encodingOffset;
         }
     }
     public static void SetAllValues(bool value, ItemDataType itemDataType)

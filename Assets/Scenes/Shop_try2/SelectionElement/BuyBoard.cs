@@ -23,15 +23,16 @@ public class BuyBoard : Board
     }
     private void CheckBoughtItem()
     {      
-        if (ItemDataController.GetItemData(GetComponent<ElementController>().itemID, ItemDataType.isBought) == true)
+        if (ItemDataController.GetItemData(GetComponent<ElementController>().itemID, ItemDataType.isBought) == 1)
         {
+
             GlobalScript.SetObjectsActive(initalBoards, false);
             GlobalScript.SetObjectsActive(replacementBoards, true);
         }
     }
     public void Buy()
     {
-        if (ItemDataController.GetItemData(GetComponent<ElementController>().itemID, ItemDataType.isBought) == false)
+        if (ItemDataController.GetItemData(GetComponent<ElementController>().itemID, ItemDataType.isBought) == 0)
             if (GlobalScript.GetValutaValue(elementController.valutaType) >= int.Parse(price.text))
             {
                 GlobalScript.SetValutaValue(elementController.valutaType, GlobalScript.GetValutaValue(elementController.valutaType) - int.Parse(price.text));
