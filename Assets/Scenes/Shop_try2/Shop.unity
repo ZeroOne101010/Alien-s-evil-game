@@ -942,11 +942,6 @@ PrefabInstance:
       propertyPath: itemID
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: -8252324777902526800, guid: 187678f9845db7748b57d368957a152c,
-        type: 3}
-      propertyPath: itemID
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6479751680158570588, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_Text
@@ -959,6 +954,11 @@ PrefabInstance:
         \u0438\u0434\u0435\u044F \u043E\u0442\u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F
         \u043E\u0442 \u043C\u0435\u043D\u044F? \u041E\u0422 \u041C\u0415\u041D\u042F?
         \u0413\u043E\u043B\u043E\u0432\u043A\u0430 \u043E\u0442 \u043F\u044B\u044F!"
+      objectReference: {fileID: 0}
+    - target: {fileID: -8252324777902526800, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: itemID
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187678f9845db7748b57d368957a152c, type: 3}
@@ -2765,12 +2765,12 @@ PrefabInstance:
     - target: {fileID: 5867131220534767054, guid: 3b8a250737593214db384f81ccc620f3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 374.9
+      value: 398
       objectReference: {fileID: 0}
     - target: {fileID: 5867131220534767054, guid: 3b8a250737593214db384f81ccc620f3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 336.19
+      value: 306
       objectReference: {fileID: 0}
     - target: {fileID: 5867131220534767054, guid: 3b8a250737593214db384f81ccc620f3,
         type: 3}
@@ -5285,11 +5285,6 @@ PrefabInstance:
       propertyPath: itemID
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: -8252324777902526800, guid: 187678f9845db7748b57d368957a152c,
-        type: 3}
-      propertyPath: itemID
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6479751680158570588, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_Text
@@ -5302,6 +5297,11 @@ PrefabInstance:
         \u0438\u0434\u0435\u044F \u043E\u0442\u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F
         \u043E\u0442 \u043C\u0435\u043D\u044F? \u041E\u0422 \u041C\u0415\u041D\u042F?
         \u0413\u043E\u043B\u043E\u0432\u043A\u0430 \u043E\u0442 \u043F\u044B\u044F!"
+      objectReference: {fileID: 0}
+    - target: {fileID: -8252324777902526800, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: itemID
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187678f9845db7748b57d368957a152c, type: 3}
