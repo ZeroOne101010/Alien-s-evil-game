@@ -24,6 +24,7 @@ public class ItemDataController : MonoBehaviour
     }
     public static void SetItemData(int itemID, ItemDataType itemDataType, int slot)
     {
+        print("k");
         using (FileStream itemData = new FileStream(@"Reestr\itemData.txt", FileMode.OpenOrCreate))
         {
             byte[] itemDataBin = new byte[sizeof(int)];
@@ -53,7 +54,6 @@ public class ItemDataController : MonoBehaviour
     }
     public static void SetAllValues(bool value, ItemDataType itemDataType)
     {
-        print(PrefabManagerScript.itemsCount);
         for (int c = 0; c < PrefabManagerScript.itemsCount; c++)
         {
             SetItemData(c, itemDataType, value);
