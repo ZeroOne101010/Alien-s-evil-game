@@ -18,9 +18,9 @@ public class PersonWeaponAttack : EntityAttack
         base.attackUpdate();
     }
 
-    protected override void attackImplementation(GameObject entity)
+    public override void attack(GameObject entity)
     {
-        base.attackImplementation(entity);
+        base.attack(entity);
         useItemInHand();
     }
 

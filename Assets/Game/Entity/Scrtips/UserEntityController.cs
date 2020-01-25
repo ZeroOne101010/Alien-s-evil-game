@@ -59,7 +59,7 @@ public class UserEntityController : EntityController
     {
         if (Input.GetKey(KeyCode.R))
         {
-            attackController.attack(0, null);
+            attackController.attack(null);
         }
     }
 }

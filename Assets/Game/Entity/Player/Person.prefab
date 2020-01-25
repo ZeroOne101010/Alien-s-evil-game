@@ -99,9 +99,9 @@ GameObject:
   - component: {fileID: 1357670561}
   - component: {fileID: 1357670562}
   - component: {fileID: 3121929985991439371}
+  - component: {fileID: 6362828439385988508}
   - component: {fileID: 6863325708490293063}
   - component: {fileID: 107848759}
-  - component: {fileID: 8996063676637025910}
   - component: {fileID: 107848772}
   m_Layer: 0
   m_Name: Person
@@ -157,7 +157,6 @@ MonoBehaviour:
   teamId: 0
   health: 10000
   isDeath: 0
-  idAnimationAttack: 0
   joystick: {fileID: 0}
 --- !u!95 &1357670560
 Animator:
@@ -211,7 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0415b50acdb70774d90d16e525c85273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityAnimation: {fileID: 0}
+  idActiveController: 0
+  entityAnimation: []
 --- !u!114 &1357670559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +275,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
+--- !u!114 &6362828439385988508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144545790313368975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed6494f1f9a66a47aede3e562f4d916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityAttack: []
 --- !u!114 &6863325708490293063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,10 +300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68a0c6e38773f4448ca0b5bb74e30fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToActiveAttackAfterAnimation: 0
-  idAnimationAttack: 0
-  probablyChooseAttack: 100
-  canRandomUse: 1
 --- !u!114 &107848759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,24 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 10
   forceJump: 8
-  inverseRight: 0
   isRight: 0
---- !u!114 &8996063676637025910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144545790313368975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff698dec16ae414b832f00693cd89ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackTimeReload: 0
-  attackIsReloaded: 0
-  entityAttack: []
-  attackButton: {fileID: 0}
 --- !u!61 &107848772
 BoxCollider2D:
   m_ObjectHideFlags: 0
