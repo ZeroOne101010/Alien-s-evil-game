@@ -21,10 +21,10 @@ public abstract class EntityAnimation : MonoBehaviour
         animator.SetBool(nameHaveWeapon, enable);
     }
 
-    public void setAnimationAttack(bool value, int id)
+    public void setAnimationAttack(int id)
     {
         if(nameAnimationAttack.Length > 0)
-        animator.SetBool(nameAnimationAttack[id], value);
+        animator.SetTrigger(nameAnimationAttack[id]);
     }
 
     public virtual void animationStart()
