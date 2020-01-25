@@ -86,11 +86,14 @@ public class BulletController : MonoBehaviour
         if (collision.gameObject.tag == "Entity")
         {
             EntityController state = collision.gameObject.GetComponent<EntityController>();
-            if (state.teamId != teamId)
+            if (!state.isDeath)
             {
-                bulletRapture(collision.gameObject);
-                effectBullet();
-                destroyBullet();
+                if (state.teamId != teamId)
+                {
+                    bulletRapture(collision.gameObject);
+                    effectBullet();
+                    destroyBullet();
+                }
             }
         }
         else if(collision.gameObject.layer == 8)

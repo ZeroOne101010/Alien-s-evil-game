@@ -38,18 +38,4 @@ public class GlobalScript : MonoBehaviour
             return BitConverter.ToInt32(Check, 0);
         }
     }
-    public static void ActivateSelectedElementFromArray(GameObject[] gameObjects, int selectedElement)
-    {
-        for (int i = 0; i < gameObjects.Length; i++)
-        {
-            if (i == selectedElement)
-            {
-                gameObjects[i].SetActive(true);
-            }
-            else
-            {
-                gameObjects[i].SetActive(false);
-            }
-        }
-    }
 }
