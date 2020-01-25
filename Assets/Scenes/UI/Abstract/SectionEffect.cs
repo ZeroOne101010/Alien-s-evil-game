@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class SectionEffect : MonoBehaviour
 {
-
     void Start()
     {
         EffectStart();
@@ -23,6 +22,10 @@ public abstract class SectionEffect : MonoBehaviour
 
     }
     public virtual void Effect()
+    {
+
+    }
+    public virtual void DeEffect()
     {
 
     }

@@ -13,6 +13,7 @@ public class ValutaController : MonoBehaviour
     public ValutaType valutaType;
     void Update()
     {
+        //ItemDataController.SetAllValues(false, ItemDataType.isBought);
         valuta.text = (GlobalScript.GetValutaValue(valutaType)).ToString();
     }
 }
