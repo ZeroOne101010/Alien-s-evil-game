@@ -57,7 +57,7 @@ public abstract class ChaseEntityController : EntityController
 
     public void attackTarget()
     {
-        entityAttackController.attack(target);
+        entityAttackController.randomAttack(target);
     }
 
     public virtual void moveToTarget()

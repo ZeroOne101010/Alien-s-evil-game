@@ -32,7 +32,7 @@ public class Inventory : MonoBehaviour
     {
         GameObject gettingItem = item[id];
         this.item.Remove(gettingItem);
-        Vector3 pos = transform.position + (Vector3)(offsetDropItem);
+        Vector3 pos = transform.position;
         if(transform.rotation.y == 0)
         {
             pos = transform.position + (Vector3)(offsetDropItem);
@@ -41,7 +41,6 @@ public class Inventory : MonoBehaviour
         {
             pos = transform.position - (Vector3)(offsetDropItem);
         }
-        Debug.Log(transform.rotation.y);
         gettingItem.transform.position = pos;
         gettingItem.transform.rotation = Quaternion.identity;
         gettingItem.SetActive(true);

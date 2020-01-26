@@ -267,6 +267,7 @@ MonoBehaviour:
   teamId: -1
   health: 100
   isDeath: 0
+  idAnimationAttack: 0
   distanceToFindTarget: 10
   distanceToAttackTarget: 3.5
   target: {fileID: 0}
@@ -282,8 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0415b50acdb70774d90d16e525c85273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idActiveController: 0
-  entityAnimation: []
+  entityAnimation: {fileID: 0}
 --- !u!114 &7571812707916981065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 5
   forceJump: 5
+  inverseRight: 0
   isRight: 0
 --- !u!114 &7571812707916981070
 MonoBehaviour:
@@ -332,6 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed6494f1f9a66a47aede3e562f4d916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackTimeReload: 20
+  attackIsReloaded: 0
   entityAttack: []
 --- !u!114 &7571812707916981068
 MonoBehaviour:
@@ -358,12 +361,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4db938f8f8dc784bb2b9be1efb7e03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToActiveAttackAfterAnimation: 10
+  idAnimationAttack: 0
+  probablyChooseAttack: 100
+  canRandomUse: 1
   spikePrifab:
   - {fileID: 8877229424615160621, guid: 10b1a668362da884882336243259a6c3, type: 3}
   countSpikes: 5
   forceShot: 0
-  idAnimationAttack: 0
-  timeReload: 50
   offsetShot: {x: 0, y: 0}
   radiusShot: 0.82
 --- !u!114 &6903484475949696981
