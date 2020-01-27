@@ -563,7 +563,7 @@ PrefabInstance:
     - target: {fileID: 7876390083957509447, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_Name
-      value: SectionElement (4)
+      value: Rifle
       objectReference: {fileID: 0}
     - target: {fileID: 2077791746986386137, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -585,6 +585,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.2999878
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093082974207919784, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -624,7 +629,7 @@ PrefabInstance:
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -711,6 +716,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.6999512
       objectReference: {fileID: 0}
+    - target: {fileID: 8293293863809888614, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.2000046
+      objectReference: {fileID: 0}
     - target: {fileID: 8689428446026500604, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -720,6 +730,17 @@ PrefabInstance:
         type: 3}
       propertyPath: ItemID
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144938179990861775, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.7999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298429721839696967, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_Text
+      value: This is the most standard rifle. It has a fast rate of fire, but small
+        damage.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187678f9845db7748b57d368957a152c, type: 3}
@@ -1193,6 +1214,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b361cd6aab78f5644ab61ed16d9cc539, type: 3}
+--- !u!1 &616813521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616813522}
+  - component: {fileID: 616813524}
+  - component: {fileID: 616813523}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &616813522
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616813521}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0002322, y: 1.0002322, z: 1.0002322}
+  m_Children: []
+  m_Father: {fileID: 7366110868849104572}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 682.67737, y: -171.64798}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &616813523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616813521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &616813524
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616813521}
+  m_CullTransparentMesh: 0
 --- !u!1001 &673592752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2222,7 +2316,7 @@ PrefabInstance:
     - target: {fileID: 7876390083957509447, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_Name
-      value: SectionElement (3)
+      value: Bluster
       objectReference: {fileID: 0}
     - target: {fileID: 2077791746986386137, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -2238,12 +2332,17 @@ PrefabInstance:
     - target: {fileID: 6479751680158570588, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_Text
-      value: BlustGun
+      value: Bluster
       objectReference: {fileID: 0}
     - target: {fileID: 7093082974207919784, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.2999878
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093082974207919784, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -2283,7 +2382,7 @@ PrefabInstance:
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -2355,6 +2454,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.6999512
       objectReference: {fileID: 0}
+    - target: {fileID: 8293293863809888614, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.2000046
+      objectReference: {fileID: 0}
     - target: {fileID: 8689428446026500604, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2364,6 +2468,17 @@ PrefabInstance:
         type: 3}
       propertyPath: ItemID
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144938179990861775, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.7999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298429721839696967, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_Text
+      value: "\rA stolen alien technology that upgraded a conventional rifle to a
+        blaster, super-fast-fire weapon."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187678f9845db7748b57d368957a152c, type: 3}
@@ -2654,7 +2769,7 @@ PrefabInstance:
     - target: {fileID: 7876390083957509447, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_Name
-      value: SectionElement (5)
+      value: Taser
       objectReference: {fileID: 0}
     - target: {fileID: 2077791746986386137, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -2670,12 +2785,17 @@ PrefabInstance:
     - target: {fileID: 6479751680158570588, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_Text
-      value: Tazer
+      value: Taser
       objectReference: {fileID: 0}
     - target: {fileID: 7093082974207919784, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.2999878
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093082974207919784, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -2715,7 +2835,7 @@ PrefabInstance:
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -2787,6 +2907,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.6999512
       objectReference: {fileID: 0}
+    - target: {fileID: 8293293863809888614, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.2000046
+      objectReference: {fileID: 0}
     - target: {fileID: 8689428446026500604, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2796,6 +2921,17 @@ PrefabInstance:
         type: 3}
       propertyPath: ItemID
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144938179990861775, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.7999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298429721839696967, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_Text
+      value: "\rInteresting weapon. It affects enemies with electric homing current.
+        Like a fractal, current spreads in the air."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187678f9845db7748b57d368957a152c, type: 3}
@@ -3037,7 +3173,7 @@ PrefabInstance:
     - target: {fileID: 7366110869378797976, guid: b361cd6aab78f5644ab61ed16d9cc539,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.1000061
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7366110869378797976, guid: b361cd6aab78f5644ab61ed16d9cc539,
         type: 3}
@@ -3419,7 +3555,7 @@ PrefabInstance:
     - target: {fileID: 7876390083957509447, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_Name
-      value: SectionElement (1)
+      value: Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 2077791746986386137, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -3435,12 +3571,19 @@ PrefabInstance:
     - target: {fileID: 6479751680158570588, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_Text
-      value: ShotGun
+      value: 'Shotg
+
+        un'
       objectReference: {fileID: 0}
     - target: {fileID: 7093082974207919784, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.2999878
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093082974207919784, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -3480,7 +3623,7 @@ PrefabInstance:
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -3552,6 +3695,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.6999512
       objectReference: {fileID: 0}
+    - target: {fileID: 8293293863809888614, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.2000046
+      objectReference: {fileID: 0}
     - target: {fileID: 8689428446026500604, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3561,6 +3709,17 @@ PrefabInstance:
         type: 3}
       propertyPath: ItemID
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144938179990861775, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.7999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298429721839696967, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_Text
+      value: Normal grandfather's gun. For a shot several bullets with great damage
+        take off at once. Slowly recharges.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187678f9845db7748b57d368957a152c, type: 3}
@@ -3909,7 +4068,7 @@ PrefabInstance:
     - target: {fileID: 7876390083957509447, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_Name
-      value: SectionElement (2)
+      value: Flamethrower
       objectReference: {fileID: 0}
     - target: {fileID: 2077791746986386137, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -3931,6 +4090,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.2999878
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093082974207919784, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -3970,7 +4134,7 @@ PrefabInstance:
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7876390083957509446, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
@@ -4042,10 +4206,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.6999512
       objectReference: {fileID: 0}
+    - target: {fileID: 8293293863809888614, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.2000046
+      objectReference: {fileID: 0}
     - target: {fileID: 8689428446026500604, guid: 187678f9845db7748b57d368957a152c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.6999512
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144938179990861775, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.7999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298429721839696967, guid: 187678f9845db7748b57d368957a152c,
+        type: 3}
+      propertyPath: m_Text
+      value: Everyone knows about the flamethrower. This is a weapon of mass destruction
+        with the effect of burning enemies.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187678f9845db7748b57d368957a152c, type: 3}
@@ -5201,3 +5381,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b361cd6aab78f5644ab61ed16d9cc539, type: 3}
+--- !u!224 &7366110868849104572 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7366110868149748319, guid: b361cd6aab78f5644ab61ed16d9cc539,
+    type: 3}
+  m_PrefabInstance: {fileID: 7366110868849104571}
+  m_PrefabAsset: {fileID: 0}
