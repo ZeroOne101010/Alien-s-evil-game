@@ -19,11 +19,11 @@ public class EquipSlotsController : MonoBehaviour
     }
     public void Start()
     {
-        //DataController.SetData(FilePath.slotData, slotsID, DataType.slotsCount, 2);
         СompareSlotsCount();
     }
     public void Update()
     {
+
     }
     public void СompareSlotsCount()
     {
