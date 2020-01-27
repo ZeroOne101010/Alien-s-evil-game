@@ -8,6 +8,7 @@ public class PrefabManagerScript : MonoBehaviour
     public static int itemsCount;
     void Awake()
     {
+
         itemsCount = items.Length;
     }
 
