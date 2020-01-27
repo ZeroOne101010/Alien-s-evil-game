@@ -234,5 +234,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1437f83ef2dc384c97e42566ca33ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: SelectPlanet
   progressCircle: {fileID: 80623822458207694}
