@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4950556000474328842}
   - component: {fileID: 3842022113702875385}
   - component: {fileID: 6848851548987386717}
-  - component: {fileID: 7948279991872496409}
   - component: {fileID: 2495715802247202648}
   - component: {fileID: 2083471936605437658}
   - component: {fileID: 4950556000474328846}
@@ -22,7 +21,8 @@ GameObject:
   - component: {fileID: 4998612038918024614}
   - component: {fileID: 1923777335}
   - component: {fileID: 8833034337313144754}
-  m_Layer: 0
+  - component: {fileID: 8140607993225771850}
+  m_Layer: 9
   m_Name: xPeke
   m_TagString: Entity
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 4950556000474328847}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9bb08b3045771ad47839ec5bb3e61c0c, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -156,24 +156,10 @@ MonoBehaviour:
   teamId: -1
   health: 100
   isDeath: 0
+  idAnimationAttack: 0
   distanceToFindTarget: 10
   distanceToAttackTarget: 2
-  idAnimationAttack: 0
   target: {fileID: 0}
---- !u!114 &7948279991872496409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4950556000474328847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0415b50acdb70774d90d16e525c85273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idActiveController: 0
-  entityAnimation: []
 --- !u!114 &2495715802247202648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 2
   forceJump: 5
+  inverseRight: 0
   isRight: 0
 --- !u!114 &2083471936605437658
 MonoBehaviour:
@@ -201,6 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed6494f1f9a66a47aede3e562f4d916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackTimeReload: 0
+  attackIsReloaded: 0
   entityAttack: []
 --- !u!114 &4950556000474328846
 MonoBehaviour:
@@ -226,12 +215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc648865c2fc0d44d9fa2604d8ae0326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameAnimationAttack:
-  - Attack1
-  nameHaveWeapon: HaveWeapon
-  nameDeath: Death
-  nameFloatRight: FloatRight
-  nameVelocity: Velocity
   nameVelocityY: VelocityY
   nameVelocityX: VelocityX
   nameIdle: Idle
@@ -272,8 +255,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54697a2d63ec4df42b3df09d8f22783b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToActiveAttackAfterAnimation: 0
+  probablyChooseAttack: 100
+  canRandomUse: 1
+  nameAnimationAttack: 
   damage: 20
-  attackReloadTime: 20
+--- !u!114 &8140607993225771850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950556000474328847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab90ebac7affd814f8ff781a5491987d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityAnimation: []
+  nameDeath: Death
+  nameFloatRight: FloatRight
+  nameVelocity: Velocity
+  nameSpeedRun: SpeedRun
+  nameJump: Jump
 --- !u!1 &4950556000926738683
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950556000926738682}
   - component: {fileID: 4950556000926738681}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950556001295771646}
   - component: {fileID: 4950556001295771645}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950556001502198535}
   - component: {fileID: 4950556001502198534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950556001629158980}
   - component: {fileID: 4950556001629158979}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950556001681970146}
   - component: {fileID: 4950556001681970145}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950556002025291654}
   - component: {fileID: 4950556002025291653}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

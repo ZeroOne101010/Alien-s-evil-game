@@ -64,10 +64,6 @@ public abstract class InventoryWithHand : InventoryController
             itemInHand.transform.rotation = transform.rotation;
 
             EntityAnimation entityAnimation = GetComponent<EntityAnimation>();
-            if(entityAnimation != null)
-            {
-                entityAnimation.activeWeapon(true);
-            }
 
             itemInHand.SetActive(true);
         }
@@ -88,10 +84,11 @@ public abstract class InventoryWithHand : InventoryController
             weaponController.canTakeItem = true;
             itemInHand = null;
             EntityAnimation entityAnimation = GetComponent<EntityAnimation>();
-            if (entityAnimation != null)
-            {
-                entityAnimation.activeWeapon(false);
-            }
         }
+    }
+
+    public bool haveWeapon()
+    {
+        return itemInHand == null ? false : true;
     }
 }

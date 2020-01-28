@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetDamageAttack : EntityAttack
+public class SetDamageAttack : SkillAttack
 {
 
     public float damage = 1;
@@ -20,6 +20,7 @@ public class SetDamageAttack : EntityAttack
     protected override void attackImplementation(GameObject entity)
     {
         base.attackImplementation(entity);
+        activeAttackAnimation(nameAnimationAttack);
         EntityController entityController = entity.GetComponent<EntityController>();
         entityController.setDamage(damage);
     }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public abstract class WeaponShot : MonoBehaviour
 {
+
+    public string nameAnimationShot = "Range";
+    public string[] nameAnimationOther;
+    private Animator personAnimator;
+
     void Start()
     {
         startWeaponShot();
@@ -22,6 +27,20 @@ public abstract class WeaponShot : MonoBehaviour
     public virtual void updateWeaponShot()
     {
 
+    }
+
+    public void activeAnimation(string name)
+    {
+        GameObject entity = getKeepedEntity();
+        if(entity != null)
+        {
+            entity.GetComponent<EntityAttack>().activeAttackAnimation(name);
+        }
+    }
+
+    public void activeAnimationShot()
+    {
+        activeAnimation(nameAnimationShot);
     }
 
     public abstract void shot(Vector3 offsetShot);

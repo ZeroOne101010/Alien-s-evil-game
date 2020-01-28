@@ -5,8 +5,9 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
 
-    private WeaponShot[] weaponShot;
     public Vector2 offsetShot;
+    public float timeReload;
+    public int typeWeapon = 0;
 
     [HideInInspector]
     public GameObject keepedEntity;
@@ -14,9 +15,8 @@ public class WeaponController : MonoBehaviour
     [HideInInspector]
     public bool canTakeItem;
 
-    public float timeReload;
-
     private float timerReload;
+    private WeaponShot[] weaponShot;
 
     void Start()
     {

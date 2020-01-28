@@ -4,35 +4,34 @@ using UnityEngine;
 
 public abstract class AnimationController : MonoBehaviour
 {
-
     [HideInInspector]
-    public EntityAnimation entityAnimation;
+    public EntityAnimation[] entityAnimation;
 
     void Start()
     {
-        entityAnimation = GetComponent<EntityAnimation>();
-        entityAnimation.animationStart();
+        entityAnimation = GetComponents<EntityAnimation>();
         controllerStart();
     }
 
-    public void setAnimationAttack(int id)
-    {
-        entityAnimation.setAnimationAttack(id);
-    }
 
     void Update()
     {
-        entityAnimation.animationUpdate();
         controllerUpdate();
     }
 
     public virtual void controllerStart()
     {
-
+        for (int x = 0; x < entityAnimation.Length; x++)
+        {
+            entityAnimation[x].animationStart();
+        }
     }
 
     public virtual void controllerUpdate()
     {
-
+        for (int x = 0; x < entityAnimation.Length; x++)
+        {
+            entityAnimation[x].animationUpdate();
+        }
     }
 }
