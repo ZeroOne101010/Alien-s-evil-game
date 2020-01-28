@@ -17,35 +17,39 @@ public enum SlotType
     pistolWeapon = 2,
     granadaWeapon = 3
 }
+public enum itemDataValuesCount
+{
+    slotCount = 2
+}
 public class DataController : MonoBehaviour
 {
 
-    static int itemDataValuesCount = 2;
+    //static int itemDataValuesCount = 2;
     static int encodingOffset = 224;
-    public static void SetData(string path, int ID, DataType dataType, bool value)
+    public static void SetData(string path, int ID, DataType dataType, itemDataValuesCount itemDataValuesCount, bool value)
     {
         using (FileStream itemData = new FileStream(path, FileMode.OpenOrCreate))
         {
             byte[] itemDataBin = new byte[sizeof(int)];
-            itemData.Seek((ID * itemDataValuesCount) + (long)dataType, SeekOrigin.Current);
+            itemData.Seek((ID * (int)itemDataValuesCount) + (long)dataType, SeekOrigin.Current);
             itemData.Write(BitConverter.GetBytes((value == true ? 1 + encodingOffset : encodingOffset)), 0, 1);
         }
     }
-    public static void SetData(string path, int ID, DataType dataType, int value)
+    public static void SetData(string path, int ID, DataType dataType, itemDataValuesCount itemDataValuesCount, int value)
     {
         using (FileStream itemData = new FileStream(path, FileMode.OpenOrCreate))
         {
             byte[] itemDataBin = new byte[sizeof(int)];
-            itemData.Seek((ID * itemDataValuesCount) + (long)dataType, SeekOrigin.Current);
+            itemData.Seek((ID * (int)itemDataValuesCount) + (long)dataType, SeekOrigin.Current);
             itemData.Write(BitConverter.GetBytes(value + encodingOffset), 0, 1);
         }
     }
-    public static int GetData(string path, int ID, DataType dataType)
+    public static int GetData(string path, int ID, DataType dataType, itemDataValuesCount itemDataValuesCount)
     {
         using (FileStream itemData = new FileStream(path, FileMode.OpenOrCreate))
         {
             byte[] itemDataBin = new byte[sizeof(int)];
-            itemData.Seek((ID * itemDataValuesCount) + (long)ID, SeekOrigin.Current);
+            itemData.Seek((ID * (int)itemDataValuesCount) + (long)dataType, SeekOrigin.Current);
             itemData.Read(itemDataBin, 0, 1);
             return BitConverter.ToInt32(itemDataBin, 0) - encodingOffset;
         }
