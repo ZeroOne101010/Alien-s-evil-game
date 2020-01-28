@@ -10,12 +10,15 @@ public class EffectCreateParticles : ShotEffect
     public float speedMove;
     public Vector2 offsetShot;
 
-    public override void effect(Vector3 offsetShot)
+    public override void effect(bool isRight)
     {
+        
         for (int x = 0; x < count; x++)
         {
-            Quaternion randomQu = new Quaternion(Random.Range(0, 360), 0, 0, 0);
-            GameObject particle = Instantiate(prifabParticle, transform.position + (Vector3)this.offsetShot, randomQu);
+            float g = isRight ? 1 : -1;
+            float qu = isRight ? 0 : -180;
+            Quaternion randomQu = new Quaternion(0, 0, qu, 0);
+            GameObject particle = Instantiate(prifabParticle, transform.position + (Vector3)(new Vector2(offsetShot.x * g, offsetShot.y)), randomQu);
             Rigidbody2D rigid = particle.GetComponent<Rigidbody2D>();
             if(rigid != null)
             {

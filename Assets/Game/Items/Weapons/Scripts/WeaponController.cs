@@ -40,10 +40,10 @@ public class WeaponController : MonoBehaviour
         ShotEffect[] effect = GetComponents<ShotEffect>();
         EntityMoveController entityMove = keepedEntity.GetComponent<EntityMoveController>();
         bool isRight = entityMove.isRight;
-        Vector2 offset = isRight ? offsetShot : -offsetShot;
+        Vector2 offset = isRight ? offsetShot : new Vector2(-offsetShot.x, offsetShot.y);
         for (int x = 0; x < effect.Length; x++)
         {
-            effect[x].effect(offset);
+            effect[x].effect(isRight);
         }
     }
 

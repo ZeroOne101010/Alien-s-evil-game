@@ -561,6 +561,7 @@ GameObject:
   - component: {fileID: 8762204478836645439}
   - component: {fileID: 3358090004908719915}
   - component: {fileID: 1012602002}
+  - component: {fileID: 2268819325282445206}
   m_Layer: 9
   m_Name: Bingo
   m_TagString: Entity
@@ -764,6 +765,19 @@ MonoBehaviour:
   nameVelocity: Velocity
   nameSpeedRun: SpeedRun
   nameJump: Jump
+--- !u!114 &2268819325282445206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313887825933536061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea9470103c261e4f8eaf38910230788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 100
 --- !u!1 &6928679935836681724
 GameObject:
   m_ObjectHideFlags: 0

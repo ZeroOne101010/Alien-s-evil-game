@@ -366,42 +366,42 @@ PrefabInstance:
     - target: {fileID: 4046232511898131239, guid: c622ed662c2b9b14daac733f3ef6df2c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -541
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4046232511898131239, guid: c622ed662c2b9b14daac733f3ef6df2c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -229
+      value: -0.3999939
       objectReference: {fileID: 0}
     - target: {fileID: 4046232511898131239, guid: c622ed662c2b9b14daac733f3ef6df2c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: -0.83999634
       objectReference: {fileID: 0}
     - target: {fileID: 4046232511898131239, guid: c622ed662c2b9b14daac733f3ef6df2c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: -63.199997
       objectReference: {fileID: 0}
     - target: {fileID: 4046232511898131239, guid: c622ed662c2b9b14daac733f3ef6df2c,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0.020838562
       objectReference: {fileID: 0}
     - target: {fileID: 4046232511898131239, guid: c622ed662c2b9b14daac733f3ef6df2c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0.012848429
       objectReference: {fileID: 0}
     - target: {fileID: 4046232511898131239, guid: c622ed662c2b9b14daac733f3ef6df2c,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.164
       objectReference: {fileID: 0}
     - target: {fileID: 4046232511898131239, guid: c622ed662c2b9b14daac733f3ef6df2c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0.16172759
       objectReference: {fileID: 0}
     - target: {fileID: 4046232511898131239, guid: c622ed662c2b9b14daac733f3ef6df2c,
         type: 3}
@@ -422,6 +422,16 @@ PrefabInstance:
         type: 3}
       propertyPath: scene
       value: SelectPlanet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046232511898131237, guid: c622ed662c2b9b14daac733f3ef6df2c,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046232511898131237, guid: c622ed662c2b9b14daac733f3ef6df2c,
+        type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4046232511898131291, guid: c622ed662c2b9b14daac733f3ef6df2c, type: 3}

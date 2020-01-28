@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 4689733356860605382}
   - component: {fileID: 4280631243282289992}
   - component: {fileID: 1448521221653387162}
+  - component: {fileID: 1403999136080541304}
   m_Layer: 9
   m_Name: Gutti
   m_TagString: Entity
@@ -546,6 +547,19 @@ MonoBehaviour:
   nameVelocity: Velocity
   nameSpeedRun: SpeedRun
   nameJump: Jump
+--- !u!114 &1403999136080541304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690927528979603715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea9470103c261e4f8eaf38910230788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 50
 --- !u!1 &7506779617289356235
 GameObject:
   m_ObjectHideFlags: 0
