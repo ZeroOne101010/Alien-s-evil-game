@@ -32,16 +32,6 @@ public class ItemDataController : MonoBehaviour
             itemData.Write(BitConverter.GetBytes(slot + encodingOffset), 0, 1);
         }
     }
-    //public static bool GetItemData(int itemID, ItemDataType itemDataType)
-    //{
-    //    using (FileStream itemData = new FileStream(@"Reestr\itemData.txt", FileMode.OpenOrCreate))
-    //    {
-    //        byte[] itemDataBin = new byte[sizeof(int)];
-    //        itemData.Seek((itemID * itemDataValuesCount) + (long)itemDataType, SeekOrigin.Current);
-    //        itemData.Read(itemDataBin, 0, 1);
-    //        return BitConverter.ToInt32(itemDataBin, 0) == encodingOffset ? true : false;
-    //    }
-    //}
     public static int GetItemData(int itemID, ItemDataType itemDataType)
     {
         using (FileStream itemData = new FileStream(FilePath.itemData, FileMode.OpenOrCreate))
