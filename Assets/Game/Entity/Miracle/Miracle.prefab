@@ -268,7 +268,7 @@ MonoBehaviour:
   health: 100
   isDeath: 0
   idAnimationAttack: 0
-  distanceToFindTarget: 10
+  distanceToFindTarget: 50
   distanceToAttackTarget: 3.5
   target: {fileID: 0}
 --- !u!114 &7571812707916981065
@@ -300,6 +300,7 @@ MonoBehaviour:
   forceJump: 5
   inverseRight: 0
   isRight: 0
+  canReactionOnEntityTrigger: 1
 --- !u!114 &7571812707916981070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,10 +344,11 @@ MonoBehaviour:
   timeToActiveAttackAfterAnimation: 10
   probablyChooseAttack: 100
   canRandomUse: 1
+  idShotEffect: 0
   nameAnimationAttack: Attack1
   spikePrifab:
   - {fileID: 8877229424615160621, guid: 10b1a668362da884882336243259a6c3, type: 3}
-  countSpikes: 5
+  countSpikes: 6
   forceShot: 0
   offsetShot: {x: 0, y: 0}
   radiusShot: 0.82
