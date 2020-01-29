@@ -7,6 +7,7 @@ public class ChooseItemForSlotController : MonoBehaviour
 {
     public GameObject scrollContent;
     public GameObject EquipItemForSlotPrefab;
+    public WeaponType weaponType;
     [HideInInspector]
     public int slotIDWhichOpenPanel;
     [HideInInspector]
@@ -17,8 +18,14 @@ public class ChooseItemForSlotController : MonoBehaviour
     public GameObject equipSlotsScroll;
     [HideInInspector]
     public GameObject prefabManager;
+    [HideInInspector]
+    public PrefabManagerScript prefabManagerScript;
+    public GameObject chooseItemForSlotScroll;
     public void Start()
     {
+        prefabManagerScript = prefabManager.GetComponent<PrefabManagerScript>();
+
+
         //ItemDataController.SetAllValues(-1, ItemDataType.isEquiped);
         //ItemDataController.SetAllValues(-1, ItemDataType.isBought);
     }
@@ -40,7 +47,6 @@ public class ChooseItemForSlotController : MonoBehaviour
         {
             if (itemID == equipSlotsScroll.GetComponent<EquipSlotsScrollController>().slots[i].GetComponent<EquipWeaponSlotController>().itemID)
             {
-                print("LOL");
                 ActivateAlredyEqupedTag(itemsForSlots[itemsForSlots.Count - 1], i);
             }
 
@@ -48,11 +54,11 @@ public class ChooseItemForSlotController : MonoBehaviour
     }
     public void FillContent()
     {
-        for(int i = 0; i < equipSlotsScroll.GetComponent<EquipSlotsScrollController>().weaponsCanSet.Length; i++)
+        for(int i = 0; i < equipSlotsScroll.GetComponent<EquipSlotsScrollController>().prefabManagerScript.types[(int)weaponType].Length; i++)
         {
-            if (ItemDataController.GetItemData(equipSlotsScroll.GetComponent<EquipSlotsScrollController>().weaponsCanSet[i], ItemDataType.isBought) > 0)
+            if (ItemDataController.GetItemData(equipSlotsScroll.GetComponent<EquipSlotsScrollController>().prefabManagerScript.types[(int)weaponType][i], ItemDataType.isBought) > 0)
             {
-                AddEquipItemForSlot(equipSlotsScroll.GetComponent<EquipSlotsScrollController>().weaponsCanSet[i]);
+                AddEquipItemForSlot(equipSlotsScroll.GetComponent<EquipSlotsScrollController>().prefabManagerScript.types[(int)weaponType][i]);
                 itemsForSlots[itemsForSlots.Count - 1].GetComponent<Button>().onClick.AddListener(ClosePanelAndSetDataToSlot);
                 SetDataToEquipItemForSlot(itemsForSlots[itemsForSlots.Count - 1]);
             }

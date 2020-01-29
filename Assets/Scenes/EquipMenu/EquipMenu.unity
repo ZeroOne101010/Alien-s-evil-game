@@ -413,6 +413,11 @@ PrefabInstance:
       propertyPath: slotsID
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2681667345719474057, guid: 5550ffec06e946a45b8f75ef3a4cf108,
+        type: 3}
+      propertyPath: weaponType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5550ffec06e946a45b8f75ef3a4cf108, type: 3}
 --- !u!1 &388661591
@@ -533,6 +538,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7684387342852652615, guid: 5550ffec06e946a45b8f75ef3a4cf108,
     type: 3}
   m_PrefabInstance: {fileID: 366083456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &618086816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8171508184799937881, guid: 762dd3500c516d048b4af23dc2875ffd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1871773742}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &791739459 stripped
 GameObject:
@@ -1209,6 +1220,11 @@ PrefabInstance:
       propertyPath: slotsID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2681667345719474057, guid: 5550ffec06e946a45b8f75ef3a4cf108,
+        type: 3}
+      propertyPath: weaponType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5550ffec06e946a45b8f75ef3a4cf108, type: 3}
 --- !u!1001 &1514871010
@@ -1475,6 +1491,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 388661595}
     m_Modifications:
+    - target: {fileID: -4305533711467757968, guid: 762dd3500c516d048b4af23dc2875ffd,
+        type: 3}
+      propertyPath: chooseItemForSlotScroll
+      value: 
+      objectReference: {fileID: 618086816}
     - target: {fileID: 1906591725275179664, guid: 762dd3500c516d048b4af23dc2875ffd,
         type: 3}
       propertyPath: m_Name
@@ -1914,6 +1935,11 @@ PrefabInstance:
     - target: {fileID: 2681667345719474057, guid: 5550ffec06e946a45b8f75ef3a4cf108,
         type: 3}
       propertyPath: slotsID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681667345719474057, guid: 5550ffec06e946a45b8f75ef3a4cf108,
+        type: 3}
+      propertyPath: weaponType
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2777,7 +2803,7 @@ PrefabInstance:
     - target: {fileID: 5098367104284824840, guid: f968a9ff1eba03443a0ee371883fea14,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -10
+      value: -10.000004
       objectReference: {fileID: 0}
     - target: {fileID: 5098367104284824840, guid: f968a9ff1eba03443a0ee371883fea14,
         type: 3}

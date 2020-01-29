@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum WeaponType 
+{
+    mainWeapon = 0,
+    coldWeapon = 1,
+    pistolWeapon = 2,
+    granadaWeapon = 3
+}
+
 public class EquipSlotsScrollController : MonoBehaviour
 {
     public int slotsID;
     public int maxSlots;
-    public int[] weaponsCanSet;
+    //public int[] weaponsCanSet;
+    public WeaponType weaponType;
     public GameObject chooseItemForSlotPanel;
     public GameObject slotPrefab;
     public GameObject addNewSlotPanelPrefab;
@@ -16,11 +25,13 @@ public class EquipSlotsScrollController : MonoBehaviour
     public GameObject addNewSlotPanel;
     [HideInInspector]
     public GameObject prefabManager;
+    public PrefabManagerScript prefabManagerScript;
     [HideInInspector]
     public List<GameObject> slots = new List<GameObject>();
     public void Awake()
     {
         prefabManager = GameObject.FindGameObjectWithTag("PrefabManager");
+        prefabManagerScript = prefabManager.GetComponent<PrefabManagerScript>();
     }
     public void Start()
     {
@@ -58,20 +69,21 @@ public class EquipSlotsScrollController : MonoBehaviour
         slot.GetComponent<EquipWeaponSlotController>().chooseItemForSlotPanel = chooseItemForSlotPanel;
         slot.GetComponent<EquipWeaponSlotController>().prefabManager = prefabManager;
         slot.GetComponent<EquipWeaponSlotController>().slotsInEquipSlotsScroll = slots;
+        slot.GetComponent<EquipWeaponSlotController>().weaponType = weaponType;
         int isAlreadyUsedERROR = 0;
         bool findCoincidence = false;
-        for (int i = 0; i < weaponsCanSet.Length; i++)
+        for (int i = 0; i < prefabManagerScript.types[(int)weaponType].Length; i++)
         {
             
             if(isAlreadyUsedERROR <= 1)
             {
-                if (ItemDataController.GetItemData(weaponsCanSet[i], ItemDataType.isEquiped) == slotID & ItemDataController.GetItemData(weaponsCanSet[i], ItemDataType.isBought) == 1)
+                if (ItemDataController.GetItemData(prefabManagerScript.types[(int)weaponType][i], ItemDataType.isEquiped) == slotID & ItemDataController.GetItemData(prefabManagerScript.types[(int)weaponType][i], ItemDataType.isBought) == 1)
                 {
                     slot.GetComponent<EquipWeaponSlotController>().empotyBoard.SetActive(false);
                     slot.GetComponent<EquipWeaponSlotController>().image.SetActive(true);
-                    slot.GetComponent<EquipWeaponSlotController>().itemID = weaponsCanSet[i];
-                    slot.GetComponent<EquipWeaponSlotController>().image.GetComponent<Image>().sprite = prefabManager.GetComponent<PrefabManagerScript>().items[weaponsCanSet[i]].GetComponent<SpriteRenderer>().sprite;
-                    slot.GetComponent<EquipWeaponSlotController>().nameText.text = prefabManager.GetComponent<PrefabManagerScript>().items[weaponsCanSet[i]].name;
+                    slot.GetComponent<EquipWeaponSlotController>().itemID = prefabManagerScript.types[(int)weaponType][i];
+                    slot.GetComponent<EquipWeaponSlotController>().image.GetComponent<Image>().sprite = prefabManager.GetComponent<PrefabManagerScript>().items[prefabManagerScript.types[(int)weaponType][i]].GetComponent<SpriteRenderer>().sprite;
+                    slot.GetComponent<EquipWeaponSlotController>().nameText.text = prefabManager.GetComponent<PrefabManagerScript>().items[prefabManagerScript.types[(int)weaponType][i]].name;
                     findCoincidence = true;
                     isAlreadyUsedERROR++;
                 }
