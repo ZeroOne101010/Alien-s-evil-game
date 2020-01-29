@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 5166884728960351727}
   - component: {fileID: 5166884728960351726}
   - component: {fileID: 6849202493979438360}
+  - component: {fileID: 6632986674489274200}
   m_Layer: 5
   m_Name: AddNewSlotElementScroll
   m_TagString: Untagged
@@ -192,17 +193,31 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 6632986674489274200}
+        m_MethodName: BuyNewSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6632986674489274200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5166884728960351724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6642b40a8c498af40a06d694e7f77a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: {fileID: 4263708257681440859}
+  equipSlotsScrollPanel: {fileID: 0}
 --- !u!1 &8115417332921753163
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +451,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3442572141548230276}
     m_Modifications:
+    - target: {fileID: 7792701154150149666, guid: 79d0200fa15bffe45bc4cecd5c1e0f8a,
+        type: 3}
+      propertyPath: m_Name
+      value: MoneyImage
+      objectReference: {fileID: 0}
     - target: {fileID: 4755583222793978082, guid: 79d0200fa15bffe45bc4cecd5c1e0f8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -551,11 +571,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.1594201
       objectReference: {fileID: 0}
-    - target: {fileID: 7792701154150149666, guid: 79d0200fa15bffe45bc4cecd5c1e0f8a,
-        type: 3}
-      propertyPath: m_Name
-      value: MoneyImage
-      objectReference: {fileID: 0}
     - target: {fileID: 791061588618042055, guid: 79d0200fa15bffe45bc4cecd5c1e0f8a,
         type: 3}
       propertyPath: m_Sprite
@@ -575,11 +590,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PriceBoard
-      objectReference: {fileID: 0}
-    - target: {fileID: 4346213680132579836, guid: 9f0f4a5febd5e9640851e276a13127d5,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2935537024689321763, guid: 9f0f4a5febd5e9640851e276a13127d5,
         type: 3}
@@ -696,26 +706,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.8625001
       objectReference: {fileID: 0}
-    - target: {fileID: 6854170635625097520, guid: 9f0f4a5febd5e9640851e276a13127d5,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.12156863
-      objectReference: {fileID: 0}
-    - target: {fileID: 6854170635625097520, guid: 9f0f4a5febd5e9640851e276a13127d5,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.12156863
-      objectReference: {fileID: 0}
-    - target: {fileID: 6854170635625097520, guid: 9f0f4a5febd5e9640851e276a13127d5,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.12156863
-      objectReference: {fileID: 0}
-    - target: {fileID: 6854170635625097520, guid: 9f0f4a5febd5e9640851e276a13127d5,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.5882353
-      objectReference: {fileID: 0}
     - target: {fileID: 3678870350754711824, guid: 9f0f4a5febd5e9640851e276a13127d5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -746,6 +736,36 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6854170635625097520, guid: 9f0f4a5febd5e9640851e276a13127d5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.12156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854170635625097520, guid: 9f0f4a5febd5e9640851e276a13127d5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.12156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854170635625097520, guid: 9f0f4a5febd5e9640851e276a13127d5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.12156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854170635625097520, guid: 9f0f4a5febd5e9640851e276a13127d5,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346213680132579836, guid: 9f0f4a5febd5e9640851e276a13127d5,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346213680132579836, guid: 9f0f4a5febd5e9640851e276a13127d5,
+        type: 3}
+      propertyPath: m_Text
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f0f4a5febd5e9640851e276a13127d5, type: 3}
 --- !u!224 &3442572141548230276 stripped
@@ -754,3 +774,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 539137011491955111}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4263708257681440859 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4346213680132579836, guid: 9f0f4a5febd5e9640851e276a13127d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 539137011491955111}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
