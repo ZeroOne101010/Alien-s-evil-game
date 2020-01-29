@@ -31,13 +31,20 @@ public class UserEntityController : EntityController
         {
             entityMoveController.movePerson(new Vector2(-1, 0));
         }
-        else if (joystick.Horizontal > 0.01f)
+        else if (joystick != null)
         {
-            entityMoveController.movePerson(new Vector2(joystick.Horizontal, 0));
-        }
-        else if (joystick.Horizontal < -0.01f)
-        {
-            entityMoveController.movePerson(new Vector2(joystick.Horizontal, 0));
+            if (joystick.Horizontal > 0.01f)
+            {
+                entityMoveController.movePerson(new Vector2(joystick.Horizontal, 0));
+            }
+            else if (joystick.Horizontal < -0.01f)
+            {
+                entityMoveController.movePerson(new Vector2(joystick.Horizontal, 0));
+            }
+            else
+            {
+                entityMoveController.stopMovePerson();
+            }
         }
         else
         {

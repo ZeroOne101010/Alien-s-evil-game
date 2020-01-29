@@ -15,6 +15,8 @@ public class EntityMoveController : MonoBehaviour
     [HideInInspector]
     public bool isRight;
 
+    public bool canReactionOnEntityTrigger = true;
+
     void Start()
     {
         entityMove = GetComponents<EntityMove>();

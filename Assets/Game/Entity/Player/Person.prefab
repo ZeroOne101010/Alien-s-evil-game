@@ -158,6 +158,7 @@ MonoBehaviour:
   forceJump: 8
   inverseRight: 0
   isRight: 0
+  canReactionOnEntityTrigger: 0
 --- !u!114 &7440428545164889940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +287,7 @@ MonoBehaviour:
   timeToActiveAttackAfterAnimation: 0
   probablyChooseAttack: 100
   canRandomUse: 1
+  idShotEffect: 0
 --- !u!114 &8996063676637025910
 MonoBehaviour:
   m_ObjectHideFlags: 0
