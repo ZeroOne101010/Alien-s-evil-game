@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DistanceAttack : MonoBehaviour
+public class DistanceAttack : SkillAttack
 {
 
     public float distanceToAttack = 1;

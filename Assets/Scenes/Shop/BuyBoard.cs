@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BuyBoard : MonoBehaviour
 {
+    public Image image;
     public Text price;
     public ValutaType valutaType;
     public int ItemID;
@@ -13,6 +14,10 @@ public class BuyBoard : MonoBehaviour
     public void Start()
     {
         CheckBoughtItem();
+        if(ItemDataController.GetItemData(ItemID, ItemDataType.isBought) == 1)
+        {
+            SetInitalColor();
+        }
     }
     public void Update()
     {
@@ -36,5 +41,9 @@ public class BuyBoard : MonoBehaviour
                 GlobalScript.SetObjectsActive(initalBoards, false);
                 GlobalScript.SetObjectsActive(replacementBoards, true);
             }
+    }
+    public void SetInitalColor()
+    {
+        image.color = new Color(255, 255, 255);
     }
 }

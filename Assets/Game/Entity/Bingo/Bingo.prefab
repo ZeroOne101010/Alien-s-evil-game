@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8991104350313454029}
   - component: {fileID: 6400301754166888607}
   - component: {fileID: 8894763396984958438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7678740666104790993}
   - component: {fileID: 1804240958539813870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 859079965273874048}
   - component: {fileID: 3559390683812602607}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 4367977661973491889}
   - component: {fileID: 4441937559069209450}
   - component: {fileID: 8894763396857896535}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2349660794827050514}
   - component: {fileID: 5082329411211748773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6571941029165934949}
   - component: {fileID: 435345906839997531}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,13 +555,14 @@ GameObject:
   - component: {fileID: 8894763397484877289}
   - component: {fileID: 8894763397484877290}
   - component: {fileID: 3632220982850047674}
-  - component: {fileID: 6718718097485995127}
   - component: {fileID: 6472316202960471637}
   - component: {fileID: 5120372385664654524}
   - component: {fileID: 473260929267824295}
   - component: {fileID: 8762204478836645439}
   - component: {fileID: 3358090004908719915}
-  m_Layer: 0
+  - component: {fileID: 1012602002}
+  - component: {fileID: 2268819325282445206}
+  m_Layer: 9
   m_Name: Bingo
   m_TagString: Entity
   m_Icon: {fileID: 0}
@@ -620,10 +621,10 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 10
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a90513d39f73f5a47b14bcda6d24798f, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -637,7 +638,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6313887825933536061}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: a90513d39f73f5a47b14bcda6d24798f, type: 2}
+  m_Material: {fileID: 6200000, guid: 9bb08b3045771ad47839ec5bb3e61c0c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -673,19 +674,6 @@ MonoBehaviour:
   distanceToFindTarget: 10
   distanceToAttackTarget: 2
   target: {fileID: 0}
---- !u!114 &6718718097485995127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6313887825933536061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0415b50acdb70774d90d16e525c85273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityAnimation: {fileID: 0}
 --- !u!114 &6472316202960471637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,15 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2fa8c02bf03d24d979f5a87867e44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameAnimationAttack:
-  - Attack1
-  nameHaveWeapon: HaveWeapon
-  nameDeath: Death
-  nameFloatRight: FloatRight
-  nameVelocity: Velocity
   nameGround: Ground
-  nameSpeedRun: SpeedRun
-  nameJump: SpeedJump
 --- !u!114 &5120372385664654524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,9 +715,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToActiveAttackAfterAnimation: 15
-  idAnimationAttack: 0
   probablyChooseAttack: 100
   canRandomUse: 1
+  nameAnimationAttack: Attack1
   damage: 10
 --- !u!114 &8762204478836645439
 MonoBehaviour:
@@ -767,6 +747,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e13ec9ce4e1a534b8339711ad066770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1012602002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313887825933536061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab90ebac7affd814f8ff781a5491987d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityAnimation: []
+  nameDeath: Death
+  nameFloatRight: FloatRight
+  nameVelocity: Velocity
+  nameSpeedRun: SpeedRun
+  nameJump: Jump
+--- !u!114 &2268819325282445206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313887825933536061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea9470103c261e4f8eaf38910230788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 100
 --- !u!1 &6928679935836681724
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2950454448187244035}
   - component: {fileID: 7914887026311156038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +871,7 @@ GameObject:
   - component: {fileID: 7689957104215094638}
   - component: {fileID: 6914774369768479082}
   - component: {fileID: 8894763395717917616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitBox
   m_TagString: hitbox
   m_Icon: {fileID: 0}
@@ -938,7 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341401214494204278}
   - component: {fileID: 5413662903692616148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

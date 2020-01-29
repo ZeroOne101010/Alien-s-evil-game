@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7732527744401712343}
   - component: {fileID: 2516866455568071202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Person_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 7440428545164889940}
   - component: {fileID: 1357670560}
   - component: {fileID: 8343960128121998103}
-  - component: {fileID: 6492887535381155212}
   - component: {fileID: 1357670559}
   - component: {fileID: 1357670561}
   - component: {fileID: 1357670562}
@@ -103,7 +102,8 @@ GameObject:
   - component: {fileID: 107848759}
   - component: {fileID: 8996063676637025910}
   - component: {fileID: 107848772}
-  m_Layer: 0
+  - component: {fileID: 107848767}
+  m_Layer: 9
   m_Name: Person
   m_TagString: Entity
   m_Icon: {fileID: 0}
@@ -199,19 +199,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6492887535381155212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144545790313368975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0415b50acdb70774d90d16e525c85273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityAnimation: {fileID: 0}
 --- !u!114 &1357670559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,14 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2fa8c02bf03d24d979f5a87867e44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameAnimationAttack: []
-  nameHaveWeapon: HaveWeapon
-  nameDeath: Death
-  nameFloatRight: FloatRight
-  nameVelocity: Velocity
   nameGround: Ground
-  nameSpeedRun: SpeedRun
-  nameJump: SpeedJump
 --- !u!114 &1357670561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,7 +268,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToActiveAttackAfterAnimation: 0
-  idAnimationAttack: 0
   probablyChooseAttack: 100
   canRandomUse: 1
 --- !u!114 &107848759
@@ -349,6 +328,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3, y: 1.6}
   m_EdgeRadius: 0
+--- !u!114 &107848767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144545790313368975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de0ca67acca4fc4b9c8857e277a166b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityAnimation: []
+  nameDeath: Death
+  nameFloatRight: FloatRight
+  nameVelocity: Velocity
+  nameSpeedRun: SpeedRun
+  nameJump: Jump
+  nameHaveWeapon: HaveWeapon
+  nameTypeWeapon: TypeWeapon
 --- !u!1 &1269511424631830481
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4413843637727244156}
   - component: {fileID: 5190678842930650183}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Person_8 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7415675020040795842}
   - component: {fileID: 49957749848797723}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Person_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8985558452731016176}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,13 +552,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5120041425855837294}
   - component: {fileID: 7184499888945354572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5120041425855837294
 Transform:
   m_ObjectHideFlags: 0
@@ -568,7 +567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5603367472019750489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6190359, y: -0.042693466, z: 0}
+  m_LocalPosition: {x: -0.7, y: -0.04269347, z: 0}
   m_LocalScale: {x: 0.32041663, y: 0.32041663, z: 0.32041663}
   m_Children: []
   m_Father: {fileID: 8985558452731016176}
@@ -611,7 +610,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ae98a13c765c9ae439f9d959e745993d, type: 3}
   m_Color: {r: 0.9433962, g: 0.87359256, b: 0.83214664, a: 1}
   m_FlipX: 0
@@ -633,13 +632,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7392123516241343237}
   - component: {fileID: 4060955481760555165}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7392123516241343237
 Transform:
   m_ObjectHideFlags: 0
@@ -648,8 +647,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5658465649004297661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07896405, y: -0.033693403, z: 0}
-  m_LocalScale: {x: 0.32041663, y: 0.32041663, z: 0.32041663}
+  m_LocalPosition: {x: -0.19, y: -0.0336934, z: 0}
+  m_LocalScale: {x: 0.32041663, y: 0.3204166, z: 0.3204166}
   m_Children: []
   m_Father: {fileID: 8985558452731016176}
   m_RootOrder: 1
@@ -691,7 +690,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ae98a13c765c9ae439f9d959e745993d, type: 3}
   m_Color: {r: 0.9433962, g: 0.87359256, b: 0.83214664, a: 1}
   m_FlipX: 0
@@ -713,7 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1625954838736606490}
   - component: {fileID: 1961055982426890614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Person_11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3261072458075559025}
   - component: {fileID: 3078034242912703168}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Person_12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

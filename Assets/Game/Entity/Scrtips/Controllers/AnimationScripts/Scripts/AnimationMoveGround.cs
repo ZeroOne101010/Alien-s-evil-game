@@ -6,8 +6,6 @@ public class AnimationMoveGround : EntityAnimation
 {
 
     public string nameGround = "Ground";
-    public string nameSpeedRun = "SpeedRun";
-    public string nameJump = "SpeedJump";
 
     public override void animationStart()
     {
@@ -26,9 +24,6 @@ public class AnimationMoveGround : EntityAnimation
         {
             animator.SetBool(nameGround, false);
         }
-        animator.SetFloat(nameSpeedRun, Mathf.Abs(rigid.velocity.x));
-        animator.SetFloat(nameJump, rigid.velocity.y);
-        animator.SetFloat(nameVelocity, rigid.velocity.x);
       
     }
 }

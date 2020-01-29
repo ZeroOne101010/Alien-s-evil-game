@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeAttack : EntityAttack
+public class SpikeAttack : SkillAttack
 {
 
     public GameObject[] spikePrifab;
@@ -28,6 +28,7 @@ public class SpikeAttack : EntityAttack
     protected override void attackImplementation(GameObject entity)
     {
         base.attackImplementation(entity);
+        activeAttackAnimation(nameAnimationAttack);
         float offsetAngle = (2 * Mathf.PI) / countSpikes;
 
         for (int x = 0; x < countSpikes; x++)

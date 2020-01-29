@@ -5,8 +5,9 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
 
-    private WeaponShot[] weaponShot;
     public Vector2 offsetShot;
+    public float timeReload;
+    public int typeWeapon = 0;
 
     [HideInInspector]
     public GameObject keepedEntity;
@@ -14,9 +15,8 @@ public class WeaponController : MonoBehaviour
     [HideInInspector]
     public bool canTakeItem;
 
-    public float timeReload;
-
     private float timerReload;
+    private WeaponShot[] weaponShot;
 
     void Start()
     {
@@ -40,10 +40,10 @@ public class WeaponController : MonoBehaviour
         ShotEffect[] effect = GetComponents<ShotEffect>();
         EntityMoveController entityMove = keepedEntity.GetComponent<EntityMoveController>();
         bool isRight = entityMove.isRight;
-        Vector2 offset = isRight ? offsetShot : -offsetShot;
+        Vector2 offset = isRight ? offsetShot : new Vector2(-offsetShot.x, offsetShot.y);
         for (int x = 0; x < effect.Length; x++)
         {
-            effect[x].effect(offset);
+            effect[x].effect(isRight);
         }
     }
 

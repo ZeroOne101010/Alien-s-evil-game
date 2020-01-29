@@ -5,6 +5,6 @@ using UnityEngine;
 public abstract class ShotEffect : MonoBehaviour
 {
 
-    public abstract void effect(Vector3 offsetShot);
+    public abstract void effect(bool isRight);
 
 }

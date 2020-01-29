@@ -10,22 +10,6 @@ public abstract class EntityAnimation : MonoBehaviour
     private EntityController entityController;
     private EntityMoveController entityMoveCtonroller;
 
-    public string[] nameAnimationAttack;
-    public string nameHaveWeapon = "HaveWeapon";
-    public string nameDeath = "Death";
-    public string nameFloatRight = "FloatRight";
-    public string nameVelocity = "Velocity";
-
-    public void activeWeapon(bool enable)
-    {
-        animator.SetBool(nameHaveWeapon, enable);
-    }
-
-    public void setAnimationAttack(int id)
-    {
-        if(nameAnimationAttack.Length > 0)
-        animator.SetTrigger(nameAnimationAttack[id]);
-    }
 
     public virtual void animationStart()
     {
@@ -37,15 +21,6 @@ public abstract class EntityAnimation : MonoBehaviour
 
     public virtual void animationUpdate()
     {
-        if (entityController.isDeath)
-        {
-            animator.SetBool(nameDeath, true);
-        }
-        else
-        {
-            animator.SetBool(nameDeath, false);
-        }
 
-        animator.SetBool(nameFloatRight, entityMoveCtonroller);
     }
 }

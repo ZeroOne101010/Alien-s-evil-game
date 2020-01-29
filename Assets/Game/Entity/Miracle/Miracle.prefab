@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7571812706343550254}
   - component: {fileID: 7571812706343550255}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7571812707553538378}
   - component: {fileID: 7571812707553538379}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,6 @@ GameObject:
   - component: {fileID: 7571812707916981045}
   - component: {fileID: 7571812707916981044}
   - component: {fileID: 7571812707916981067}
-  - component: {fileID: 7571812707916981066}
   - component: {fileID: 7571812707916981065}
   - component: {fileID: 7571812707916981064}
   - component: {fileID: 7571812707916981070}
@@ -183,7 +182,8 @@ GameObject:
   - component: {fileID: 651451705}
   - component: {fileID: 6903484475949696981}
   - component: {fileID: 1328833151}
-  m_Layer: 0
+  - component: {fileID: 3259789222522636430}
+  m_Layer: 9
   m_Name: Miracle
   m_TagString: Entity
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7571812707916981059}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: e9ae17cf253e8174dad0e3179b25c4d8, type: 2}
+  m_Material: {fileID: 6200000, guid: 9bb08b3045771ad47839ec5bb3e61c0c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -271,19 +271,6 @@ MonoBehaviour:
   distanceToFindTarget: 10
   distanceToAttackTarget: 3.5
   target: {fileID: 0}
---- !u!114 &7571812707916981066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7571812707916981059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0415b50acdb70774d90d16e525c85273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityAnimation: {fileID: 0}
 --- !u!114 &7571812707916981065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,15 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2fa8c02bf03d24d979f5a87867e44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameAnimationAttack:
-  - Attack1
-  nameHaveWeapon: HaveWeapon
-  nameDeath: Death
-  nameFloatRight: FloatRight
-  nameVelocity: Velocity
   nameGround: Ground
-  nameSpeedRun: SpeedRun
-  nameJump: SpeedJump
 --- !u!114 &7571812707916981064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,9 +341,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToActiveAttackAfterAnimation: 10
-  idAnimationAttack: 0
   probablyChooseAttack: 100
   canRandomUse: 1
+  nameAnimationAttack: Attack1
   spikePrifab:
   - {fileID: 8877229424615160621, guid: 10b1a668362da884882336243259a6c3, type: 3}
   countSpikes: 5
@@ -402,3 +381,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3259789222522636430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7571812707916981059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab90ebac7affd814f8ff781a5491987d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityAnimation: []
+  nameDeath: Death
+  nameFloatRight: FloatRight
+  nameVelocity: Velocity
+  nameSpeedRun: SpeedRun
+  nameJump: Jump

@@ -77,7 +77,7 @@ public class BulletController : MonoBehaviour
         ShotEffect[] effect = GetComponents<ShotEffect>();
         for (int x = 0; x < effect.Length; x++)
         {
-            effect[x].effect(new Vector3(0, 0));
+            effect[x].effect(true);
         }
     }
 

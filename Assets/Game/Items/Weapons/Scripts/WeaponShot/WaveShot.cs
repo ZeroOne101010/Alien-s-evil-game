@@ -22,6 +22,7 @@ public class WaveShot : WeaponShot
             float angle = (AngleGap / CountBullets) * (i + 1) - (AngleGap / 2);
             float radAngle = (((angleShot + angle) / 360) * 2 * Mathf.PI);
             Vector2 direction = new Vector2(Mathf.Cos(radAngle), Mathf.Sin(radAngle)) * isRight;
+            activeAnimationShot();
             bulletController.initBullet(getTeamId(), direction, gameObject, this);
         }
     }
