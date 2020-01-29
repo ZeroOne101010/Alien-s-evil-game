@@ -32,10 +32,10 @@ RectTransform:
   m_Father: {fileID: 4538628611050555200}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 0.0000000047639}
-  m_SizeDelta: {x: 920.1, y: 472.49}
+  m_AnchorMin: {x: 0.15822916, y: 0.15787669}
+  m_AnchorMax: {x: 0.85287505, y: 0.83824676}
+  m_AnchoredPosition: {x: -0.6940918, y: 1.3314667}
+  m_SizeDelta: {x: -0.8499756, y: -0.45999146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9207295922461567729
 CanvasRenderer:
@@ -172,8 +172,9 @@ GameObject:
   - component: {fileID: 4538628611050555200}
   - component: {fileID: 7479409653331961968}
   - component: {fileID: 7011757455697523439}
+  - component: {fileID: -4305533711467757968}
   m_Layer: 5
-  m_Name: ChooseWeaponForSlotPanel
+  m_Name: ChooseItemForSlotPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,6 +239,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-4305533711467757968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906591725275179664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600f5fe93e6d0104fa4f15fe62b69ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollContent: {fileID: 5673304065097260259}
+  EquipItemForSlotPrefab: {fileID: 6452684406524827621, guid: 976fb62142afe4841993371fc26f0630,
+    type: 3}
+  slotIDWhichOpenPanel: 0
+  slotsInEquipSlotsScroll: []
+  itemsForSlots: []
+  equipSlotsScroll: {fileID: 0}
+  prefabManager: {fileID: 0}
 --- !u!1 &3524877446124703889
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15822916, y: 0.15787669}
   m_AnchorMax: {x: 0.85287505, y: 0.783685}
-  m_AnchoredPosition: {x: -0.49990845, y: 2.3779907}
+  m_AnchoredPosition: {x: -0.49993896, y: 2.3779907}
   m_SizeDelta: {x: -0.9000244, y: 1.2399902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7022223170844601342
@@ -554,6 +575,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4538628611050555200}
     m_Modifications:
+    - target: {fileID: 1351704708241459556, guid: cf2d2613aa5a8b94c870ffc98df3931d,
+        type: 3}
+      propertyPath: m_Name
+      value: NameBoard
+      objectReference: {fileID: 0}
     - target: {fileID: 4487922227122942573, guid: cf2d2613aa5a8b94c870ffc98df3931d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -659,15 +685,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1351704708241459556, guid: cf2d2613aa5a8b94c870ffc98df3931d,
-        type: 3}
-      propertyPath: m_Name
-      value: NameBoard
-      objectReference: {fileID: 0}
     - target: {fileID: 5928813856148431769, guid: cf2d2613aa5a8b94c870ffc98df3931d,
         type: 3}
       propertyPath: m_Text
-      value: Choos your weapon
+      value: Choose your weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533969277521275658, guid: cf2d2613aa5a8b94c870ffc98df3931d,
+        type: 3}
+      propertyPath: m_EffectDistance.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf2d2613aa5a8b94c870ffc98df3931d, type: 3}

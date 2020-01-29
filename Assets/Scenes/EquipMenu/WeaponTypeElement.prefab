@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 4923695183171092673}
   - component: {fileID: 562219696425334024}
   - component: {fileID: 3228632098875132825}
+  - component: {fileID: 4954593815264210690}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -140,7 +141,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
@@ -151,6 +152,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: WeponType
+--- !u!114 &4954593815264210690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564341777943053215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.9686275, g: 0.5803922, b: 0.1137255, a: 1}
+  m_EffectDistance: {x: 0, y: 1.5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &6881326504890027949
 GameObject:
   m_ObjectHideFlags: 0

@@ -37,6 +37,7 @@ public class BuyBoard : MonoBehaviour
             {
                 GlobalScript.SetValutaValue(valutaType, GlobalScript.GetValutaValue(valutaType) - int.Parse(price.text));
                 ItemDataController.SetItemData(ItemID, ItemDataType.isBought, true);
+                ItemDataController.SetItemData(ItemID, ItemDataType.isEquiped, -1);
                 GlobalScript.SetObjectsActive(initalBoards, false);
                 GlobalScript.SetObjectsActive(replacementBoards, true);
             }
