@@ -254,8 +254,11 @@ MonoBehaviour:
   scrollContent: {fileID: 5673304065097260259}
   EquipItemForSlotPrefab: {fileID: 6452684406524827621, guid: 976fb62142afe4841993371fc26f0630,
     type: 3}
+  slotIDWhichOpenPanel: 0
+  slotsInEquipSlotsScroll: []
   itemsForSlots: []
   equipSlotsScroll: {fileID: 0}
+  prefabManager: {fileID: 0}
 --- !u!1 &3524877446124703889
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15822916, y: 0.15787669}
   m_AnchorMax: {x: 0.85287505, y: 0.783685}
-  m_AnchoredPosition: {x: -0.49990845, y: 2.3779907}
+  m_AnchoredPosition: {x: -0.49993896, y: 2.3779907}
   m_SizeDelta: {x: -0.9000244, y: 1.2399902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7022223170844601342
@@ -686,6 +689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Choose your weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533969277521275658, guid: cf2d2613aa5a8b94c870ffc98df3931d,
+        type: 3}
+      propertyPath: m_EffectDistance.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf2d2613aa5a8b94c870ffc98df3931d, type: 3}

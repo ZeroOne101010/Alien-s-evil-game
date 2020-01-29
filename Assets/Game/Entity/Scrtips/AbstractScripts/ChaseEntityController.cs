@@ -10,7 +10,6 @@ public abstract class ChaseEntityController : EntityController
     [HideInInspector]
     public GameObject target;
 
-    private EntityMoveController entityMoveController;
     private EntityAttackController entityAttackController;
     private AnimationController animationController;
 
@@ -18,7 +17,6 @@ public abstract class ChaseEntityController : EntityController
     {
         base.entityStart();
         entityAttackController = GetComponent<EntityAttackController>();
-        entityMoveController = GetComponent<EntityMoveController>();
         animationController = GetComponent<AnimationController>();
     }
 

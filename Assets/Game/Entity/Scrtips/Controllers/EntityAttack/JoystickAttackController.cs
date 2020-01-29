@@ -14,9 +14,11 @@ public class JoystickAttackController : EntityAttackController
     public override void entityStart()
     {
         base.entityStart();
-        button = attackButton.GetComponent<Button>();
-        button.onClick.AddListener(buttonAttack);
-        //button.OnPointerClick();
+        if (attackButton != null)
+        {
+            button = attackButton.GetComponent<Button>();
+            button.onClick.AddListener(buttonAttack);
+        }
     }
 
     public void buttonAttack()
