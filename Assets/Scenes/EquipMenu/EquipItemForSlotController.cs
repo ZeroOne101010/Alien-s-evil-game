@@ -14,7 +14,7 @@ public class EquipItemForSlotController : MonoBehaviour
     public GameObject nameBoard;
     public Text slotIdText;
     public Image image;
-    public Text nameText;
+    public GameObject nameText;
     [HideInInspector]
     public int slotIDWhichOpenPanel;
     [HideInInspector]

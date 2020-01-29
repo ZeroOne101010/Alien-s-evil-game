@@ -56,7 +56,7 @@ public class ChooseItemForSlotController : MonoBehaviour
     public void SetDataToEquipItemForSlot(GameObject EquipItemForSlot)
     {
         EquipItemForSlot.GetComponent<EquipItemForSlotController>().image.sprite = prefabManager.GetComponent<PrefabManagerScript>().items[EquipItemForSlot.GetComponent<EquipItemForSlotController>().itemID].GetComponent<SpriteRenderer>().sprite;
-        EquipItemForSlot.GetComponent<EquipItemForSlotController>().nameText.text = prefabManager.GetComponent<PrefabManagerScript>().items[EquipItemForSlot.GetComponent<EquipItemForSlotController>().itemID].name;
+        EquipItemForSlot.GetComponent<EquipItemForSlotController>().nameText.GetComponent<Text>().text = prefabManager.GetComponent<PrefabManagerScript>().items[EquipItemForSlot.GetComponent<EquipItemForSlotController>().itemID].name;
     }
     public void RemoveAllEquipItemForSlot()
     {
@@ -75,7 +75,8 @@ public class ChooseItemForSlotController : MonoBehaviour
         itemForSlot.GetComponent<EquipItemForSlotController>().alredyUsedBoard.SetActive(true);
         itemForSlot.GetComponent<EquipItemForSlotController>().GetComponent<Image>().color = itemForSlot.GetComponent<EquipItemForSlotController>().alreadyUsedDark;
         itemForSlot.GetComponent<EquipItemForSlotController>().nameBoard.GetComponent<Image>().color = itemForSlot.GetComponent<EquipItemForSlotController>().alreadyUsedLight;
-        itemForSlot.GetComponent<EquipItemForSlotController>().nameText.color = itemForSlot.GetComponent<EquipItemForSlotController>().alreadyUsedBlack;
+        itemForSlot.GetComponent<EquipItemForSlotController>().nameText.GetComponent<Text>().color = itemForSlot.GetComponent<EquipItemForSlotController>().alreadyUsedBlack;
+        itemForSlot.GetComponent<EquipItemForSlotController>().nameText.GetComponent<Shadow>().effectColor = itemForSlot.GetComponent<EquipItemForSlotController>().alreadyUsedBlack - new Color(20,20,20);
         itemForSlot.GetComponent<EquipItemForSlotController>().slotIdText.text = (itemID + 1).ToString();
     }
     public void DeactivateAlredyEqupedTag(GameObject itemForSlot)
