@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 1923777335}
   - component: {fileID: 8833034337313144754}
   - component: {fileID: 8140607993225771850}
+  - component: {fileID: 9136753338032470037}
   m_Layer: 9
   m_Name: xPeke
   m_TagString: Entity
@@ -59,7 +60,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 9bb08b3045771ad47839ec5bb3e61c0c, type: 2}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.41, y: 0}
@@ -85,7 +86,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 12.41, y: 2.6}
@@ -258,7 +259,7 @@ MonoBehaviour:
   timeToActiveAttackAfterAnimation: 0
   probablyChooseAttack: 100
   canRandomUse: 1
-  nameAnimationAttack: 
+  nameAnimationAttack: Attack1
   damage: 20
 --- !u!114 &8140607993225771850
 MonoBehaviour:
@@ -278,6 +279,19 @@ MonoBehaviour:
   nameVelocity: Velocity
   nameSpeedRun: SpeedRun
   nameJump: Jump
+--- !u!114 &9136753338032470037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950556000474328847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf534d91c02c674da1dda2feef16870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToUnactive: 0
 --- !u!1 &4950556000926738683
 GameObject:
   m_ObjectHideFlags: 0

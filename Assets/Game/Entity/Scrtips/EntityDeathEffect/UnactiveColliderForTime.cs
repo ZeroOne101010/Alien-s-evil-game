@@ -8,13 +8,13 @@ public class UnactiveColliderForTime : EntityDeathEffect
     public int timeToUnactive;
     private int timerToUnactive;
 
-    private Collider2D collider;
+    private Collider2D[] colliders;
 
     public override void effectStart()
     {
         base.effectStart();
         timerToUnactive = timeToUnactive;
-        collider = GetComponent<Collider2D>();
+        colliders = GetComponents<Collider2D>();
     }
 
     public override void effectUpdate()
@@ -24,7 +24,10 @@ public class UnactiveColliderForTime : EntityDeathEffect
         if (timerToUnactive < 0) timerToUnactive = 0;
         if(timerToUnactive == 0)
         {
-            collider.enabled = false;
+            for (int x = 0; x < colliders.Length; x++)
+            {
+                colliders[x].enabled = false;
+            }
         }
     }
 

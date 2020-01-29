@@ -14,9 +14,12 @@ public class EntityAttackController : MonoBehaviour
     [HideInInspector]
     public EntityAttack[] entityAttack;
 
+    private EntityMoveController entityMoveController;
+
     void Start()
     {
         entityAttack = GetComponents<EntityAttack>();
+        entityMoveController = GetComponent<EntityMoveController>();
         attackTimerReload = attackTimeReload;
         for(int x = 0; x < entityAttack.Length; x++)
         {
@@ -45,10 +48,9 @@ public class EntityAttackController : MonoBehaviour
 
     }
 
-
     public void allAttack(GameObject entity)
     {
-        for(int x = 0; x < entityAttack.Length; x++)
+        for (int x = 0; x < entityAttack.Length; x++)
         {
             entityAttack[x].attack(entity);
         }

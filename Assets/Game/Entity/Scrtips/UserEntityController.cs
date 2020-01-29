@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class UserEntityController : EntityController
 {
-    private EntityMove entityMove;
     private EntityAttackController attackController;
     public Joystick joystick;
 
-    void Start()
+    public override void entityStart()
     {
-
-        entityMove = GetComponent<EntityMove>();
+        base.entityStart();
         attackController = GetComponent<EntityAttackController>();
     }
 
-    void Update()
+    public override void entityUpdate()
     {
+        base.entityUpdate();
         checkMoveUser();
         checkJumpUser();
         attackUser();
@@ -26,23 +25,23 @@ public class UserEntityController : EntityController
     {
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            entityMove.movePerson(new Vector2(1, 0));
+            entityMoveController.movePerson(new Vector2(1, 0));
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            entityMove.movePerson(new Vector2(-1, 0));
+            entityMoveController.movePerson(new Vector2(-1, 0));
         }
         else if (joystick.Horizontal > 0.01f)
         {
-            entityMove.movePerson(new Vector2(joystick.Horizontal, 0));
+            entityMoveController.movePerson(new Vector2(joystick.Horizontal, 0));
         }
         else if (joystick.Horizontal < -0.01f)
         {
-            entityMove.movePerson(new Vector2(joystick.Horizontal, 0));
+            entityMoveController.movePerson(new Vector2(joystick.Horizontal, 0));
         }
         else
         {
-            entityMove.stopMovePerson();
+            entityMoveController.stopMovePerson();
         }
         
     }
@@ -51,7 +50,7 @@ public class UserEntityController : EntityController
     {
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
         {
-            entityMove.jumpPerson();
+            entityMoveController.jumpPerson();
         }
     }
 
