@@ -42,6 +42,13 @@ public class ItemDataController : MonoBehaviour
             return BitConverter.ToInt32(itemDataBin, 0) - encodingOffset;
         }
     }
+    public static void SetAllValues(int value, ItemDataType itemDataType)
+    {
+        for (int c = 0; c < PrefabManagerScript.itemsCount; c++)
+        {
+            SetItemData(c, itemDataType, value);
+        }
+    }
     public static void SetAllValues(bool value, ItemDataType itemDataType)
     {
         for (int c = 0; c < PrefabManagerScript.itemsCount; c++)
