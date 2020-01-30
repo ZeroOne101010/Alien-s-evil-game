@@ -20,6 +20,10 @@ public class PrefabManagerScript : MonoBehaviour
         types[1] = ColdWeaponsCanBeInSlots;
         types[2] = PistolWeaponsCanBeInSlots;
         types[3] = GranadaWeaponsCanBeInSlots;
+        DataController.SetData(FilePath.slotData, 0, DataType.slotsCount, itemDataValuesCount.slotCount, 1);
+        DataController.SetData(FilePath.slotData, 1, DataType.slotsCount, itemDataValuesCount.slotCount, 1);
+        DataController.SetData(FilePath.slotData, 2, DataType.slotsCount, itemDataValuesCount.slotCount, 1);
+        DataController.SetData(FilePath.slotData, 3, DataType.slotsCount, itemDataValuesCount.slotCount, 1);
     }
 
 
