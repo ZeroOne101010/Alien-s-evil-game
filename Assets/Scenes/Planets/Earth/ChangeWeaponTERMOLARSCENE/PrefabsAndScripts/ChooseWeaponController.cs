@@ -18,6 +18,8 @@ public class ChooseWeaponController : MonoBehaviour
     public List<GameObject> slots = new List<GameObject>();
     [HideInInspector]
     public GameObject PrefabManager;
+    public GameObject person;
+    public List<GameObject> weapons = new List<GameObject>();
     public void Awake()
     {
         //ItemDataController.SetAllValues(-1, ItemDataType.isEquiped);
@@ -36,6 +38,14 @@ public class ChooseWeaponController : MonoBehaviour
     public void Start()
     {
         FillSlots();
+        for (int i = 0; i < PrefabManager.GetComponent<PrefabManagerScript>().items.Length; i++)
+        {
+            weapons.Add(Instantiate(PrefabManager.GetComponent<PrefabManagerScript>().items[i], new Vector2(0, 0), Quaternion.identity));
+            weapons[weapons.Count - 1].SetActive(false);
+            Inventory inventory = person.GetComponent<Inventory>();
+            inventory.addItem(weapons[weapons.Count - 1]);
+            weapons[weapons.Count - 1].GetComponent<WeaponController>().takeTheWeapon(person);
+        }
     }
     public void Update()
     {

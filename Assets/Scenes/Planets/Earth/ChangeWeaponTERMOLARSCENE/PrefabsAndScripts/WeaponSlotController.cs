@@ -16,5 +16,7 @@ public class WeaponSlotController : MonoBehaviour
         chooseWeaponPanel.GetComponent<ChooseWeaponController>().selectedWeaponID[chooseWeaponPanel.GetComponent<ChooseWeaponController>().weaponsTypeID] = ItemID;
         chooseWeaponPanel.GetComponent<ChooseWeaponController>().ClearScrollAndSlots();
         chooseWeaponPanel.GetComponent<ChooseWeaponController>().FillSlots();
+        ChooseWeaponController chooseWeaponController = chooseWeaponPanel.GetComponent<ChooseWeaponController>();
+        chooseWeaponController.person.GetComponent<InventoryUserController>().setItemInHand(chooseWeaponController.weaponsTypes[chooseWeaponController.weaponsTypeID][chooseWeaponController.selectedWeaponID[chooseWeaponController.weaponsTypeID]]);
     }
 }

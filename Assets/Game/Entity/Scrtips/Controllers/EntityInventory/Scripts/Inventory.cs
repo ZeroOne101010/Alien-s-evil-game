@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
 
     public bool canAddItems = true;
 
-    void Start()
+    void Awake()
     {
         item = new List<GameObject>();
     }

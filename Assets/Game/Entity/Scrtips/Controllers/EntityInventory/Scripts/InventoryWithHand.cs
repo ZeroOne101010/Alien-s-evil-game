@@ -11,7 +11,7 @@ public abstract class InventoryWithHand : InventoryController
     {
         base.controllerUpdate();
     }
-
+ 
     public GameObject getItemInHand(int handIdInInventory)
     {
         if(inventory.item.Count > 0)
