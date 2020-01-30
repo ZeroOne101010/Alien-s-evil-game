@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 8996063676637025910}
   - component: {fileID: 107848772}
   - component: {fileID: 107848767}
+  - component: {fileID: 5677083538537812359}
   m_Layer: 9
   m_Name: Person
   m_TagString: Entity
@@ -397,6 +398,19 @@ MonoBehaviour:
   nameJump: Jump
   nameHaveWeapon: HaveWeapon
   nameTypeWeapon: TypeWeapon
+--- !u!114 &5677083538537812359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144545790313368975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe6e6b5d9949f741aede26fd4d2dfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heathbar: {fileID: 0}
 --- !u!1 &1269511424631830481
 GameObject:
   m_ObjectHideFlags: 0

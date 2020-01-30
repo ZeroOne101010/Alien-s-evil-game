@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 1448521221653387162}
   - component: {fileID: 1403999136080541304}
   - component: {fileID: 715293928}
+  - component: {fileID: 3227203767115668388}
   m_Layer: 9
   m_Name: Gutti
   m_TagString: Entity
@@ -519,6 +520,7 @@ MonoBehaviour:
   forceJump: 5
   inverseRight: 0
   isRight: 0
+  canReactionOnEntityTrigger: 1
 --- !u!114 &4280631243282289992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,6 +581,24 @@ MonoBehaviour:
   count: 1
   speedMove: 0
   offsetShot: {x: 0, y: 0}
+--- !u!114 &3227203767115668388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690927528979603715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14f512a9db0b6243983dabcdfbfd4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj:
+  - {fileID: 4468635350604367064, guid: b29f51d5aaf7140499d1f80bf58112db, type: 3}
+  countObj: 10000000
+  offsetSpawn: {x: 0, y: 0}
+  minForce: 4000
+  maxForce: 10000
 --- !u!1 &7506779617289356235
 GameObject:
   m_ObjectHideFlags: 0

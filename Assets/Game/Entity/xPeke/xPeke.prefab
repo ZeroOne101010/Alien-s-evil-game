@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 8833034337313144754}
   - component: {fileID: 8140607993225771850}
   - component: {fileID: 9136753338032470037}
+  - component: {fileID: 1909898907}
   m_Layer: 9
   m_Name: xPeke
   m_TagString: Entity
@@ -177,6 +178,7 @@ MonoBehaviour:
   forceJump: 5
   inverseRight: 0
   isRight: 0
+  canReactionOnEntityTrigger: 1
 --- !u!114 &2083471936605437658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed6494f1f9a66a47aede3e562f4d916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackTimeReload: 0
+  attackTimeReload: 30
   attackIsReloaded: 0
   entityAttack: []
 --- !u!114 &4950556000474328846
@@ -259,6 +261,7 @@ MonoBehaviour:
   timeToActiveAttackAfterAnimation: 0
   probablyChooseAttack: 100
   canRandomUse: 1
+  idShotEffect: 0
   nameAnimationAttack: Attack1
   damage: 20
 --- !u!114 &8140607993225771850
@@ -292,6 +295,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToUnactive: 0
+--- !u!114 &1909898907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950556000474328847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14f512a9db0b6243983dabcdfbfd4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj:
+  - {fileID: 4468635350604367064, guid: b29f51d5aaf7140499d1f80bf58112db, type: 3}
+  countObj: 0a000000
+  offsetSpawn: {x: 0, y: 0}
+  minForce: 4000
+  maxForce: 10000
 --- !u!1 &4950556000926738683
 GameObject:
   m_ObjectHideFlags: 0

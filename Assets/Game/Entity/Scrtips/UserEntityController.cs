@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UserEntityController : EntityController
+public class UserEntityController : EntityController, IMathedController
 {
     private EntityAttackController attackController;
     public Joystick joystick;
@@ -67,5 +67,11 @@ public class UserEntityController : EntityController
         {
             attackController.attack(0, null);
         }
+    }
+
+    public void addValue(MathedControlller mathedController)
+    {
+        GlobalScript.SetValutaValue(mathedController.type, GlobalScript.GetValutaValue(mathedController.type) + mathedController.worth);
+        Debug.Log(GlobalScript.GetValutaValue(mathedController.type));
     }
 }

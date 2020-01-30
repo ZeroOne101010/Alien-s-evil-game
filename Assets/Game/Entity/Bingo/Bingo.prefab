@@ -562,6 +562,7 @@ GameObject:
   - component: {fileID: 3358090004908719915}
   - component: {fileID: 1012602002}
   - component: {fileID: 2268819325282445206}
+  - component: {fileID: 4789514847422155666}
   m_Layer: 9
   m_Name: Bingo
   m_TagString: Entity
@@ -717,6 +718,7 @@ MonoBehaviour:
   timeToActiveAttackAfterAnimation: 15
   probablyChooseAttack: 100
   canRandomUse: 1
+  idShotEffect: 0
   nameAnimationAttack: Attack1
   damage: 10
 --- !u!114 &8762204478836645439
@@ -735,6 +737,7 @@ MonoBehaviour:
   forceJump: 5
   inverseRight: 1
   isRight: 0
+  canReactionOnEntityTrigger: 1
 --- !u!114 &3358090004908719915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,6 +781,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 100
+--- !u!114 &4789514847422155666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313887825933536061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14f512a9db0b6243983dabcdfbfd4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj:
+  - {fileID: 4468635350604367064, guid: b29f51d5aaf7140499d1f80bf58112db, type: 3}
+  countObj: 08000000
+  offsetSpawn: {x: 0, y: 0}
+  minForce: 4000
+  maxForce: 10000
 --- !u!1 &6928679935836681724
 GameObject:
   m_ObjectHideFlags: 0
