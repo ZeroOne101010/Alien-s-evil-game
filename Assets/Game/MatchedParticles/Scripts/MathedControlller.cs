@@ -13,6 +13,7 @@ public class MathedControlller : MonoBehaviour
     void Start()
     {
         shotEffect = GetComponents<ShotEffect>();
+        StartCoroutine("DestroyACoint");
     }
 
     void Update()
@@ -43,5 +44,10 @@ public class MathedControlller : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+    IEnumerator DestroyACoint()
+    {
+        yield return new WaitForSeconds(5);
+        Destroy(gameObject);
     }
 }

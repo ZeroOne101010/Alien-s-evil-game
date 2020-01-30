@@ -20,7 +20,7 @@ public class SwitchWeaponType : MonoBehaviour
         //{
         //    chooseWeaponPanel.GetComponent<ChooseWeaponController>().weaponsTypeID += value;
         //}
-        Debug.LogError("В скрипте SwitchWeaponType закаментирована большая часть кода, из за недостатка разных типов оружия, обязательно после добовления следующего типа оужия. Убрать закоментирование и доделать!");
+        Debug.LogError("В скрипте SwitchWeaponType закаментирована большая часть кода, из за недостатка разных типов оружия, обязательно после добавления следующего типа оужия. Убрать закоментирование и доделать!");
         chooseWeaponPanel.GetComponent<ChooseWeaponController>().ClearScrollAndSlots();
         chooseWeaponPanel.GetComponent<ChooseWeaponController>().FillSlots();
     }

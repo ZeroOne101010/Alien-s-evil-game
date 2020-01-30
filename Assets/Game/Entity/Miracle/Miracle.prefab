@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMove: 5
-  forceJump: 5
+  forceJump: 7
   inverseRight: 0
   isRight: 0
   canReactionOnEntityTrigger: 1

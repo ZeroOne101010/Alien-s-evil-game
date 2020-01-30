@@ -4106,6 +4106,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 107848771}
+    - target: {fileID: 198039936, guid: 5406ea37b04a350469db7d0933fc692d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 763883577, guid: 5406ea37b04a350469db7d0933fc692d, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4114,15 +4118,16 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1161752550}
-    - target: {fileID: 198039936, guid: 5406ea37b04a350469db7d0933fc692d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6422340655414013285, guid: 5406ea37b04a350469db7d0933fc692d,
         type: 3}
       propertyPath: person
       value: 
       objectReference: {fileID: 107848758}
+    - target: {fileID: 7847164709080556161, guid: 5406ea37b04a350469db7d0933fc692d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5406ea37b04a350469db7d0933fc692d, type: 3}
 --- !u!1001 &979276087
@@ -5953,24 +5958,11 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1197986971}
-    - target: {fileID: 7440428545164889940, guid: 6b7b597a5cacd3443af3f5500eba3d4f,
-        type: 3}
-      propertyPath: health
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 5677083538537812359, guid: 6b7b597a5cacd3443af3f5500eba3d4f,
         type: 3}
       propertyPath: heathbar
       value: 
       objectReference: {fileID: 1833907072}
-    - target: {fileID: 1357670562, guid: 6b7b597a5cacd3443af3f5500eba3d4f, type: 3}
-      propertyPath: item.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1357670562, guid: 6b7b597a5cacd3443af3f5500eba3d4f, type: 3}
-      propertyPath: maxCountItems
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7b597a5cacd3443af3f5500eba3d4f, type: 3}
 --- !u!1 &1462170229

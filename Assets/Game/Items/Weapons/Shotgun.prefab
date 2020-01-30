@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 101
   m_Sprite: {fileID: -4583253144846247162, guid: 6b1161981e749d04c8d7c45d06a21dba,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,9 +145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetShot: {x: 1, y: 0}
+  timeReload: 60
+  typeWeapon: 0
   keepedEntity: {fileID: 0}
   canTakeItem: 0
-  timeReload: 60
 --- !u!114 &1051479679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96963f38e35bceb44a5b892018268757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameAnimationShot: Range
+  nameAnimationOther: []
   BulletPrefab:
   - {fileID: 6491278691691511616, guid: f4c2a5233b4606a45bba67b43a23090a, type: 3}
   CountBullets: 10

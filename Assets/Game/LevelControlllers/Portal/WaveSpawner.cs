@@ -15,9 +15,9 @@ public class WaveSpawner : MonoBehaviour
     public List<GameObject> spawnedEntity;
     public int idPrifabEntity;
     private int idCountEntity;
-    public float timer;
-    public float timerBetweenSpawnGroup;
-    public float timerToStart;
+    private float timer;
+    private float timerBetweenSpawnGroup;
+    private float timerToStart;
     private bool canSpawn;
     private bool isStart;
     private bool waveIsDone;

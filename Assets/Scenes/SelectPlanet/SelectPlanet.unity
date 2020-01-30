@@ -544,7 +544,7 @@ RectTransform:
   m_GameObject: {fileID: 56594889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.305346, y: 2.8554444, z: 1.305346}
+  m_LocalScale: {x: 1.305346, y: 2.1772764, z: 1.305346}
   m_Children:
   - {fileID: 204580666}
   m_Father: {fileID: 678944126}
@@ -3053,6 +3053,7 @@ GameObject:
   - component: {fileID: 454210697}
   - component: {fileID: 454210696}
   - component: {fileID: 454210699}
+  - component: {fileID: 454210700}
   m_Layer: 5
   m_Name: Mars
   m_TagString: Untagged
@@ -3122,30 +3123,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: CloseMenu
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: Load_Random_Level
+      - m_Target: {fileID: 454210700}
+        m_MethodName: Load_Level
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3211,6 +3190,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &454210700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454210694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2704c19959b1370458ed512c1ceac07b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Mars
+  progressBG: {fileID: 2013776249}
 --- !u!1 &459464167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3356,6 +3349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenes:
   - Summer
+  - Winter
 --- !u!95 &459464173
 Animator:
   serializedVersion: 3
