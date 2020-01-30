@@ -455,7 +455,7 @@ MonoBehaviour:
   health: 100
   isDeath: 0
   idAnimationAttack: 0
-  distanceToFindTarget: 10
+  distanceToFindTarget: 50
   distanceToAttackTarget: 2
   target: {fileID: 0}
 --- !u!114 &7192917657690846778
