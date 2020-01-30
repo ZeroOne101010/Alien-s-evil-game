@@ -18,6 +18,7 @@ TagManager:
   - Item
   - PrefabManager
   - Portal
+  - Matched
   layers:
   - Default
   - TransparentFX

@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 6903484475949696981}
   - component: {fileID: 1328833151}
   - component: {fileID: 3259789222522636430}
+  - component: {fileID: 7173677081370096153}
   m_Layer: 9
   m_Name: Miracle
   m_TagString: Entity
@@ -313,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed6494f1f9a66a47aede3e562f4d916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackTimeReload: 20
+  attackTimeReload: 100
   attackIsReloaded: 0
   entityAttack: []
 --- !u!114 &7571812707916981068
@@ -401,3 +402,21 @@ MonoBehaviour:
   nameVelocity: Velocity
   nameSpeedRun: SpeedRun
   nameJump: Jump
+--- !u!114 &7173677081370096153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7571812707916981059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14f512a9db0b6243983dabcdfbfd4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj:
+  - {fileID: 4468635350604367064, guid: b29f51d5aaf7140499d1f80bf58112db, type: 3}
+  countObj: 04000000
+  offsetSpawn: {x: 0, y: 0}
+  minForce: 4000
+  maxForce: 10000

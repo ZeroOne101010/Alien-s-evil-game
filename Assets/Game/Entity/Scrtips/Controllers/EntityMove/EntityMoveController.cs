@@ -20,6 +20,7 @@ public class EntityMoveController : MonoBehaviour
     void Start()
     {
         entityMove = GetComponents<EntityMove>();
+        speedMove = Random.Range(speedMove - speedMove / 5, speedMove);
     }
 
     void Update()
