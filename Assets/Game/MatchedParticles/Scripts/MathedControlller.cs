@@ -45,6 +45,9 @@ public class MathedControlller : MonoBehaviour
             }
         }
     }
+
+
+
     IEnumerator DestroyACoint()
     {
         yield return new WaitForSeconds(5);

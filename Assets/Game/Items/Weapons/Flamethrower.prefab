@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prifabParticle: {fileID: 8056667336045124589, guid: 6e7d9573270d6374da7bea05a9cca802,
     type: 3}
-  count: 1
+  count: 0
   speedMove: 5
   offsetShot: {x: 0, y: 0}
 --- !u!114 &9204829194296966213
