@@ -17,6 +17,11 @@ public class ChooseItemForSlotController : MonoBehaviour
     public GameObject equipSlotsScroll;
     [HideInInspector]
     public GameObject prefabManager;
+    public void Start()
+    {
+        //ItemDataController.SetAllValues(-1, ItemDataType.isEquiped);
+        //ItemDataController.SetAllValues(-1, ItemDataType.isBought);
+    }
     public void Update()
     {
     }
@@ -45,7 +50,7 @@ public class ChooseItemForSlotController : MonoBehaviour
     {
         for(int i = 0; i < equipSlotsScroll.GetComponent<EquipSlotsScrollController>().weaponsCanSet.Length; i++)
         {
-            if (ItemDataController.GetItemData(equipSlotsScroll.GetComponent<EquipSlotsScrollController>().weaponsCanSet[i], ItemDataType.isBought) == 1)
+            if (ItemDataController.GetItemData(equipSlotsScroll.GetComponent<EquipSlotsScrollController>().weaponsCanSet[i], ItemDataType.isBought) > 0)
             {
                 AddEquipItemForSlot(equipSlotsScroll.GetComponent<EquipSlotsScrollController>().weaponsCanSet[i]);
                 itemsForSlots[itemsForSlots.Count - 1].GetComponent<Button>().onClick.AddListener(ClosePanelAndSetDataToSlot);
