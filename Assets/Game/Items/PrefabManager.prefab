@@ -49,8 +49,9 @@ MonoBehaviour:
   - {fileID: 8745479236224440983, guid: aeb45a66c7b401e4e8ddb645313e44de, type: 3}
   - {fileID: 2680584747454608416, guid: 67bb485b9e7cafa469fe079f7806f86a, type: 3}
   - {fileID: 2860898062141704838, guid: 915de89cc7a34cb45a43e1fc12448077, type: 3}
+  - {fileID: 637569399116543583, guid: a6477221edb7d1e4b9bba3feea3d16a1, type: 3}
   typesCount: 4
   MainWeaponsCanBeInSlots: 0000000001000000020000000300000004000000
-  ColdWeaponsCanBeInSlots: 03000000
+  ColdWeaponsCanBeInSlots: 05000000
   PistolWeaponsCanBeInSlots: 00000000
   GranadaWeaponsCanBeInSlots: 00000000
